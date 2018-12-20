@@ -87,6 +87,9 @@
 [submodule "ledger-mode"]
 	path = lib/ledger-mode
 	url = git@github.com:ledger/ledger-mode.git
+[submodule "linum-relative"]
+	path = lib/linum-relative
+	url = git@github.com:coldnew/linum-relative.git
 [submodule "lispy"]
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
