@@ -98,6 +98,9 @@
 [submodule "magit-popup"]
 	path = lib/magit-popup
 	url = git@github.com:magit/magit-popup.git
+[submodule "multiple-cursors"]
+	path = lib/multiple-cursors
+	url = git@github.com:magnars/multiple-cursors.el.git
 [submodule "notmuch"]
 	path = lib/notmuch
 	url = https://git.notmuchmail.org/git/notmuch
