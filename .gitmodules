@@ -24,6 +24,9 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+[submodule "ess"]
+	path = lib/ess
+	url = git@github.com:emacs-ess/ESS.git
 [submodule "evil"]
 	path = lib/evil
 	url = git@github.com:emacs-evil/evil.git
@@ -36,6 +39,9 @@
 [submodule "graphql"]
 	path = lib/graphql
 	url = git@github.com:vermiculus/graphql.el.git
+[submodule "julia-mode"]
+	path = lib/julia-mode
+	url = git@github.com:JuliaEditorSupport/julia-emacs.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
