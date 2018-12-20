@@ -42,6 +42,9 @@
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = git@github.com:JuliaEditorSupport/julia-emacs.git
+[submodule "ledger-mode"]
+	path = lib/ledger-mode
+	url = git@github.com:ledger/ledger-mode.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
