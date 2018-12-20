@@ -95,6 +95,9 @@
 [submodule "magit-popup"]
 	path = lib/magit-popup
 	url = git@github.com:magit/magit-popup.git
+[submodule "notmuch"]
+	path = lib/notmuch
+	url = https://git.notmuchmail.org/git/notmuch
 [submodule "org-ref"]
 	path = lib/org-ref
 	url = git@github.com:jkitchin/org-ref.git
