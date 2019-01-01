@@ -295,6 +295,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . emacs))))
 
+(use-package org-journal
+  :custom
+  (org-journal-dir "~/Dropbox/org/journal/")
+  (org-journal-enable-encryption t))
+
 (use-package org-ref
   :custom
   (org-ref-default-bibliography '("~/Sync/bibliography/references.bib"))
