@@ -218,6 +218,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package evil
   :config (evil-mode 1))
 
+(use-package evil-surround
+  :config (global-evil-surround-mode 1))
+
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
