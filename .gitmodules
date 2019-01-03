@@ -158,3 +158,6 @@
 [submodule "color-theme-sanityinc-solarized"]
 	path = lib/color-theme-sanityinc-solarized
 	url = git@github.com:purcell/color-theme-sanityinc-solarized.git
+[submodule "evil-surround"]
+	path = lib/evil-surround
+	url = git@github.com:emacs-evil/evil-surround.git
