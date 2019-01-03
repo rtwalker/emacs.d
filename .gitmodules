@@ -1,14 +1,13 @@
 [borg]
-	pushDefault = locutus
-	collective = emacsg
+	pushDefault = rtwalker
 [submodule "ace-window"]
 	path = lib/ace-window
 	url = git@github.com:abo-abo/ace-window.git
-	ignore = dirty
+	ignore = untracked
 [submodule "alert"]
 	path = lib/alert
 	url = git@github.com:jwiegley/alert.git
-	ignore = dirty
+	ignore = untracked
 [submodule "async"]
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git
@@ -18,11 +17,11 @@
 [submodule "avy"]
 	path = lib/avy
 	url = git@github.com:abo-abo/avy.git
-	ignore = dirty
+	ignore = untracked
 [submodule "biblio"]
 	path = lib/biblio
 	url = git@github.com:cpitclaudel/biblio.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -32,21 +31,21 @@
 [submodule "company"]
 	path = lib/company
 	url = git@github.com:company-mode/company-mode.git
-	ignore = dirty
+	ignore = untracked
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
 	no-makeinfo = dash-template.texi
-	ignore = dirty
+	ignore = untracked
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
-	ignore = dirty
+	ignore = untracked
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
 	no-byte-compile = emacsql-pg.el
-	ignore = dirty
+	ignore = untracked
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
@@ -56,19 +55,19 @@
 [submodule "evil"]
 	path = lib/evil
 	url = git@github.com:emacs-evil/evil.git
-	ignore = dirty
+	ignore = untracked
 [submodule "f"]
 	path = lib/f
 	url = git@github.com:rejeep/f.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "flycheck"]
 	path = lib/flycheck
 	url = git@github.com:flycheck/flycheck.git
-	ignore = dirty
+	ignore = untracked
 [submodule "general"]
 	path = lib/general
 	url = git@github.com:noctuid/general.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "ghub"]
 	path = lib/ghub
 	url = git@github.com:magit/ghub.git
@@ -78,45 +77,45 @@
 [submodule "graphql"]
 	path = lib/graphql
 	url = git@github.com:vermiculus/graphql.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "helm"]
 	path = lib/helm
 	url = git@github.com:emacs-helm/helm.git
 [submodule "helm-bibtex"]
 	path = lib/helm-bibtex
 	url = git@github.com:tmalsburg/helm-bibtex.git
-	ignore = dirty
+	ignore = untracked
 [submodule "htmlize"]
 	path = lib/htmlize
 	url = git@github.com:hniksic/emacs-htmlize.git
-	ignore = dirty
+	ignore = untracked
 [submodule "hydra"]
 	path = lib/hydra
 	url = git@github.com:abo-abo/hydra.git
-	ignore = dirty
+	ignore = untracked
 [submodule "iedit"]
 	path = lib/iedit
 	url = git@github.com:victorhge/iedit.git
-	ignore = dirty
+	ignore = untracked
 [submodule "ivy"]
 	path = lib/ivy
 	url = git@github.com:abo-abo/swiper.git
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = git@github.com:JuliaEditorSupport/julia-emacs.git
-	ignore = dirty
+	ignore = untracked
 [submodule "ledger-mode"]
 	path = lib/ledger-mode
 	url = git@github.com:ledger/ledger-mode.git
-	ignore = dirty
+	ignore = untracked
 [submodule "linum-relative"]
 	path = lib/linum-relative
 	url = git@github.com:coldnew/linum-relative.git
-	ignore = dirty
+	ignore = untracked
 [submodule "lispy"]
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
-	ignore = dirty
+	ignore = untracked
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
@@ -128,37 +127,37 @@
 [submodule "multiple-cursors"]
 	path = lib/multiple-cursors
 	url = git@github.com:magnars/multiple-cursors.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "notmuch"]
 	path = lib/notmuch
 	url = https://git.notmuchmail.org/git/notmuch
-	ignore = dirty
+	ignore = untracked
 [submodule "org-journal"]
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git
 [submodule "org-ref"]
 	path = lib/org-ref
 	url = git@github.com:jkitchin/org-ref.git
-	ignore = dirty
+	ignore = untracked
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
 [submodule "parsebib"]
 	path = lib/parsebib
 	url = git@github.com:joostkremers/parsebib.git
-	ignore = dirty
+	ignore = untracked
 [submodule "pdf-tools"]
 	path = lib/pdf-tools
 	url = git@github.com:politza/pdf-tools.git
-	ignore = dirty
+	ignore = untracked
 [submodule "powerline"]
 	path = lib/powerline
 	url = git@github.com:milkypostman/powerline.git
-	ignore = dirty
+	ignore = untracked
 [submodule "s"]
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "spaceline"]
 	path = lib/spaceline
 	url = git@github.com:TheBB/spaceline.git
@@ -168,22 +167,22 @@
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
-	ignore = dirty
+	ignore = untracked
 [submodule "use-package"]
 	path = lib/use-package
 	url = git@github.com:jwiegley/use-package.git
-	ignore = dirty
+	ignore = untracked
 [submodule "which-key"]
 	path = lib/which-key
 	url = git@github.com:justbur/emacs-which-key.git
-	ignore = dirty
+	ignore = untracked
 [submodule "with-editor"]
 	path = lib/with-editor
 	url = git@github.com:magit/with-editor.git
 [submodule "spacemacs-theme"]
 	path = lib/spacemacs-theme
 	url = git@github.com:nashamri/spacemacs-theme.git
-	ignore = dirty
+	ignore = untracked
 [submodule "color-theme-sanityinc-tomorrow"]
 	path = lib/color-theme-sanityinc-tomorrow
 	url = git@github.com:purcell/color-theme-sanityinc-tomorrow.git
