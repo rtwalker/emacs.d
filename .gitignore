@@ -4,3 +4,8 @@
 /elpa
 /var
 *.el~
+/auto-save-list
+/backups
+history
+places
+recentf
