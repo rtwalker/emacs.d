@@ -199,3 +199,6 @@
 [submodule "ox-hugo"]
 	path = lib/ox-hugo
 	url = git@github.com:kaushalmodi/ox-hugo.git
+[submodule "sword-to-org"]
+	path = lib/sword-to-org
+	url = https://github.com/alphapapa/sword-to-org.git
