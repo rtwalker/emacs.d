@@ -193,3 +193,6 @@
 [submodule "org-journal"]
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git
+[submodule "ox-hugo"]
+	path = lib/ox-hugo
+	url = git@github.com:kaushalmodi/ox-hugo.git
