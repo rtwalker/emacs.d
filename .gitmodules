@@ -187,6 +187,7 @@
 [submodule "color-theme-sanityinc-tomorrow"]
 	path = lib/color-theme-sanityinc-tomorrow
 	url = git@github.com:purcell/color-theme-sanityinc-tomorrow.git
+	ignore = untracked
 [submodule "color-theme-sanityinc-solarized"]
 	path = lib/color-theme-sanityinc-solarized
 	url = git@github.com:purcell/color-theme-sanityinc-solarized.git
