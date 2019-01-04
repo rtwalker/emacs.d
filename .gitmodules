@@ -132,10 +132,6 @@
 	path = lib/notmuch
 	url = https://git.notmuchmail.org/git/notmuch
 	ignore = untracked
-[submodule "org-journal"]
-	path = lib/org-journal
-	url = git@github.com:bastibe/org-journal.git
-	ignore = untracked
 [submodule "org-ref"]
 	path = lib/org-ref
 	url = git@github.com:jkitchin/org-ref.git
