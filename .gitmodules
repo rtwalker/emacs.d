@@ -187,12 +187,15 @@
 [submodule "color-theme-sanityinc-solarized"]
 	path = lib/color-theme-sanityinc-solarized
 	url = git@github.com:purcell/color-theme-sanityinc-solarized.git
+	ignore = untracked
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = git@github.com:emacs-evil/evil-surround.git
+	ignore = untracked
 [submodule "org-journal"]
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git
+	ignore = untracked
 [submodule "ox-hugo"]
 	path = lib/ox-hugo
 	url = git@github.com:kaushalmodi/ox-hugo.git
