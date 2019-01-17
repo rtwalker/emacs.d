@@ -70,6 +70,9 @@
   :config
   (global-company-mode 1))
 
+(use-package counsel-projectile
+  :config (counsel-projectile-mode))
+
 (use-package dash
   :config (dash-enable-font-lock))
 
@@ -340,6 +343,12 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
   (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left))
+
+(use-package projectile
+  :config
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))
 
 (use-package recentf
   :demand t
