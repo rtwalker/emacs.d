@@ -202,3 +202,11 @@
 [submodule "sword-to-org"]
 	path = lib/sword-to-org
 	url = https://github.com/alphapapa/sword-to-org.git
+[submodule "projectile"]
+	path = lib/projectile
+	url = git@github.com:bbatsov/projectile.git
+	ignore = untracked
+[submodule "counsel-projectile"]
+	path = lib/counsel-projectile
+	url = git@github.com:ericdanan/counsel-projectile.git
+	ignore = untracked
