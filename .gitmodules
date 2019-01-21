@@ -213,3 +213,6 @@
 [submodule "dumb-jump"]
 	path = lib/dumb-jump
 	url = git@github.com:jacktasia/dumb-jump.git
+[submodule "use-package-hydra"]
+	path = lib/use-package-hydra
+	url = git@gitlab.com:to1ne/use-package-hydra.git
