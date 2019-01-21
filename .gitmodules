@@ -216,3 +216,6 @@
 [submodule "use-package-hydra"]
 	path = lib/use-package-hydra
 	url = git@gitlab.com:to1ne/use-package-hydra.git
+[submodule "ag"]
+	path = lib/ag
+	url = git@github.com:Wilfred/ag.el.git
