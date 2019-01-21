@@ -276,7 +276,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package magit
   :defer t
-  :bind (("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status)
+         ("C-x M-g" . magit-dispatch-popup))
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
@@ -311,12 +312,12 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . emacs))))
 
-(use-package org-journal
-  :custom
-  (org-journal-dir "~/Dropbox/org/journal/")
-  (org-journal-enable-encryption t)
-  :hook
-  (auto-fill-mode flyspell-mode))
+;(use-package org-journal
+;  :custom
+;  (org-journal-dir "~/Dropbox/org/journal/")
+;  (org-journal-enable-encryption t)
+;  :hook
+;  (auto-fill-mode flyspell-mode))
 
 (use-package org-ref
   :custom
