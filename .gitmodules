@@ -210,3 +210,6 @@
 	path = lib/counsel-projectile
 	url = git@github.com:ericdanan/counsel-projectile.git
 	ignore = untracked
+[submodule "dumb-jump"]
+	path = lib/dumb-jump
+	url = git@github.com:jacktasia/dumb-jump.git
