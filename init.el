@@ -68,6 +68,8 @@
   :custom
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
+(use-package ag)
+
 (use-package company
   :config
   (global-company-mode 1))
@@ -359,6 +361,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
    (pdf-tools-install)
    (add-hook 'pdf-view-mode-hook (lambda () (linum-mode -1) (linum-relative-mode -1))))
 
+(use-package popup)
 
 (use-package prog-mode
   :config (global-prettify-symbols-mode)
