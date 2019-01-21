@@ -70,6 +70,13 @@
 
 (use-package ag)
 
+(use-package autorevert
+  :custom
+  (global-auto-revert-non-file-buffers t)
+  (auto-revert-verbose nil)
+  :config
+  (global-auto-revert-mode))
+
 (use-package company
   :config
   (global-company-mode 1))
@@ -88,8 +95,7 @@
 
 (use-package dired
   :defer t
-  :config (setq dired-listing-switches "-alh")
-  :hook auto-revert-mode)
+  :config (setq dired-listing-switches "-alh"))
 
 (use-package dumb-jump
   :bind (("M-g o" . dumb-jump-go-other-window)
