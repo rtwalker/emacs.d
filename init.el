@@ -57,6 +57,8 @@
 (use-package server
   :config (or (server-running-p) (server-mode)))
 
+(use-package use-package-hydra)
+
 
 ;;; Long tail
 
