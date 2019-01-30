@@ -315,6 +315,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :config (setq Man-width 80))
 
+(use-package notmuch)
+
 (use-package org
   :bind
   (("C-c l" . org-store-link)
