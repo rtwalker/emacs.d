@@ -43,6 +43,10 @@
 	path = lib/company
 	url = git@github.com:company-mode/company-mode.git
 	ignore = untracked
+[submodule "company-math"]
+	path = lib/company-math
+	url = git@github.com:vspinu/company-math.git
+	ignore = untracked
 [submodule "counsel-projectile"]
 	path = lib/counsel-projectile
 	url = git@github.com:ericdanan/counsel-projectile.git
