@@ -78,6 +78,7 @@
 [submodule "evil-ledger"]
 	path = lib/evil-ledger
 	url = git@github.com:atheriel/evil-ledger.git
+	ignore = untracked
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = git@github.com:emacs-evil/evil-surround.git
