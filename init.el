@@ -81,6 +81,11 @@
   :config
   (global-company-mode 1))
 
+(use-package company-math                                                                                                                          
+  :config                                                                                                                                          
+  (add-to-list 'company-backends 'company-math-symbols-latex)                                                                                      
+  (setq company-math-allow-latex-symbols-in-faces t))
+
 (use-package counsel-projectile
   :config (counsel-projectile-mode))
 
