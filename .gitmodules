@@ -155,6 +155,10 @@
 [submodule "magit-popup"]
 	path = lib/magit-popup
 	url = git@github.com:magit/magit-popup.git
+[submodule "math-symbol-lists"]
+	path = lib/math-symbol-lists
+	url = git@github.com:vspinu/math-symbol-lists.git
+	ignore = untracked
 [submodule "multiple-cursors"]
 	path = lib/multiple-cursors
 	url = git@github.com:magnars/multiple-cursors.el.git
