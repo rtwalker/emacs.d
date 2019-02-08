@@ -326,6 +326,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :config (setq Man-width 80))
 
+(use-package markdown-mode
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)))
+
 (use-package notmuch)
 
 (use-package org
