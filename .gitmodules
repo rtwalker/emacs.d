@@ -181,6 +181,13 @@
 	build-step = make sphinx-texinfo
 	build-step = borg-makeinfo
 	ignore = untracked
+[submodule "org"]
+	path = lib/org
+	url = https://code.orgmode.org/bzg/org-mode.git
+	build-step = make
+	load-path = lisp
+	load-path = contrib/lisp
+	info-path = doc
 [submodule "org-journal"]
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git
