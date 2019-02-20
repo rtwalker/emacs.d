@@ -62,6 +62,13 @@
 
 ;;; Long tail
 
+(use-package ace-link
+  :bind
+    (:map org-mode-map
+          ("M-O" . ace-link-org))
+  :config
+  (ace-link-setup-default))
+
 (use-package ace-window
   :bind
   ("M-o" . 'ace-window)
