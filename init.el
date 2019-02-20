@@ -70,6 +70,50 @@
 
 (use-package ag)
 
+;; borrowed from jabranham's init.el as a starting point
+;; auctex
+(use-package tex-site
+  ;; AuCTeX is better than the built in tex mode; let's use it.
+  :mode ("\\.tex\\'" . TeX-latex-mode)
+  :custom
+  (TeX-lisp-directory (expand-file-name "auctex/" borg-drone-directory))
+  (TeX-data-directory (expand-file-name "auctex/" borg-drone-directory))
+  (TeX-auto-save t)
+  (TeX-electric-sub-and-superscript t)
+  (TeX-parse-self t)
+  (reftex-plug-into-AUCTeX t)
+  (TeX-source-correlate-mode t)
+  (TeX-clean-confirm nil)
+  ;; TeX-command-list by default contains a bunch of stuff I'll never
+  ;; use. I use latexmk, xelatexmk, and View.  That's pretty much it.
+  ;; Maybe one day I'll add "clean" back to the list.
+  (TeX-command-list
+   '(("latexmk" "latexmk -synctex=1 -quiet -pdf %s"
+      TeX-run-compile nil t :help "Process file with latexmk")
+     ("View" "%V" TeX-run-discard-or-function nil t :help "Run Viewer")
+     ("xelatexmk" "latexmk -synctex=1 -quiet -xelatex %s"
+      TeX-run-compile nil t :help "Process file with xelatexmk")
+     ("Clean" "TeX-clean" TeX-run-function nil t
+      :help "Delete generated intermediate files")
+     ("Clean All" "(TeX-clean t)" TeX-run-function nil t
+      :help "Delete generated intermediate and output files")))
+  :hook
+  (LaTeX-mode . LaTeX-math-mode)
+  (LaTeX-mode . reftex-mode)
+  (LaTeX-mode . TeX-PDF-mode)
+  :init
+  (use-package tex-mode)
+  :config
+  (setq-default TeX-command-default "latexmk")
+  ;; revert pdf from file after compilation finishes
+  (add-hook 'TeX-after-compilation-finished-functions #'TeX-revert-document-buffer)
+  (use-package latex
+    :bind
+    (:map LaTeX-mode-map
+          ("M-p" . outline-previous-visible-heading)
+          ("M-n" . outline-next-visible-heading)
+          ("<backtab>" . org-cycle))))
+
 (use-package autorevert
   :custom
   (global-auto-revert-non-file-buffers t)
