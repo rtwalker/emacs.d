@@ -99,6 +99,10 @@
 	path = lib/flycheck
 	url = git@github.com:flycheck/flycheck.git
 	ignore = untracked
+[submodule "forge"]
+	path = lib/forge
+	url = git@github.com:magit/forge.git
+	ignore = untracked
 [submodule "general"]
 	path = lib/general
 	url = git@github.com:noctuid/general.el.git
