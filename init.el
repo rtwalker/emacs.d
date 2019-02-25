@@ -108,6 +108,7 @@
   (LaTeX-mode . LaTeX-math-mode)
   (LaTeX-mode . reftex-mode)
   (LaTeX-mode . TeX-PDF-mode)
+  (LaTeX-mode . cdlatex-mode)
   :init
   (use-package tex-mode)
   :config
