@@ -415,12 +415,14 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . emacs))))
 
-;(use-package org-journal
-;  :custom
-;  (org-journal-dir "~/Dropbox/org/journal/")
-;  (org-journal-enable-encryption t)
-;  :hook
-;  (auto-fill-mode flyspell-mode))
+(use-package org-journal
+  :custom
+  (org-journal-dir "~/Dropbox/org/journal/")
+  (org-journal-enable-encryption t)
+  :hook
+  (auto-fill-mode flyspell-mode))
+
+(use-package org-noter)
 
 (use-package org-ref
   :custom
