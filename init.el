@@ -473,6 +473,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package simple
   :config (column-number-mode))
 
+(use-package slime
+  :custom
+  (inferior-lisp-program "/usr/local/bin/sbcl")
+  (slime-contribs '(slime-fancy)))
+
 (use-package spaceline
   :config (spaceline-emacs-theme))
 

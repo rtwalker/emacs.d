@@ -155,6 +155,10 @@
 	path = lib/hydra
 	url = git@github.com:abo-abo/hydra.git
 	ignore = untracked
+[submodule "hyperspec"]
+	path = lib/hyperspec
+	url = git@github.com:emacsorphanage/hyperspec.git
+	ignore = untracked
 [submodule "iedit"]
 	path = lib/iedit
 	url = git@github.com:victorhge/iedit.git
@@ -259,6 +263,10 @@
 [submodule "s"]
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
+	ignore = untracked
+[submodule "slime"]
+	path = lib/slime
+	url = git@github.com:slime/slime.git
 	ignore = untracked
 [submodule "spaceline"]
 	path = lib/spaceline
