@@ -267,7 +267,7 @@
 [submodule "slime"]
 	path = lib/slime
 	url = git@github.com:slime/slime.git
-	ignore = untracked
+	ignore = dirty
 [submodule "spaceline"]
 	path = lib/spaceline
 	url = git@github.com:TheBB/spaceline.git
