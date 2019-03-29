@@ -11,6 +11,7 @@
 [submodule "ag"]
 	path = lib/ag
 	url = git@github.com:Wilfred/ag.el.git
+	ignore = untracked
 [submodule "alert"]
 	path = lib/alert
 	url = git@github.com:jwiegley/alert.git
@@ -252,6 +253,7 @@
 [submodule "popup"]
 	path = lib/popup
 	url = git@github.com:auto-complete/popup-el.git
+	ignore = untracked
 [submodule "powerline"]
 	path = lib/powerline
 	url = git@github.com:milkypostman/powerline.git
@@ -278,6 +280,7 @@
 [submodule "sword-to-org"]
 	path = lib/sword-to-org
 	url = https://github.com/alphapapa/sword-to-org.git
+	ignore = untracked
 [submodule "tablist"]
 	path = lib/tablist
 	url = git@github.com:politza/tablist.git
@@ -296,6 +299,7 @@
 [submodule "use-package-hydra"]
 	path = lib/use-package-hydra
 	url = git@gitlab.com:to1ne/use-package-hydra.git
+	ignore = untracked
 [submodule "which-key"]
 	path = lib/which-key
 	url = git@github.com:justbur/emacs-which-key.git
