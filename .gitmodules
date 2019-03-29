@@ -44,6 +44,10 @@
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
+[submodule "calfw"]
+	path = lib/calfw
+	url = git@github.com:kiwanami/emacs-calfw.git
+	ignore = untracked
 [submodule "cdlatex"]
 	path = lib/cdlatex
 	url = git@github.com:cdominik/cdlatex.git
