@@ -88,6 +88,10 @@
 	path = lib/dumb-jump
 	url = git@github.com:jacktasia/dumb-jump.git
 	ignore = untracked
+[submodule "elfeed"]
+	path = lib/elfeed
+	url = git@github.com:skeeto/elfeed.git
+	ignore = untracked
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git

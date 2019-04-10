@@ -175,6 +175,8 @@
   :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
 
+(use-package elfeed)
+
 (use-package epkg
   :defer t
   :bind
