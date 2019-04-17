@@ -269,10 +269,6 @@
 	path = lib/popup
 	url = git@github.com:auto-complete/popup-el.git
 	ignore = untracked
-[submodule "powerline"]
-	path = lib/powerline
-	url = git@github.com:milkypostman/powerline.git
-	ignore = untracked
 [submodule "projectile"]
 	path = lib/projectile
 	url = git@github.com:bbatsov/projectile.git
@@ -285,9 +281,6 @@
 	path = lib/slime
 	url = git@github.com:slime/slime.git
 	ignore = dirty
-[submodule "spaceline"]
-	path = lib/spaceline
-	url = git@github.com:TheBB/spaceline.git
 [submodule "spacemacs-theme"]
 	path = lib/spacemacs-theme
 	url = git@github.com:nashamri/spacemacs-theme.git

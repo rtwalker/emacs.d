@@ -394,6 +394,12 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package moody
+  :config
+  (setq x-underline-at-descent-line t)
+  (moody-replace-mode-line-buffer-identification)
+  (moody-replace-vc-mode))
+
 (use-package notmuch)
 
 (use-package org
@@ -483,8 +489,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (inferior-lisp-program "/usr/local/bin/sbcl")
   (slime-contribs '(slime-fancy)))
 
-(use-package spaceline
-  :config (spaceline-emacs-theme))
+;(use-package spaceline
+;  :config (spaceline-emacs-theme))
 
 (progn ;    `text-mode'
   (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
