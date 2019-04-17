@@ -18,8 +18,7 @@
   (setq ring-bell-function #'ignore)
   (setq-default truncate-lines t)
   (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'super)
-  (add-to-list 'exec-path "/usr/local/bin"))
+  (setq mac-option-modifier 'super))
 
 (progn ;    `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
@@ -321,6 +320,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package evil-surround
   :config (global-evil-surround-mode 1))
+
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac))
+  :config (exec-path-from-shell-initialize))
 
 (use-package files
   :config
