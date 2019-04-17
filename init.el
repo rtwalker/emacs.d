@@ -127,6 +127,10 @@
   :config
   (global-auto-revert-mode))
 
+(use-package calfw
+  :config
+  (use-package calfw-org))
+
 (use-package company
   :config
   (global-company-mode 1))
