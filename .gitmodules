@@ -211,6 +211,9 @@
 	path = lib/math-symbol-lists
 	url = git@github.com:vspinu/math-symbol-lists.git
 	ignore = untracked
+[submodule "moody"]
+	path = lib/moody
+	url = git@github.com:tarsius/moody.git
 [submodule "multiple-cursors"]
 	path = lib/multiple-cursors
 	url = git@github.com:magnars/multiple-cursors.el.git
