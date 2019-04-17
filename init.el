@@ -50,8 +50,7 @@
 (use-package custom
   :no-require t
   :config
-  (setq custom-file null-device)
-  (set-face-attribute 'default nil :family "Hack"))
+  (setq custom-file null-device))
 
 (use-package server
   :config (or (server-running-p) (server-mode)))
@@ -324,6 +323,18 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package exec-path-from-shell
   :if (memq window-system '(mac))
   :config (exec-path-from-shell-initialize))
+
+(use-package faces
+  :config
+  (set-face-attribute 'default nil :family "Hack")
+  (load-theme 'tsdh-light)
+  (let ((line (face-attribute 'mode-line :underline)))
+    (set-face-attribute 'mode-line          nil :overline   line)
+    (set-face-attribute 'mode-line-inactive nil :overline   line)
+    (set-face-attribute 'mode-line-inactive nil :underline  line)
+    (set-face-attribute 'mode-line          nil :box        nil)
+    (set-face-attribute 'mode-line-inactive nil :box        nil)
+    (set-face-attribute 'mode-line-inactive nil :background "#e3e3e5")))
 
 (use-package files
   :config
