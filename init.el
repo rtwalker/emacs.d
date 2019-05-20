@@ -328,6 +328,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :if (memq window-system '(mac))
   :config (exec-path-from-shell-initialize))
 
+(use-package eyebrowse
+  :config (eyebrowse-mode t))
+
 (use-package faces
   :config
   (set-face-attribute 'default nil :family "Hack")

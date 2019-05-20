@@ -127,6 +127,10 @@
 	path = lib/exec-path-from-shell
 	url = git@github.com:purcell/exec-path-from-shell.git
 	ignore = untracked
+[submodule "eyebrowse"]
+	path = lib/eyebrowse
+	url = git@github.com:wasamasa/eyebrowse.git
+	ignore = untracked
 [submodule "f"]
 	path = lib/f
 	url = git@github.com:rejeep/f.el.git
