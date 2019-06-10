@@ -309,6 +309,13 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package evil
   :config (evil-mode 1))
 
+(use-package evil-collection
+  :after evil
+  :init
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-collection-init))
+
 (use-package evil-ledger
   :after ledger-mode
   :custom

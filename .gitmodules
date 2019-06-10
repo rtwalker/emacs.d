@@ -107,6 +107,10 @@
 	path = lib/evil
 	url = git@github.com:emacs-evil/evil.git
 	ignore = untracked
+[submodule "evil-collection"]
+	path = lib/evil-collection
+	url = git@github.com:emacs-evil/evil-collection.git
+	ignore = untracked
 [submodule "evil-ledger"]
 	path = lib/evil-ledger
 	url = git@github.com:atheriel/evil-ledger.git
