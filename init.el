@@ -158,7 +158,10 @@
 
 (use-package dired
   :defer t
-  :config (setq dired-listing-switches "-alh"))
+  :custom
+  (dired-use-ls-dired t)
+  (insert-directory-program "/usr/local/bin/gls")
+  (dired-listing-switches "-alh --group-directories-first"))
 
 (use-package dumb-jump
   :bind (("M-g o" . dumb-jump-go-other-window)
