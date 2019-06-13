@@ -300,6 +300,7 @@
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
+	info-path = docs
 	ignore = untracked
 [submodule "treepy"]
 	path = lib/treepy
