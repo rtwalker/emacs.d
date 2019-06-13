@@ -127,6 +127,10 @@
   :config
   (global-auto-revert-mode))
 
+(use-package calc
+  :defer t
+  :bind ("M-+" . calc))
+
 (use-package calfw
   :config
   (use-package calfw-org))
