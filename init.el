@@ -379,14 +379,14 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :custom
   (ledger-reports
    (quote
-    (("Assets" "/usr/local/bin/ledger -f ledger.ldg balance Assets -V --real")
-     ("TotalAssets" "/usr/local/bin/ledger -f ledger.ldg balance Assets")
-     ("BudgetableAssets" "/usr/local/bin/ledger -f ledger.ldg balance --limit 'account=~/Assets:(Cash|Checking|Gift Cards)/' -V")
-     ("Budget" "/usr/local/bin/ledger -f ledger-budget.ldg balance ^Budget --empty --no-total")
-     ("CheckingBalances" "/usr/local/bin/ledger -f ledger.ldg balance Checking Savings --real")
-     ("CheckingBalancesCleared" "/usr/local/bin/ledger -f ledger.ldg balance Checking Savings --cleared --real")
-     ("CreditCardBalances" "/usr/local/bin/ledger -f ledger.ldg balance Liabilities --real")
-     ("CreditCardBalancesCleared" "/usr/local/bin/ledger -f ledger.ldg balance Liabilities --cleared --real")
+    (("Assets" "/usr/local/bin/hledger -f all.ldg balance Assets -V --real")
+     ("TotalAssets" "/usr/local/bin/hledger -f all.ldg balance Assets")
+     ("BudgetableAssets" "/usr/local/bin/hledger -f all.ldg balance --limit 'account=~/Assets:(Cash|Checking|Gift Cards)/' -V")
+     ("Budget" "/usr/local/bin/hledger -f ledger-budget.ldg balance ^Budget --empty --no-total")
+     ("CheckingBalances" "/usr/local/bin/hledger -f all.ldg balance Checking Savings --real")
+     ("CheckingBalancesCleared" "/usr/local/bin/hledger -f all.ldg balance Checking Savings --cleared --real")
+     ("CreditCardBalances" "/usr/local/bin/hledger -f all.ldg balance Liabilities --real")
+     ("CreditCardBalancesCleared" "/usr/local/bin/hledger -f all.ldg balance Liabilities --cleared --real")
      ("bal" "%(binary) -f %(ledger-file) bal")
      ("reg" "%(binary) -f %(ledger-file) reg")
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
