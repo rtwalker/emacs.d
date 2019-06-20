@@ -331,6 +331,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
         (ess-eval-region beg end vis)))))
 
 (use-package evil
+  :custom
+  (evil-mode-line-format nil)
+  (evil-insert-state-message nil)
   :config (evil-mode 1))
 
 (use-package evil-collection
@@ -447,7 +450,29 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq x-underline-at-descent-line t)
   (moody-replace-mode-line-buffer-identification)
-  (moody-replace-vc-mode))
+
+  (defvar rtw/moody-vc-mode
+  '(:eval (moody-tab (replace-regexp-in-string "Git[:-]" "\xf841 " (substring vc-mode 1)) nil 'up)))
+  (put 'rtw/moody-vc-mode 'risky-local-variable t)
+  (make-variable-buffer-local 'rtw/moody-vc-mode)
+  (moody-replace-element '(vc-mode vc-mode) '(vc-mode rtw/moody-vc-mode))
+
+  (defvar rtw/moody-evil-state
+    '(:eval (when (bound-and-true-p evil-local-mode)
+              (let ((color
+                    (cond ((evil-normal-state-p)   "#cce6f1")
+                          ((evil-emacs-state-p)    "#f1a2a4")
+                          ((evil-insert-state-p)   "#cae2ca")
+                          ((evil-motion-state-p)   "#e0c180")
+                          ((evil-visual-state-p)   "#edd3ec")
+                          ((evil-replace-state-p)  "#cce6f1")
+                          ((evil-operator-state-p) "#cce6f1"))))
+                (moody-wrap-tab-with-bg-color
+                 (upcase (symbol-name evil-state))
+                 nil 'up 'tab nil nil color)))))
+  (put 'rtw/moody-evil-state 'risky-local-variable t)
+  (make-variable-buffer-local 'rtw/moody-evil-state)
+  (moody-replace-element 'mode-line-front-space 'rtw/moody-evil-state))
 
 (use-package notmuch)
 
