@@ -73,6 +73,8 @@
 
 (use-package ag)
 
+(use-package all-the-icons)
+
 ;; borrowed from jabranham's init.el as a starting point
 ;; auctex
 (use-package tex-site

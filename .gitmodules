@@ -16,6 +16,10 @@
 	path = lib/alert
 	url = git@github.com:jwiegley/alert.git
 	ignore = untracked
+[submodule "all-the-icons"]
+	path = lib/all-the-icons
+	url = git@github.com:domtronn/all-the-icons.el.git
+	ignore = untracked
 [submodule "async"]
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git
@@ -215,6 +219,10 @@
 [submodule "math-symbol-lists"]
 	path = lib/math-symbol-lists
 	url = git@github.com:vspinu/math-symbol-lists.git
+	ignore = untracked
+[submodule "memoize"]
+	path = lib/memoize
+	url = git@github.com:skeeto/emacs-memoize.git
 	ignore = untracked
 [submodule "moody"]
 	path = lib/moody
