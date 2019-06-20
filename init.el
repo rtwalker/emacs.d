@@ -199,13 +199,14 @@
   :defer t
   :custom
   (eshell-prompt-header "\n┌─ ")
-  (eshell-prompt-regexp "└─> ")
-  (eshell-prompt-string "└─> ")
+  (eshell-prompt-regexp "└─>> ")
+  (eshell-prompt-string "└─>> ")
   (eshell-prompt-function 'esh-prompt-func)
   :config
   (defun esh-prompt-func ()
     "Build `eshell-prompt-function'"
     (concat eshell-prompt-header
+            "\xf115 "
             (abbreviate-file-name (eshell/pwd))
             "\n"
             eshell-prompt-string)))
