@@ -163,6 +163,10 @@
   (insert-directory-program "/usr/local/bin/gls")
   (dired-listing-switches "-alh --group-directories-first"))
 
+(use-package display-line-numbers
+  :custom
+  (display-line-numbers 'relative))
+
 (use-package dumb-jump
   :bind (("M-g o" . dumb-jump-go-other-window)
          ("M-g j" . dumb-jump-go)
@@ -412,12 +416,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
      ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
   :mode "\\.ldg\\'")
-
-(use-package linum-relative
-  :custom
-  (linum-relative-current-symbol "")
-  :config
-  (linum-relative-global-mode 1))
 
 (use-package lisp-mode
   :config

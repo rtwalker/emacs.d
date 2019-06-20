@@ -199,10 +199,6 @@
 	path = lib/ledger-mode
 	url = git@github.com:ledger/ledger-mode.git
 	ignore = untracked
-[submodule "linum-relative"]
-	path = lib/linum-relative
-	url = git@github.com:coldnew/linum-relative.git
-	ignore = untracked
 [submodule "lispy"]
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
