@@ -223,6 +223,7 @@
 [submodule "moody"]
 	path = lib/moody
 	url = git@github.com:tarsius/moody.git
+	remote = "rtwalker git@github.com:rtwalker/moody.git"
 [submodule "multiple-cursors"]
 	path = lib/multiple-cursors
 	url = git@github.com:magnars/multiple-cursors.el.git
