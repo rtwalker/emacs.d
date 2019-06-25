@@ -394,6 +394,46 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
+(use-package general
+  :config
+  (general-create-definer space :prefix "SPC")
+  (general-create-definer space-b :prefix "SPC b")
+  (general-create-definer space-o :prefix "SPC o")
+
+  (space
+   :states 'normal
+   "SPC" '(counsel-M-x :wk "M-x")
+   "f" '(counsel-find-file :wk "find file")
+   "g" 'magit-status
+   "p" 'projectile-command-map
+   "w" 'ace-window)
+
+  (defun rtw/switch-to-home ()
+    (interactive)
+    (switch-to-buffer (get-buffer "*GNU Emacs*")))
+  (defun rtw/switch-to-scratch ()
+    (interactive)
+    (switch-to-buffer (get-buffer-create "*scratch*")))
+ (space-b
+   :states 'normal
+   "b" 'ivy-switch-buffer
+   "c" 'delete-frame
+   "d" 'delete-window
+   "f" 'delete-other-windows
+   "k" 'kill-buffer
+   "h" 'split-window-horizontally
+   "l" 'list-buffers
+   "n" 'make-frame-command
+  ;"h" '(rtw/switch-to-home :wk "home")
+   "s" '(rtw/switch-to-scratch :wk "*scratch*")
+   "v" 'split-window-vertically)
+
+  (space-o
+   :states 'normal
+   "a" 'org-agenda
+   "c" 'org-capture
+   "j" 'org-journal-new-entry))
+
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
@@ -597,7 +637,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package which-key
   :custom
   (which-key-allow-evil-operators 1)
-  (which-key-idle-delay 0.5)
+  (which-key-idle-delay 0.1)
   :config
   (which-key-mode)
   (which-key-show-major-mode))
