@@ -74,7 +74,12 @@
 
 (use-package ag)
 
-(use-package all-the-icons)
+(use-package all-the-icons
+  :config
+  (add-to-list
+   'all-the-icons-mode-icon-alist
+   '(ledger-mode all-the-icons-faicon "money"
+                 :height 1.0 :v-adjust 0.0 :face all-the-icons-green)))
 
 ;; borrowed from jabranham's init.el as a starting point
 ;; auctex
