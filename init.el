@@ -501,7 +501,18 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package moody
   :config
   (setq x-underline-at-descent-line t)
-  (moody-replace-mode-line-buffer-identification)
+
+  (defvar rtw/moody-mode-line-buffer-identification
+    '(:eval (let ((icon
+                   (propertize (all-the-icons-icon-for-buffer)
+                               'display '(:raise 0.00)
+                               'font-lock-face '(:height 0.90 :family ,(all-the-icons-icon-family-for-buffer)))))
+            (moody-tab (concat icon "  "
+                               (format-mode-line (propertized-buffer-identification "%b")))
+                       20 'down))))
+  (put 'rtw/moody-mode-line-buffer-identification 'risky-local-variable t)
+  (make-variable-buffer-local 'rtw/moody-mode-line-buffer-identification)
+  (moody-replace-element 'mode-line-buffer-identification 'rtw/moody-mode-line-buffer-identification)
 
   (defvar rtw/moody-vc-mode
     '(:eval (moody-tab (replace-regexp-in-string "Git[:-]" "\xf841 " (substring vc-mode 1)) nil 'up)))
