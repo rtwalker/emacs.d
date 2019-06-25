@@ -450,7 +450,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (moody-replace-mode-line-buffer-identification)
 
   (defvar rtw/moody-vc-mode
-  '(:eval (moody-tab (replace-regexp-in-string "Git[:-]" "\xf841 " (substring vc-mode 1)) nil 'up)))
+    '(:eval (moody-tab (replace-regexp-in-string "Git[:-]" "\xf841 " (substring vc-mode 1)) nil 'up)))
   (put 'rtw/moody-vc-mode 'risky-local-variable t)
   (make-variable-buffer-local 'rtw/moody-vc-mode)
   (moody-replace-element '(vc-mode vc-mode) '(vc-mode rtw/moody-vc-mode))
@@ -465,7 +465,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
                           ((evil-visual-state-p)   "#edd3ec")
                           ((evil-replace-state-p)  "#cce6f1")
                           ((evil-operator-state-p) "#cce6f1"))))
-                (moody-wrap-tab-with-bg-color
+                (moody-wrap-bookend-with-bg-color
                  (upcase (symbol-name evil-state))
                  nil 'up 'tab nil nil color)))))
   (put 'rtw/moody-evil-state 'risky-local-variable t)
