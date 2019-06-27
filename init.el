@@ -126,7 +126,7 @@
   (global-auto-revert-non-file-buffers t)
   (auto-revert-verbose nil)
   :config
-  (global-auto-revert-mode))
+  (global-auto-revert-mode 1))
 
 (use-package calc
   :defer t
