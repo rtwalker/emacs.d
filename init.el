@@ -138,6 +138,12 @@
 
 (use-package company
   :config
+  (set-face-attribute 'company-tooltip nil :background "#e3e3e5" :foreground "#87888d")
+  (set-face-attribute 'company-tooltip-annotation nil :foreground "#a626a4")
+  (set-face-attribute 'company-scrollbar-fg nil :background "#383a42")
+  (set-face-attribute 'company-scrollbar-bg nil :background "#e3e3e5")
+  (set-face-attribute 'company-tooltip-common nil :foreground "#383a42")
+  (set-face-attribute 'company-tooltip-selection nil :background "#cce6f1")
   (global-company-mode 1))
 
 (use-package company-math                                                                                                                          
