@@ -454,6 +454,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package minions
+  :custom (minions-mode-line-lighter "&")
+  :config
+  (minions-mode))
+
 (use-package moody
   :config
   (setq x-underline-at-descent-line t)

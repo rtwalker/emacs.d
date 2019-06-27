@@ -220,6 +220,9 @@
 	path = lib/memoize
 	url = git@github.com:skeeto/emacs-memoize.git
 	ignore = untracked
+[submodule "minions"]
+	path = lib/minions
+	url = git@github.com:tarsius/minions.git
 [submodule "moody"]
 	path = lib/moody
 	url = git@github.com:tarsius/moody.git
