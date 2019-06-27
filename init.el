@@ -15,6 +15,7 @@
   (scroll-bar-mode 0)
   (tool-bar-mode 0)
   (blink-cursor-mode 0)
+  (global-hl-line-mode 1)
   (setq ring-bell-function #'ignore)
   (setq-default truncate-lines t)
   (setq mac-command-modifier 'meta)
@@ -165,7 +166,10 @@
 
 (use-package display-line-numbers
   :custom
-  (display-line-numbers 'relative))
+  (display-line-numbers 'relative)
+  :config
+  (set-face-attribute 'line-number-current-line nil :foreground "#836fff")
+  (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
 
 (use-package dumb-jump
   :bind (("M-g o" . dumb-jump-go-other-window)
