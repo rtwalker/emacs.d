@@ -174,7 +174,7 @@
   :custom
   (display-line-numbers 'relative)
   :config
-  (set-face-attribute 'line-number-current-line nil :foreground "#836fff")
+  (set-face-attribute 'line-number-current-line nil :foreground "#ee7621")
   (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
 
 (use-package dumb-jump
