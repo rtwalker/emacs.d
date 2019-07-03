@@ -132,6 +132,12 @@
   :defer t
   :bind ("M-+" . calc))
 
+(use-package calendar
+  :custom
+  (calendar-week-start-day 1)
+  :hook
+  (calendar-today-visible . calendar-mark-today))
+
 (use-package calfw
   :config
   (use-package calfw-org))
@@ -496,7 +502,12 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (make-variable-buffer-local 'rtw/moody-evil-state)
   (moody-replace-element 'mode-line-front-space 'rtw/moody-evil-state))
 
-(use-package notmuch)
+(use-package notmuch
+  :custom
+  (notmuch-search-oldest-first nil)
+  :config
+  (add-hook 'notmuch-hello-mode-hook
+            (lambda () (display-line-numbers-mode nil))))
 
 (use-package org
   :bind
