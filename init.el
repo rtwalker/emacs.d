@@ -132,6 +132,12 @@
   :defer t
   :bind ("M-+" . calc))
 
+(use-package calendar
+  :custom
+  (calendar-week-start-day 1)
+  :hook
+  (calendar-today-visible . calendar-mark-today))
+
 (use-package calfw
   :config
   (use-package calfw-org))
