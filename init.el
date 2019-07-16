@@ -510,35 +510,27 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq x-underline-at-descent-line t)
 
-  (defvar rtw/moody-mode-line-buffer-identification
-    '(:eval (let ((icon
-                   (propertize (all-the-icons-icon-for-buffer)
-                               'display '(:raise 0.00)
-                               'font-lock-face '(:height 0.90 :family ,(all-the-icons-icon-family-for-buffer)))))
-            (moody-tab (concat icon "  "
-                               (format-mode-line (propertized-buffer-identification "%b")))
-                       20 'down))))
-  (put 'rtw/moody-mode-line-buffer-identification 'risky-local-variable t)
-  (make-variable-buffer-local 'rtw/moody-mode-line-buffer-identification)
-  (moody-replace-element 'mode-line-buffer-identification 'rtw/moody-mode-line-buffer-identification)
+  (defun rtw/moody-mode-line-buffer-identification ()
+      (let ((icon
+             (propertize (all-the-icons-icon-for-buffer)
+                         'display '(:raise 0.00)
+                         'font-lock-face '(:height 0.90 :family ,(all-the-icons-icon-family-for-buffer)))))
+        (moody-tab (concat icon "  "
+                           (format-mode-line (propertized-buffer-identification "%b")))
+                   20 'down)))
 
-  (defvar rtw/moody-vc-mode
-    '(:eval (moody-tab (replace-regexp-in-string "Git[:-]" "\xf841 " (substring vc-mode 1)) nil 'up)))
-  (put 'rtw/moody-vc-mode 'risky-local-variable t)
-  (make-variable-buffer-local 'rtw/moody-vc-mode)
-  (moody-replace-element '(vc-mode vc-mode) '(vc-mode rtw/moody-vc-mode))
+  (defun rtw/moody-vc-mode ()
+    (when vc-mode
+    (moody-tab (replace-regexp-in-string "Git[:-]" "\xf841 " (substring vc-mode 1)) nil 'up)))
 
-  (defvar rtw/moody-org-clock
-    '(:eval (let ((clock (when (and (fboundp 'org-clocking-p)
-                                    (org-clocking-p))
-                           (org-clock-get-clock-string))))
-              (moody-tab clock nil 'up))))
-  (put 'rtw/moody-org-clock 'risky-local-variable t)
-  (make-variable-buffer-local 'rtw/moody-org-clock)
-  (moody-replace-element 'mode-line-end-spaces 'rtw/moody-org-clock)
+  (defun rtw/moody-org-clock ()
+    (when (and (fboundp 'org-clocking-p)
+               (org-clocking-p))
+      (let ((clock (org-clock-get-clock-string)))
+        (moody-tab clock nil 'up))))
   
-  (defvar rtw/moody-evil-state
-    '(:eval (when (bound-and-true-p evil-local-mode)
+  (defun rtw/moody-evil-state ()
+    (when (bound-and-true-p evil-local-mode)
               (let ((color
                     (cond ((evil-normal-state-p)   "#cce6f1")
                           ((evil-emacs-state-p)    "#f1a2a4")
@@ -549,10 +541,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
                           ((evil-operator-state-p) "#cce6f1"))))
                 (moody-wrap-bookend-with-bg-color
                  (upcase (symbol-name evil-state))
-                 nil 'up 'tab nil nil color)))))
-  (put 'rtw/moody-evil-state 'risky-local-variable t)
-  (make-variable-buffer-local 'rtw/moody-evil-state)
-  (moody-replace-element 'mode-line-front-space 'rtw/moody-evil-state))
+                 nil 'up 'tab nil nil color))))
 
 (use-package notmuch
   :custom
