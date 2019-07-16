@@ -556,6 +556,36 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
         (moody-wrap-bookend-with-bg-color
          " " 7 'up 'tab nil nil color 'right))))
 
+  ; from https://gitlab.com/jessieh/mood-line/blob/master/mood-line.el
+  (defun rtw/mode-line-format (left right)
+    "Return a string of `window-width' length containing LEFT and RIGHT, aligned respectively."
+    (let* ((left (format-mode-line left))
+          (right (format-mode-line right))
+          (reserve (length right)))
+      (when (and (display-graphic-p) (eq 'right (get-scroll-bar-mode)))
+        (setq reserve (- reserve 3)))
+      (concat
+       left
+       " "
+       (propertize
+        " " 'display `((space :align-to (- (+ right right-fringe right-margin) ,(+ reserve 0)))))
+       right)))
+
+
+  (setq-default mode-line-format
+                '((:eval
+                   (rtw/mood-line-format
+                    ;; Left
+                    '((:eval (rtw/moody-evil-state))
+                      (:eval (rtw/moody-mode-line-buffer-identification))
+                      (:eval (rtw/moody-vc-mode)))
+                    ;; Right
+                    '((:eval (rtw/moody-org-clock))
+                      minions-mode-line-modes
+                      (:eval (rtw/moody-evil-color)))))))
+
+  )
+
 (use-package notmuch
   :custom
   (notmuch-search-oldest-first nil)
