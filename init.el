@@ -525,6 +525,15 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (make-variable-buffer-local 'rtw/moody-vc-mode)
   (moody-replace-element '(vc-mode vc-mode) '(vc-mode rtw/moody-vc-mode))
 
+  (defvar rtw/moody-org-clock
+    '(:eval (let ((clock (when (and (fboundp 'org-clocking-p)
+                                    (org-clocking-p))
+                           (org-clock-get-clock-string))))
+              (moody-tab clock nil 'up))))
+  (put 'rtw/moody-org-clock 'risky-local-variable t)
+  (make-variable-buffer-local 'rtw/moody-org-clock)
+  (moody-replace-element 'mode-line-end-spaces 'rtw/moody-org-clock)
+  
   (defvar rtw/moody-evil-state
     '(:eval (when (bound-and-true-p evil-local-mode)
               (let ((color
