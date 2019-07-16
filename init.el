@@ -78,7 +78,10 @@
   :config
   (add-to-list
    'all-the-icons-mode-icon-alist
-   '(ledger-mode all-the-icons-faicon "money"
+   '(inferior-ess-r-mode all-the-icons-fileicon "R" :height 1.0 :face all-the-icons-lblue))
+  (add-to-list
+   'all-the-icons-mode-icon-alist
+   '(ledger-mode all-the-icons-faicon "usd"
                  :height 1.0 :v-adjust 0.0 :face all-the-icons-green)))
 
 ;; borrowed from jabranham's init.el as a starting point
