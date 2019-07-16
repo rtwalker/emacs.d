@@ -543,6 +543,19 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
                  (upcase (symbol-name evil-state))
                  nil 'up 'tab nil nil color))))
 
+  (defun rtw/moody-evil-color ()
+    (when (bound-and-true-p evil-local-mode)
+      (let ((color
+             (cond ((evil-normal-state-p)   "#cce6f1")
+                   ((evil-emacs-state-p)    "#f1a2a4")
+                   ((evil-insert-state-p)   "#cae2ca")
+                   ((evil-motion-state-p)   "#e0c180")
+                   ((evil-visual-state-p)   "#edd3ec")
+                   ((evil-replace-state-p)  "#cce6f1")
+                   ((evil-operator-state-p) "#cce6f1"))))
+        (moody-wrap-bookend-with-bg-color
+         " " 7 'up 'tab nil nil color 'right))))
+
 (use-package notmuch
   :custom
   (notmuch-search-oldest-first nil)
