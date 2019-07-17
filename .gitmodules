@@ -256,6 +256,10 @@
 	path = lib/org-noter
 	url = git@github.com:weirdNox/org-noter.git
 	ignore = untracked
+[submodule "org-pomodoro"]
+	path = lib/org-pomodoro
+	url = git@github.com:lolownia/org-pomodoro.git
+	ignore = untracked
 [submodule "org-ref"]
 	path = lib/org-ref
 	url = git@github.com:jkitchin/org-ref.git
