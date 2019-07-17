@@ -574,7 +574,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
   (setq-default mode-line-format
                 '((:eval
-                   (rtw/mood-line-format
+                   (rtw/mode-line-format
                     ;; Left
                     '((:eval (rtw/moody-evil-state))
                       (:eval (rtw/moody-mode-line-buffer-identification))
@@ -582,9 +582,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
                     ;; Right
                     '((:eval (rtw/moody-org-clock))
                       minions-mode-line-modes
-                      (:eval (rtw/moody-evil-color)))))))
-
-  )
+                      (:eval (rtw/moody-evil-color))))))))
 
 (use-package notmuch
   :custom
