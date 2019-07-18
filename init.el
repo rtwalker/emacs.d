@@ -409,6 +409,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (ivy-count-format "(%d/%d) "))
 
 (use-package ledger-mode
+  :mode "\\.ldg\\'"
+  :init
+  (unbind-key  "C-c C-f" ledger-mode-map)
   :custom
   (ledger-reports
    (quote
@@ -424,7 +427,15 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
      ("reg" "%(binary) -f %(ledger-file) reg")
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
      ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
-  :mode "\\.ldg\\'")
+  :config
+  (defun ledger-occur-uncleared ()
+    (interactive)
+    (apply 'ledger-occur '("[0-9][0-9][0-9][0-9][-/][0-9][0-9][-/][0-9][0-9] [^*]")))
+  :bind
+  (:map ledger-mode-map
+        ("C-c C-f C-u" . ledger-occur-uncleared)
+        ("C-c C-f C-f" . ledger-occur)
+  ))
 
 (use-package lisp-mode
   :config
