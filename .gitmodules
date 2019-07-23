@@ -248,6 +248,10 @@
 	load-path = lisp
 	load-path = contrib/lisp
 	info-path = doc
+[submodule "org-bullets"]
+	path = lib/org-bullets
+	url = git@github.com:emacsorphanage/org-bullets.git
+	ignore = untracked
 [submodule "org-journal"]
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git

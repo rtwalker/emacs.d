@@ -528,6 +528,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . emacs))))
 
+(use-package org-bullets
+  :hook org-mode
+  :custom
+  (org-bullets-bullet-list '("◉" "○")))
+
 (use-package org-journal
   :custom
   (org-journal-dir "~/Dropbox/org/journal/")
