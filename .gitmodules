@@ -298,6 +298,10 @@
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
 	ignore = untracked
+[submodule "shell-pop"]
+	path = lib/shell-pop
+	url = git@github.com:kyagi/shell-pop-el.git
+	ignore = untracked
 [submodule "slime"]
 	path = lib/slime
 	url = git@github.com:slime/slime.git

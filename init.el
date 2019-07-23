@@ -588,6 +588,13 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :when (version< "25" emacs-version)
   :config (save-place-mode))
 
+(use-package shell-pop
+  :custom
+  (shell-pop-shell-type '("eshell" "*eshell*" (lambda nil (eshell))))
+  (shell-pop-full-span t)
+  (shell-pop-universal-key "s-SPC")
+  (shell-pop-window-position "bottom"))
+
 (use-package simple
   :config (column-number-mode))
 
