@@ -199,6 +199,7 @@
 	path = lib/ledger-mode
 	url = git@github.com:ledger/ledger-mode.git
 	ignore = untracked
+	build-step = borg-makeinfo
 [submodule "lispy"]
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
