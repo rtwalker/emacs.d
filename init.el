@@ -394,6 +394,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
+(use-package gams-mode)
+
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
