@@ -602,7 +602,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package slime
   :custom
-  (inferior-lisp-program "/usr/local/bin/sbcl")
+  (inferior-lisp-program "/usr/local/bin/clisp")
   (slime-contribs '(slime-fancy)))
 
 ;(use-package spaceline
