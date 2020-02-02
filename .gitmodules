@@ -88,6 +88,10 @@
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
 	ignore = untracked
+[submodule "doom-themes"]
+	path = lib/doom-themes
+	url = git@github.com:hlissner/emacs-doom-themes.git
+	ignore = untracked
 [submodule "dumb-jump"]
 	path = lib/dumb-jump
 	url = git@github.com:jacktasia/dumb-jump.git
