@@ -100,6 +100,10 @@
 	path = lib/elfeed
 	url = git@github.com:skeeto/elfeed.git
 	ignore = untracked
+[submodule "elpy"]
+	path = lib/elpy
+	url = git@github.com:jorgenschaefer/elpy.git
+	ignore = untracked
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = git@github.com:skeeto/emacsql.git
@@ -179,6 +183,10 @@
 [submodule "helm-bibtex"]
 	path = lib/helm-bibtex
 	url = git@github.com:tmalsburg/helm-bibtex.git
+	ignore = untracked
+[submodule "highlight-indentation"]
+	path = lib/highlight-indentation
+	url = git@github.com:antonj/Highlight-Indentation-for-Emacs.git
 	ignore = untracked
 [submodule "htmlize"]
 	path = lib/htmlize
@@ -302,6 +310,22 @@
 [submodule "projectile"]
 	path = lib/projectile
 	url = git@github.com:bbatsov/projectile.git
+	ignore = untracked
+[submodule "pyenv-mode"]
+	path = lib/pyenv-mode
+	url = git@github.com:proofit404/pyenv-mode.git
+	ignore = untracked
+[submodule "pyenv-mode-auto"]
+	path = lib/pyenv-mode-auto
+	url = git@github.com:ssbb/pyenv-mode-auto.git
+	ignore = untracked
+[submodule "pythonic"]
+	path = lib/pythonic
+	url = git@github.com:proofit404/pythonic.git
+	ignore = untracked
+[submodule "pyvenv"]
+	path = lib/pyvenv
+	url = git@github.com:jorgenschaefer/pyvenv.git
 	ignore = untracked
 [submodule "s"]
 	path = lib/s
