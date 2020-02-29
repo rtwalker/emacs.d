@@ -179,6 +179,7 @@
 (use-package display-line-numbers
   :custom
   (display-line-numbers 'relative)
+  (display-line-numbers-width 4)
   :config
   (set-face-attribute 'line-number-current-line nil :foreground "#ee7621")
   (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
