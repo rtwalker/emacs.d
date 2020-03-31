@@ -173,6 +173,7 @@
   :defer t
   :custom
   (dired-use-ls-dired t)
+  (dired-dwim-target t)
   (insert-directory-program "/usr/local/bin/gls")
   (dired-listing-switches "-alh --group-directories-first"))
 
