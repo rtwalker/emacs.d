@@ -401,6 +401,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
+(use-package flyspell
+  :hook
+  (org-mode . flyspell-mode))
+
 (use-package gams-mode
   :custom
   (gams-system-directory "/Applications/GAMS29.1/")
@@ -549,9 +553,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package org-journal
   :custom
   (org-journal-dir "~/org/journal/")
-  (org-journal-enable-encryption t)
-  :hook
-  (auto-fill-mode flyspell-mode))
+  (org-journal-enable-encryption t))
 
 (use-package org-noter)
 
@@ -623,7 +625,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (shell-pop-window-position "bottom"))
 
 (use-package simple
-  :config (column-number-mode))
+  :config (column-number-mode)
+  :hook
+  (org-mode . auto-fill-mode))
 
 (use-package slime
   :custom
