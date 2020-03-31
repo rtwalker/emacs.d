@@ -401,7 +401,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
-(use-package gams-mode)
+(use-package gams-mode
+  :custom
+  (gams-system-directory "/Applications/GAMS29.1/")
+  (gams-docs-directory "/Applications/GAMS29.1/Resources/docs/"))
 
 (use-package help
   :defer t
