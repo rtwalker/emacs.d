@@ -591,17 +591,19 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
-(use-package pyenv-mode)
+(use-package pyenv-mode
+  :hook
+  (python-mode . pyenv-mode))
 
-(use-package pyenv-mode-auto)
+;(use-package pyenv-mode-auto
+;  :hook
+;  (python-mode . pyenv-mode-auto))
 
 (use-package python
   :custom
   (python-flymake-command '("flake8", "-"))
   (python-indent-guess-indent-offset-verbose nil)
-  (python-indent-offset 4)
-  :config
-  (pyenv-mode))
+  (python-indent-offset 4))
 
 (use-package recentf
   :demand t
