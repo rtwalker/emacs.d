@@ -577,8 +577,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
    (TeX-view-program-selection '((output-pdf "pdf-tools")) "Use pdf-tools to display pdfs from latex runs.")
    (TeX-view-program-list '(("pdf-tools" ("TeX-pdf-tools-sync-view") nil)))
    :config
-   (pdf-tools-install)
-   (add-hook 'pdf-view-mode-hook (lambda () (linum-mode -1) (linum-relative-mode -1))))
+   (pdf-tools-install))
 
 (use-package popup)
 
