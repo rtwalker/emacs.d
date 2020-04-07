@@ -233,6 +233,10 @@
 	path = lib/math-symbol-lists
 	url = git@github.com:vspinu/math-symbol-lists.git
 	ignore = untracked
+[submodule "matlab-mode"]
+	path = lib/matlab-mode
+	url = https://git.code.sf.net/p/matlab-emacs/src
+	ignore = untracked
 [submodule "memoize"]
 	path = lib/memoize
 	url = git@github.com:skeeto/emacs-memoize.git

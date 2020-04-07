@@ -480,6 +480,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package matlab)
+
 (use-package minions
   :custom (minions-mode-line-lighter "&")
   :config
