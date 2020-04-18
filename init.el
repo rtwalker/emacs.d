@@ -211,7 +211,10 @@
 (use-package elpy
   :defer t
   :init
-  (elpy-enable))
+  (elpy-enable)
+  :custom
+  (elpy-rpc-python-command "~/.pyenv/shims/python")
+  (elpy-rpc-virtualenv-path "~/.emacs.d/elpy/rpc-venv"))
 
 (use-package epkg
   :defer t
