@@ -663,6 +663,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (which-key-mode)
   (which-key-show-major-mode))
 
+(use-package yaml-mode)
+
 (progn ;     personalize
   (let ((file (expand-file-name (concat (user-real-login-name) ".el")
                                 user-emacs-directory)))
