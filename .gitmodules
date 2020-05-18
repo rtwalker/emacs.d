@@ -381,6 +381,10 @@
 	path = lib/use-package-hydra
 	url = git@gitlab.com:to1ne/use-package-hydra.git
 	ignore = untracked
+[submodule "vterm"]
+	path = lib/vterm
+	url = git@github.com:akermu/emacs-libvterm.git
+	ignore = untracked
 [submodule "which-key"]
 	path = lib/which-key
 	url = git@github.com:justbur/emacs-which-key.git

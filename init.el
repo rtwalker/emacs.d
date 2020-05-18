@@ -666,6 +666,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (which-key-mode)
   (which-key-show-major-mode))
 
+(use-package vterm)
+
 (use-package yaml-mode)
 
 (progn ;     personalize
