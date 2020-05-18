@@ -413,8 +413,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (gams-system-directory "/Applications/GAMS29.1/")
   (gams-docs-directory "/Applications/GAMS29.1/Resources/docs/"))
 
-(use-package gesiser
-  :load-path "~/.emacs.d/lib/geiser/elisp/")
+(use-package geiser)
 
 (use-package help
   :defer t
