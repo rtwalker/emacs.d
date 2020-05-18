@@ -420,6 +420,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :config (temp-buffer-resize-mode))
 
+(use-package ibuffer
+  :bind (("C-x C-b" . ibuffer)))
+
 (progn ;    `isearch'
   (setq isearch-allow-scroll t))
 
