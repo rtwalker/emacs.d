@@ -269,11 +269,11 @@
     (interactive)
     (start-process-shell-command "emacs" nil (concat "emacs -Q -L " ess-lisp-directory))))
 
-(use-package ess-julia
-  :defer
-  :mode ("\\.jl\\'" . ess-julia-mode)
-  :config
-  (setq inferior-julia-args "-i --color=yes"))
+;(use-package ess-julia
+;  :defer
+;  :mode ("\\.jl\\'" . ess-julia-mode)
+;  :config
+;  (setq inferior-julia-args "-i --color=yes"))
 
 (use-package ess-r-mode
   :defer
@@ -432,6 +432,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :custom
   (ivy-use-virtual-buffers t)
   (ivy-count-format "(%d/%d) "))
+
+(use-package julia-mode)
+
+(use-package julia-snail
+  :hook (julia-mode . julia-snail-mode))
 
 (use-package ledger-mode
   :mode "\\.ldg\\'"
