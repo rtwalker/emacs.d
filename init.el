@@ -566,6 +566,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :custom
   (org-bullets-bullet-list '("◉" "○")))
 
+(use-package org-drill)
+
 (use-package org-journal
   :custom
   (org-journal-dir "~/org/journal/")

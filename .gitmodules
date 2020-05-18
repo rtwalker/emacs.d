@@ -286,6 +286,10 @@
 	path = lib/org-bullets
 	url = git@github.com:emacsorphanage/org-bullets.git
 	ignore = untracked
+[submodule "org-drill"]
+	path = lib/org-drill
+	url = git@gitlab.com:phillord/org-drill.git
+	ignore = untracked
 [submodule "org-journal"]
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git
@@ -324,6 +328,10 @@
 	build-step = make
 	build-step = borg-byte-compile
 	build-step = borg-update-autoloads
+	ignore = untracked
+[submodule "persist"]
+	path = lib/persist
+	url = git@github.com:emacsmirror/persist.git
 	ignore = untracked
 [submodule "popup"]
 	path = lib/popup
