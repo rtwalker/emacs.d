@@ -202,6 +202,10 @@
     ("l" dumb-jump-quick-look "Quick look")
     ("b" dumb-jump-back "Back")))
 
+(use-package ediff
+  :custom
+  (ediff-window-setup-function 'ediff-setup-windows-plain))
+
 (use-package eldoc
   :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
