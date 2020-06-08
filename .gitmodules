@@ -361,6 +361,10 @@
 	path = lib/pyvenv
 	url = git@github.com:jorgenschaefer/pyvenv.git
 	ignore = untracked
+[submodule "rg"]
+	path = lib/rg
+	url = git@github.com:dajva/rg.el.git
+	ignore = untracked
 [submodule "s"]
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
@@ -408,6 +412,10 @@
 [submodule "vterm"]
 	path = lib/vterm
 	url = git@github.com:akermu/emacs-libvterm.git
+	ignore = untracked
+[submodule "wgrep"]
+	path = lib/wgrep
+	url = git@github.com:mhayashi1120/Emacs-wgrep.git
 	ignore = untracked
 [submodule "which-key"]
 	path = lib/which-key

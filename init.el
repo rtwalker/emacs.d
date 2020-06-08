@@ -630,6 +630,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :demand t
   :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?:"))
 
+(use-package rg
+  :config (rg-enable-menu))
+
 (use-package savehist
   :config (savehist-mode))
 
