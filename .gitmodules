@@ -100,6 +100,14 @@
 	path = lib/dumb-jump
 	url = git@github.com:jacktasia/dumb-jump.git
 	ignore = untracked
+[submodule "eglot"]
+	path = lib/eglot
+	url = git@github.com:joaotavora/eglot.git
+	ignore = untracked
+[submodule "eglot-jl"]
+	path = lib/eglot-jl
+	url = git@github.com:non-Jedi/eglot-jl.git
+	ignore = untracked
 [submodule "elfeed"]
 	path = lib/elfeed
 	url = git@github.com:skeeto/elfeed.git
