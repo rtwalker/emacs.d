@@ -417,6 +417,10 @@
 	path = lib/use-package-hydra
 	url = git@gitlab.com:to1ne/use-package-hydra.git
 	ignore = untracked
+[submodule "visual-fill-column"]
+	path = lib/visual-fill-column
+	url = git@github.com:joostkremers/visual-fill-column.git
+	ignore = untracked
 [submodule "vterm"]
 	path = lib/vterm
 	url = git@github.com:akermu/emacs-libvterm.git
