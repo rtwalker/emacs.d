@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: list of variables
+# key: lovar
+# --
+${1:x}_{1},\ldots,$1_{${2:n}}$0

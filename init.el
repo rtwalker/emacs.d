@@ -108,6 +108,7 @@
   (LaTeX-mode . reftex-mode)
   (LaTeX-mode . TeX-PDF-mode)
   (LaTeX-mode . cdlatex-mode)
+  (LaTeX-mode . yas-minor-mode)
   :init
   (use-package tex-mode)
   :config
@@ -141,6 +142,16 @@
 (use-package calfw
   :config
   (use-package calfw-org))
+
+
+(use-package cdlatex
+  :custom
+  (cdlatex-use-dollar-to-ensure-math nil)
+  :config
+  (setq cdlatex-math-modify-alist
+        '((?B "\\mathbb"   nil t nil nil)
+          (?F "\\mathfrak" nil t nil nil)
+          (?s "\\mathscr"  nil t nil nil))))
 
 (use-package company
   :config
@@ -690,6 +701,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package vterm)
 
 (use-package yaml-mode)
+
+(use-package yasnippet)
 
 (progn ;     personalize
   (let ((file (expand-file-name (concat (user-real-login-name) ".el")

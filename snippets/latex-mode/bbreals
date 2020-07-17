@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: bbreals
+# key: bbrn 
+# --
+\mathbb{R}^{n}
