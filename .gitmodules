@@ -205,6 +205,10 @@
 	path = lib/highlight-indentation
 	url = git@github.com:antonj/Highlight-Indentation-for-Emacs.git
 	ignore = untracked
+[submodule "ht"]
+	path = lib/ht
+	url = git@github.com:Wilfred/ht.el.git
+	ignore = untracked
 [submodule "htmlize"]
 	path = lib/htmlize
 	url = git@github.com:hniksic/emacs-htmlize.git
@@ -314,9 +318,21 @@
 	path = lib/org-pomodoro
 	url = git@github.com:lolownia/org-pomodoro.git
 	ignore = untracked
+[submodule "org-ql"]
+	path = lib/org-ql
+	url = git@github.com:alphapapa/org-ql.git
+	ignore = untracked
 [submodule "org-ref"]
 	path = lib/org-ref
 	url = git@github.com:jkitchin/org-ref.git
+	ignore = untracked
+[submodule "org-super-agenda"]
+	path = lib/org-super-agenda
+	url = git@github.com:alphapapa/org-super-agenda.git
+	ignore = untracked
+[submodule "ov"]
+	path = lib/ov
+	url = git@github.com:emacsorphanage/ov.git
 	ignore = untracked
 [submodule "ox-hugo"]
 	path = lib/ox-hugo
@@ -340,6 +356,10 @@
 	build-step = make
 	build-step = borg-byte-compile
 	build-step = borg-update-autoloads
+	ignore = untracked
+[submodule "peg"]
+	path = lib/peg
+	url = git@github.com:ellerh/peg.el.git
 	ignore = untracked
 [submodule "persist"]
 	path = lib/persist
@@ -408,6 +428,10 @@
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
+	ignore = untracked
+[submodule "ts"]
+	path = lib/ts
+	url = git@github.com:alphapapa/ts.el.git
 	ignore = untracked
 [submodule "use-package"]
 	path = lib/use-package
