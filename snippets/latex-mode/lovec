@@ -2,4 +2,4 @@
 # name: list of vectors
 # key: lovec
 # --
-\mathbb{${1:x}}_{1},\ldots,\mathbb{$1}_{${2:n}}$0
+\mathbf{${1:x}}_{1},\ldots,\mathbf{$1}_{${2:n}}$0
