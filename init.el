@@ -109,6 +109,7 @@
   (LaTeX-mode . TeX-PDF-mode)
   (LaTeX-mode . cdlatex-mode)
   (LaTeX-mode . yas-minor-mode)
+  (LaTeX-mode . flyspell-mode)
   :init
   (use-package tex-mode)
   :config
