@@ -569,7 +569,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
    '((emacs-lisp)
      (R . t)))
   :custom
-  (org-agenda-files '("~/org/courses.org" "~/org/ta.org"))
+  (org-agenda-files '("~/org/courses.org" "~/org/ta.org" "~/org/research.org"))
   (org-confirm-babel-evaluate nil)
   (org-M-RET-may-split-line nil)
   (org-agenda-timegrid-use-ampm t)
