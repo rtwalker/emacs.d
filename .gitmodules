@@ -45,6 +45,10 @@
 	path = lib/avy
 	url = git@github.com:abo-abo/avy.git
 	ignore = untracked
+[submodule "beeminder"]
+	path = lib/beeminder
+	url = git@github.com:mbork/beeminder.el.git
+	ignore = untracked
 [submodule "biblio"]
 	path = lib/biblio
 	url = git@github.com:cpitclaudel/biblio.el.git
@@ -87,6 +91,10 @@
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
 	no-makeinfo = dash-template.texi
+	ignore = untracked
+[submodule "deferred"]
+	path = lib/deferred
+	url = git@github.com:kiwanami/emacs-deferred.git
 	ignore = untracked
 [submodule "diff-hl"]
 	path = lib/diff-hl
@@ -388,6 +396,10 @@
 [submodule "pyvenv"]
 	path = lib/pyvenv
 	url = git@github.com:jorgenschaefer/pyvenv.git
+	ignore = untracked
+[submodule "request"]
+	path = lib/request
+	url = git@github.com:tkf/emacs-request.git
 	ignore = untracked
 [submodule "rg"]
 	path = lib/rg
