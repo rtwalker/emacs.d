@@ -248,6 +248,10 @@
 	path = lib/kaolin-themes
 	url = git@github.com:ogdenwebb/emacs-kaolin-themes.git
 	ignore = untracked
+[submodule "kubel"]
+	path = lib/kubel
+	url = git@github.com:abrochard/kubel.git
+	ignore = untracked
 [submodule "ledger-mode"]
 	path = lib/ledger-mode
 	url = git@github.com:ledger/ledger-mode.git
