@@ -430,6 +430,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
     (set-face-attribute 'mode-line-inactive nil :box        nil)
     (set-face-attribute 'mode-line-inactive nil :background "#e3e3e5")))
 
+(use-package files
+  :config
+  (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
+
 (use-package flymake
   :hook
   ((emacs-lisp-mode python-mode LaTeX-mode) . flymake-mode))
@@ -444,10 +448,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (gams-docs-directory "/Applications/GAMS29.1/Resources/docs/"))
 
 (use-package geiser)
-
-(use-package files
-  :config
-  (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
 (use-package general
   :config
