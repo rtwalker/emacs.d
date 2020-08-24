@@ -19,7 +19,9 @@
   (setq ring-bell-function #'ignore)
   (setq-default truncate-lines t)
   (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'super))
+  (setq mac-option-modifier 'super)
+  (global-unset-key (kbd "<wheel-left>"))
+  (global-unset-key (kbd "<wheel-right>")))
 
 (progn ;    `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
