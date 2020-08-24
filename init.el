@@ -596,6 +596,15 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
    'org-babel-load-languages
    '((emacs-lisp)
      (R . t)))
+  (setq org-agenda-custom-commands
+        '(("c" "Custom Agenda View"
+           ((org-ql-block '(and (priority "A")
+                                (not (todo "DONE")))
+                          ((org-ql-block-header "Today:")))
+             (agenda "")
+             (org-ql-block '(and (not (priority "A"))
+                                     (todo))
+                           ((org-ql-block-header "Other TODOs")))))))
   :custom
   (org-agenda-files '("~/org/courses.org" "~/org/ta.org" "~/org/research.org"))
   (org-confirm-babel-evaluate nil)
