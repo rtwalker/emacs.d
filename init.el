@@ -392,7 +392,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :custom
   (evil-mode-line-format nil)
   (evil-insert-state-message nil)
-  :config (evil-mode 1))
+  :config
+  (evil-mode 1)
+  (add-to-list 'evil-emacs-state-modes 'special-mode))
 
 (use-package evil-ledger
   :after ledger-mode
