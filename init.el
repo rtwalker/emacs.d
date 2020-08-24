@@ -453,6 +453,22 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :config (temp-buffer-resize-mode))
 
+(use-package hydra
+  :config
+  (defhydra hydra-zoom (:color amaranth)
+    "zoom"
+    ("i" text-scale-increase "in")
+    ("o" text-scale-decrease "out")
+    ("d" (text-scale-adjust 0) "default")
+    ("q" nil "quit" :color blue))
+
+  (defhydra hydra-window (:color amaranth)
+    ("w" (enlarge-window 2) "top")
+    ("d" (enlarge-window 2 t) "left")
+    ("s" (shrink-window 2) "bottom")
+    ("a" (shrink-window 2 t) "right")
+    ("q" nil "quit" :color blue)))
+
 (use-package ibuffer
   :bind (("C-x C-b" . ibuffer)))
 
