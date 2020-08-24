@@ -434,6 +434,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
+(use-package flymake
+  :hook
+  ((emacs-lisp-mode python-mode LaTeX-mode) . flymake-mode))
+
 (use-package flyspell
   :hook
   (org-mode . flyspell-mode))
