@@ -76,6 +76,12 @@
 
 (use-package all-the-icons)
 
+(use-package beacon
+  :bind ("<s-escape>" . beacon-blink)
+  :custom
+  (beacon-color "#fb6859")
+  :config (beacon-mode -1))
+
 ;; borrowed from jabranham's init.el as a starting point
 ;; auctex
 (use-package tex-site
