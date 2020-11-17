@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: math mode
-# key: \[
+# name: display math
+# key: dm
 # --
 \[
 $1

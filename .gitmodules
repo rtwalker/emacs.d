@@ -487,3 +487,7 @@
 	path = lib/yasnippet
 	url = git@github.com:joaotavora/yasnippet.git
 	ignore = untracked
+[submodule "yasnippet-snippets"]
+	path = lib/yasnippet-snippets
+	url = git@github.com:AndreaCrotti/yasnippet-snippets.git
+	ignore = untracked

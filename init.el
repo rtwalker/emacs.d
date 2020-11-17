@@ -783,7 +783,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package yaml-mode)
 
-(use-package yasnippet)
+(use-package yasnippet
+  :custom
+  (yas-snippet-dirs '("~/.emacs.d/snippets" "~/.emacs.d/lib/yasnippet-snippets/snippets/c++-mode/")))
 
 (progn ;     personalize
   (let ((file (expand-file-name (concat (user-real-login-name) ".el")
