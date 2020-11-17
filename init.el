@@ -532,8 +532,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package ledger-mode
   :mode "\\.ldg\\'"
-  :init
-  (unbind-key  "C-c C-f" ledger-mode-map)
   :custom
   (ledger-reports
    (quote
