@@ -498,6 +498,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
     ("i" text-scale-increase "in")
     ("o" text-scale-decrease "out")
     ("d" (text-scale-adjust 0) "default")
+    ("0" (text-scale-adjust 0) "default")
     ("q" nil "quit" :color blue))
 
   (defhydra hydra-window (:color amaranth)
