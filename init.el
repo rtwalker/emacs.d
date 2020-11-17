@@ -143,6 +143,7 @@
   :bind ("M-+" . calc))
 
 (use-package calendar
+  :bind ("M-C" . calendar)
   :custom
   (calendar-week-start-day 1)
   :hook
