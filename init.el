@@ -670,7 +670,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package org-journal
   :custom
-  (org-journal-dir "~/org/journal/")
+  (org-journal-dir "~/Documents/journal/")
   (org-journal-enable-encryption t))
 
 (use-package org-noter)
