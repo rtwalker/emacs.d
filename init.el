@@ -227,7 +227,12 @@
   :custom
   (ediff-window-setup-function 'ediff-setup-windows-plain))
 
-(use-package eglot)
+(use-package eglot
+  :init
+  (add-hook 'c++-mode-hook 'eglot-ensure)
+  (add-hook 'c-mode-hook 'eglot-ensure)
+  :config
+  (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd")))
 
 (use-package eglot-jl
   :custom
