@@ -173,9 +173,9 @@
   (set-face-attribute 'company-tooltip-selection nil :background "#cce6f1")
   (global-company-mode 1))
 
-(use-package company-math                                                                                                                          
-  :config                                                                                                                                          
-  (add-to-list 'company-backends 'company-math-symbols-latex)                                                                                      
+(use-package company-math
+  :config
+  (add-to-list 'company-backends 'company-math-symbols-latex)
   (setq company-math-allow-latex-symbols-in-faces t))
 
 (use-package counsel-projectile
