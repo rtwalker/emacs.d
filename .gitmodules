@@ -467,3 +467,7 @@
 	path = lib/yasnippet-snippets
 	url = git@github.com:AndreaCrotti/yasnippet-snippets.git
 	ignore = untracked
+[submodule "zig-mode"]
+	path = lib/zig-mode
+	url = git@github.com:ziglang/zig-mode.git
+	ignore = untracked
