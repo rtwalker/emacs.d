@@ -244,14 +244,6 @@
 
 (use-package elfeed)
 
-(use-package elpy
-  :defer t
-  :init
-  (elpy-enable)
-  :custom
-  (elpy-rpc-python-command "~/.pyenv/shims/python")
-  (elpy-rpc-virtualenv-path "~/.emacs.d/elpy/rpc-venv"))
-
 (use-package epkg
   :defer t
   :bind
@@ -708,14 +700,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
-
-(use-package pyenv-mode
-  :hook
-  (python-mode . pyenv-mode))
-
-;(use-package pyenv-mode-auto
-;  :hook
-;  (python-mode . pyenv-mode-auto))
 
 (use-package python
   :custom
