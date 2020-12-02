@@ -572,6 +572,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch))
+  :custom
+  (magit-git-executable "/usr/local/bin/git")
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
