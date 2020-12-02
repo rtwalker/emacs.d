@@ -762,6 +762,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (add-to-list 'tramp-default-proxies-alist
                (list (regexp-quote (system-name)) nil nil)))
 
+(use-package tree-sitter)
+
 (use-package which-key
   :custom
   (which-key-allow-evil-operators 1)
