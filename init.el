@@ -198,6 +198,16 @@
   (insert-directory-program "/usr/local/bin/gls")
   (dired-listing-switches "-alh --group-directories-first"))
 
+(use-package dired-subtree
+  :after dired
+  :config
+  (set-face-attribute 'dired-subtree-depth-1-face nil :background "#dbdbdb")
+  (setq dired-subtree-use-backgrounds t)
+  :bind (:map dired-mode-map
+              ("<tab>" . dired-subtree-toggle)
+              ("<S-right>" . dired-subtree-cycle)
+              ("<S-up>" . dired-subtree-remove)))
+
 (use-package display-line-numbers
   :custom
   (display-line-numbers 'relative)
