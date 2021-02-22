@@ -345,9 +345,6 @@
 	path = lib/ov
 	url = git@github.com:emacsorphanage/ov.git
 	ignore = untracked
-[submodule "ox-hugo"]
-	path = lib/ox-hugo
-	url = git@github.com:kaushalmodi/ox-hugo.git
 [submodule "packed"]
 	path = lib/packed
 	url = git@github.com:emacscollective/packed.git
