@@ -389,6 +389,9 @@
 	path = lib/rg
 	url = git@github.com:dajva/rg.el.git
 	ignore = untracked
+[submodule "rust-mode"]
+	path = lib/rust-mode
+	url = git@github.com:rust-lang/rust-mode.git
 [submodule "s"]
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
