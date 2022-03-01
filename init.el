@@ -20,6 +20,7 @@
   (setq-default truncate-lines t)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
+  (setq mac-auto-operator-composition-mode t)
   (global-unset-key (kbd "<wheel-left>"))
   (global-unset-key (kbd "<wheel-right>")))
 
@@ -55,6 +56,11 @@
 
 (use-package server
   :config (or (server-running-p) (server-mode)))
+
+(progn ;
+  (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+  (require 'pragmatapro-prettify-symbols-v0.829))
+
 
 (use-package use-package-hydra)
 
@@ -423,7 +429,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package faces
   :config
-  (set-face-attribute 'default nil :family "Hack")
+  (set-face-attribute 'default nil :family "PragmataPro Mono" :height 130)
   (load-theme 'tsdh-light)
   (let ((line (face-attribute 'mode-line :underline)))
     (set-face-attribute 'mode-line          nil :overline   line)
@@ -704,7 +710,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
-  (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left))
+  (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left)
+  (add-hook 'prog-mode-hook #'prettify-hook))
 
 (use-package projectile
   :config
