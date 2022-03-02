@@ -683,6 +683,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package org-noter)
 
 (use-package org-ref
+  :defer t
   :custom
   (org-ref-default-bibliography '("~/Sync/bibliography/references.bib"))
   (org-ref-pdf-directory "~/Sync/bibliography/bibtex-pdfs/")
