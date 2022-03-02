@@ -755,9 +755,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (inferior-lisp-program "/usr/local/bin/clisp")
   (slime-contribs '(slime-fancy)))
 
-;(use-package spaceline
-;  :config (spaceline-emacs-theme))
-
 (progn ;    `text-mode'
   (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
 
