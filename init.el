@@ -456,8 +456,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (gams-system-directory "/Applications/GAMS29.1/")
   (gams-docs-directory "/Applications/GAMS29.1/Resources/docs/"))
 
-(use-package geiser)
-
 (use-package general
   :config
   (general-create-definer space :prefix "SPC")
