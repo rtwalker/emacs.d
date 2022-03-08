@@ -151,10 +151,6 @@
 	path = lib/evil-lion
 	url = git@github.com:edkolev/evil-lion.git
 	ignore = untracked
-[submodule "evil-magit"]
-	path = lib/evil-magit
-	url = git@github.com:emacs-evil/evil-magit.git
-	ignore = untracked
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = git@github.com:emacs-evil/evil-surround.git

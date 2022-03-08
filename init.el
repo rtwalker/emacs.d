@@ -415,8 +415,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config
   (evil-lion-mode))
 
-(use-package evil-magit)
-
 (use-package evil-surround
   :config (global-evil-surround-mode 1))
 
