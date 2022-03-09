@@ -713,6 +713,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left)
   (add-hook 'prog-mode-hook #'prettify-hook))
 
+(use-package project)
+
 (use-package projectile
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)

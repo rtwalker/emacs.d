@@ -365,6 +365,9 @@
 	path = lib/popup
 	url = git@github.com:auto-complete/popup-el.git
 	ignore = untracked
+[submodule "project"]
+	path = lib/project
+	url = git@github.com:emacsmirror/project.git
 [submodule "projectile"]
 	path = lib/projectile
 	url = git@github.com:bbatsov/projectile.git
