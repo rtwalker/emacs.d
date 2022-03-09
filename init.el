@@ -243,16 +243,10 @@
   :custom
   (ediff-window-setup-function 'ediff-setup-windows-plain))
 
-;(use-package eglot
-;  :init
-;  (add-hook 'c++-mode-hook 'eglot-ensure)
-;  (add-hook 'c-mode-hook 'eglot-ensure)
-;  :config
-;  (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd")))
-
-;(use-package eglot-jl
-;  :custom
-;  (eglot-connect-timeout 600))
+(use-package eglot
+  :after project
+  :init
+  (add-hook 'rust-mode-hook 'eglot-ensure))
 
 (use-package eldoc
   :when (version< "25" emacs-version)
@@ -733,6 +727,12 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package rg
   :config (rg-enable-menu))
+
+(use-package rust-mode
+  :custom
+  (rust-format-on-save t)
+  (rust-indent-method-chain t)
+  (rust-indent-where-clause t))
 
 (use-package savehist
   :config (savehist-mode))
