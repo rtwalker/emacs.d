@@ -396,6 +396,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
         (ess-eval-region beg end vis)))))
 
 (use-package evil
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
   :custom
   (evil-mode-line-format nil)
   (evil-insert-state-message nil)
@@ -403,11 +406,20 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (evil-mode 1)
   (add-to-list 'evil-emacs-state-modes 'special-mode))
 
+(use-package evil-collection
+  :after evil
+  :custom
+  (evil-collection-setup-minibuffer t)
+  :config
+  (evil-collection-init '(dired eglot eshell forge ibuffer magit notmuch ripgrep selectrum)))
+
 (use-package evil-lion
+  :after evil
   :config
   (evil-lion-mode))
 
 (use-package evil-surround
+  :after evil
   :config (global-evil-surround-mode 1))
 
 (use-package exec-path-from-shell
@@ -435,7 +447,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package flymake
   :hook
-  ((emacs-lisp-mode python-mode LaTeX-mode) . flymake-mode))
+  ((emacs-lisp-mode LaTeX-mode python-mode rust-mode) . flymake-mode))
 
 (use-package flyspell
   :hook
