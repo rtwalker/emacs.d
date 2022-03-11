@@ -220,23 +220,6 @@
   (set-face-attribute 'line-number-current-line nil :foreground "#ee7621")
   (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
 
-(use-package dumb-jump
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go)
-         ("M-g i" . dumb-jump-go-prompt)
-         ("M-g x" . dumb-jump-go-prefer-external)
-         ("M-g z" . dumb-jump-go-prefer-external-other-window))
-  :config (setq dumb-jump-selector 'completing-read)
-  :hydra (dumb-jump-hydra (:color blue :columns 3)
-    "Dumb Jump"
-    ("j" dumb-jump-go "Go")
-    ("o" dumb-jump-go-other-window "Other window")
-    ("e" dumb-jump-go-prefer-external "Go external")
-    ("x" dumb-jump-go-prefer-external-other-window "Go external other window")
-    ("i" dumb-jump-go-prompt "Prompt")
-    ("l" dumb-jump-quick-look "Quick look")
-    ("b" dumb-jump-back "Back")))
-
 (use-package ediff
   :custom
   (ediff-window-setup-function 'ediff-setup-windows-plain))
@@ -426,9 +409,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :if (memq window-system '(mac))
   :config (exec-path-from-shell-initialize))
 
-(use-package eyebrowse
-  :config (eyebrowse-mode t))
-
 (use-package faces
   :config
   (set-face-attribute 'default nil :family "PragmataPro Mono" :height 130)
@@ -590,8 +570,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
-(use-package matlab)
-
 (use-package minions
   :custom (minions-mode-line-lighter "&")
   :config
@@ -674,8 +652,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (org-mode . org-bullets-mode)
   :custom
   (org-bullets-bullet-list '("◉" "○")))
-
-(use-package org-drill)
 
 (use-package org-journal
   :custom

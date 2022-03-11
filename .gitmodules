@@ -114,10 +114,6 @@
 	path = lib/doom-themes
 	url = git@github.com:hlissner/emacs-doom-themes.git
 	ignore = untracked
-[submodule "dumb-jump"]
-	path = lib/dumb-jump
-	url = git@github.com:jacktasia/dumb-jump.git
-	ignore = untracked
 [submodule "eglot"]
 	path = lib/eglot
 	url = git@github.com:joaotavora/eglot.git
@@ -160,10 +156,6 @@
 [submodule "exec-path-from-shell"]
 	path = lib/exec-path-from-shell
 	url = git@github.com:purcell/exec-path-from-shell.git
-	ignore = untracked
-[submodule "eyebrowse"]
-	path = lib/eyebrowse
-	url = git@github.com:wasamasa/eyebrowse.git
 	ignore = untracked
 [submodule "f"]
 	path = lib/f
@@ -261,10 +253,6 @@
 	path = lib/math-symbol-lists
 	url = git@github.com:vspinu/math-symbol-lists.git
 	ignore = untracked
-[submodule "matlab-mode"]
-	path = lib/matlab-mode
-	url = https://git.code.sf.net/p/matlab-emacs/src
-	ignore = untracked
 [submodule "memoize"]
 	path = lib/memoize
 	url = git@github.com:skeeto/emacs-memoize.git
@@ -302,10 +290,6 @@
 [submodule "org-bullets"]
 	path = lib/org-bullets
 	url = git@github.com:emacsorphanage/org-bullets.git
-	ignore = untracked
-[submodule "org-drill"]
-	path = lib/org-drill
-	url = git@gitlab.com:phillord/org-drill.git
 	ignore = untracked
 [submodule "org-journal"]
 	path = lib/org-journal
