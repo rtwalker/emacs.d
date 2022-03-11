@@ -159,7 +159,6 @@
   :config
   (use-package calfw-org))
 
-
 (use-package cdlatex
   :custom
   (cdlatex-use-dollar-to-ensure-math nil)
@@ -184,8 +183,7 @@
   (add-to-list 'company-backends 'company-math-symbols-latex)
   (setq company-math-allow-latex-symbols-in-faces t))
 
-(use-package counsel-projectile
-  :config (counsel-projectile-mode))
+(use-package consult)
 
 (use-package dash
   :config (dash-enable-font-lock))
@@ -228,7 +226,7 @@
          ("M-g i" . dumb-jump-go-prompt)
          ("M-g x" . dumb-jump-go-prefer-external)
          ("M-g z" . dumb-jump-go-prefer-external-other-window))
-  :config (setq dumb-jump-selector 'ivy)
+  :config (setq dumb-jump-selector 'completing-read)
   :hydra (dumb-jump-hydra (:color blue :columns 3)
     "Dumb Jump"
     ("j" dumb-jump-go "Go")
@@ -459,8 +457,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
   (space
    :states 'normal
-   "SPC" '(counsel-M-x :wk "M-x")
-   "f" '(counsel-find-file :wk "find file")
+;;   "SPC" '(counsel-M-x :wk "M-x")
+;;   "f" '(counsel-find-file :wk "find file")
    "g" 'magit-status
    "p" 'projectile-command-map
    "w" 'hydra-window/body
@@ -474,7 +472,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
     (switch-to-buffer (get-buffer-create "*scratch*")))
  (space-b
    :states 'normal
-   "b" 'ivy-switch-buffer
+;;   "b" 'ivy-switch-buffer
    "c" 'delete-frame
    "d" 'delete-window
    "f" 'delete-other-windows
@@ -518,13 +516,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (progn ;    `isearch'
   (setq isearch-allow-scroll t))
-
-(use-package ivy
-  :config
-  (ivy-mode 1)
-  :custom
-  (ivy-use-virtual-buffers t)
-  (ivy-count-format "(%d/%d) "))
 
 (use-package julia-mode)
 
@@ -629,6 +620,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (add-hook 'notmuch-hello-mode-hook
             (lambda () (display-line-numbers-mode nil))))
 
+(use-package orderless
+  :config
+  (setq completion-styles '(orderless)))
+
 (use-package org
   :bind
   (("C-c l" . org-store-link)
@@ -681,8 +676,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :custom
   (org-ref-default-bibliography '("~/Sync/bibliography/references.bib"))
-  (org-ref-pdf-directory "~/Sync/bibliography/bibtex-pdfs/")
-  (org-ref-completion-library 'org-ref-ivy-cite))
+  (org-ref-pdf-directory "~/Sync/bibliography/bibtex-pdfs/"))
 
 (use-package paren
   :config (show-paren-mode))
@@ -699,6 +693,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
    (pdf-tools-install))
 
 (use-package popup)
+
+(use-package prescient
+  :config
+  (selectrum-prescient-mode)
+  (prescient-persist-mode +1))
 
 (use-package prog-mode
   :config (global-prettify-symbols-mode)
@@ -740,6 +739,11 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package saveplace
   :when (version< "25" emacs-version)
   :config (save-place-mode))
+
+(use-package selectrum
+  :config
+  (selectrum-mode +1)
+  (setq selectrum-prescient-enable-filtering nil))
 
 (use-package shell-pop
   :custom

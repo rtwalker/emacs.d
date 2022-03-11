@@ -90,10 +90,9 @@
 	path = lib/company-math
 	url = git@github.com:vspinu/company-math.git
 	ignore = untracked
-[submodule "counsel-projectile"]
-	path = lib/counsel-projectile
-	url = git@github.com:ericdanan/counsel-projectile.git
-	ignore = untracked
+[submodule "consult"]
+	path = lib/consult
+	url = git@github.com:minad/consult.git
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
@@ -228,9 +227,6 @@
 	path = lib/iedit
 	url = git@github.com:victorhge/iedit.git
 	ignore = untracked
-[submodule "ivy"]
-	path = lib/ivy
-	url = git@github.com:abo-abo/swiper.git
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = git@github.com:JuliaEditorSupport/julia-emacs.git
@@ -293,6 +289,9 @@
 	build-step = make sphinx-texinfo
 	build-step = borg-makeinfo
 	ignore = untracked
+[submodule "orderless"]
+	path = lib/orderless
+	url = git@github.com:oantolin/orderless.git
 [submodule "org"]
 	path = lib/org
 	url = https://code.orgmode.org/bzg/org-mode.git
@@ -368,6 +367,9 @@
 	path = lib/popup
 	url = git@github.com:auto-complete/popup-el.git
 	ignore = untracked
+[submodule "prescient"]
+	path = lib/prescient
+	url = git@github.com:raxod502/prescient.el.git
 [submodule "project"]
 	path = lib/project
 	url = git@github.com:emacsmirror/project.git
@@ -390,6 +392,9 @@
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
 	ignore = untracked
+[submodule "selectrum"]
+	path = lib/selectrum
+	url = git@github.com:raxod502/selectrum.git
 [submodule "shell-pop"]
 	path = lib/shell-pop
 	url = git@github.com:kyagi/shell-pop-el.git
