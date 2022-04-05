@@ -223,9 +223,11 @@
   (ediff-window-setup-function 'ediff-setup-windows-plain))
 
 (use-package eglot
-  :after project
+  :after eldoc flymake project
   :init
-  (add-hook 'rust-mode-hook 'eglot-ensure))
+  (add-hook 'rust-mode-hook 'eglot-ensure)
+  :custom
+  (eglot-extend-to-xref t))
 
 (use-package eldoc
   :when (version< "25" emacs-version)
@@ -424,6 +426,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))))
 
 (use-package flymake
+  :bind (:map flymake-mode-map
+              ("M-n" . flymake-goto-next-error)
+              ("M-p" . flymake-goto-prev-error))
   :hook
   ((emacs-lisp-mode LaTeX-mode python-mode rust-mode) . flymake-mode))
 
