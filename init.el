@@ -80,8 +80,6 @@
   :custom
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
-(use-package ag)
-
 (use-package all-the-icons)
 
 (use-package beacon
