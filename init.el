@@ -166,22 +166,33 @@
           (?F "\\mathfrak" nil t nil nil)
           (?s "\\mathscr"  nil t nil nil))))
 
-(use-package company
-  :config
-  (set-face-attribute 'company-tooltip nil :background "#e3e3e5" :foreground "#87888d")
-  (set-face-attribute 'company-tooltip-annotation nil :foreground "#a626a4")
-  (set-face-attribute 'company-scrollbar-fg nil :background "#383a42")
-  (set-face-attribute 'company-scrollbar-bg nil :background "#e3e3e5")
-  (set-face-attribute 'company-tooltip-common nil :foreground "#383a42")
-  (set-face-attribute 'company-tooltip-selection nil :background "#cce6f1")
-  (global-company-mode 1))
-
-(use-package company-math
-  :config
-  (add-to-list 'company-backends 'company-math-symbols-latex)
-  (setq company-math-allow-latex-symbols-in-faces t))
-
 (use-package consult)
+
+(use-package corfu
+  ;; Optional customizations
+  :custom
+  ;; (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+  (corfu-auto t)                 ;; Enable auto completion
+  ;; (corfu-separator ?\s)          ;; Orderless field separator
+  ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
+  ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
+  ;; (corfu-preview-current nil)    ;; Disable current candidate preview
+  ;; (corfu-preselect-first nil)    ;; Disable candidate preselection
+  ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+  ;; (corfu-echo-documentation nil) ;; Disable documentation in the echo area
+  ;; (corfu-scroll-margin 5)        ;; Use scroll margin
+
+  ;; You may want to enable Corfu only for certain modes.
+  ;; :hook ((prog-mode . corfu-mode)
+  ;;        (shell-mode . corfu-mode)
+  ;;        (eshell-mode . corfu-mode))
+
+  ;; Recommended: Enable Corfu globally.
+  ;; This is recommended since dabbrev can be used globally (M-/).
+  :init
+  (corfu-global-mode)
+  :config
+  (setq completion-cycle-threshold 3))
 
 (use-package dash
   :config (dash-enable-font-lock))
@@ -227,11 +238,17 @@
   :init
   (add-hook 'rust-mode-hook 'eglot-ensure)
   :custom
-  (eglot-extend-to-xref t))
+  (eglot-extend-to-xref t)
+  :config
+  (setq completion-category-overrides '((eglot (styles orderless)))))
 
 (use-package eldoc
   :when (version< "25" emacs-version)
   :config (global-eldoc-mode))
+
+(use-package elec-pair
+  :config
+  (electric-pair-mode))
 
 (use-package elfeed)
 
