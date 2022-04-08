@@ -82,6 +82,11 @@
 
 (use-package all-the-icons)
 
+(use-package all-the-icons-dired
+  :after dired
+  :config
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+
 (use-package beacon
   :bind ("<s-escape>" . beacon-blink)
   :custom
@@ -210,6 +215,19 @@
   (dired-dwim-target t)
   (insert-directory-program "/usr/local/bin/gls")
   (dired-listing-switches "-alh --group-directories-first"))
+
+(use-package dired-sidebar
+  :after dired
+  :bind (("C-x C-n" . dired-sidebar-toggle-sidebar))
+  :commands (dired-sidebar-toggle-sidebar)
+  :custom
+  (dired-sidebar-use-custom-font t)
+  (dired-sidebar-width 40)
+  :init
+  (add-hook 'dired-sidebar-mode-hook
+            (lambda ()
+              (unless (file-remote-p default-directory)
+                (auto-revert-mode)))))
 
 (use-package dired-subtree
   :after dired
