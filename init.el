@@ -703,8 +703,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (org-journal-dir "~/Documents/journal/")
   (org-journal-enable-encryption t))
 
-(use-package org-noter)
-
 (use-package org-ref
   :defer t
   :custom
