@@ -818,7 +818,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package visual-fill-column)
 
-(use-package vterm)
+(use-package vterm
+  :custom
+  (vterm-shell "/usr/local/bin/fish"))
 
 (use-package yaml-mode)
 
