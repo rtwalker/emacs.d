@@ -247,6 +247,10 @@
   (set-face-attribute 'line-number-current-line nil :foreground "#ee7621")
   (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
 
+(use-package doom-themes
+  :config
+  (load-theme 'doom-tomorrow-day t))
+
 (use-package ediff
   :custom
   (ediff-window-setup-function 'ediff-setup-windows-plain))
@@ -450,7 +454,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package faces
   :config
   (set-face-attribute 'default nil :family "PragmataPro Mono" :height 130)
-  (load-theme 'tsdh-light)
+  ;; (load-theme 'tsdh-light)
   (let ((line (face-attribute 'mode-line :underline)))
     (set-face-attribute 'mode-line          nil :overline   line)
     (set-face-attribute 'mode-line-inactive nil :overline   line)
