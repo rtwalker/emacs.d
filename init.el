@@ -823,8 +823,15 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package yaml-mode)
 
 (use-package yasnippet
-  :custom
-  (yas-snippet-dirs '("~/.emacs.d/snippets" "~/.emacs.d/lib/yasnippet-snippets/snippets/c++-mode/")))
+  :bind (:map yas-minor-mode-map
+              ("M-i" . yas-expand)
+              ("M-I" . yas-insert-snippet))
+  :config
+  (setq yas-snippet-dirs '("~/.emacs.d/snippets" "~/.emacs.d/lib/yasnippet-snippets/snippets/rust-mode/"))
+  (add-hook 'rust-mode-hook #'yas-minor-mode))
+
+(use-package yasnippet-snippets
+  :after yasnippet)
 
 (use-package zig-mode)
 
