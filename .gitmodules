@@ -19,9 +19,11 @@
 [submodule "all-the-icons-dired"]
 	path = lib/all-the-icons-dired
 	url = git@github.com:wyuenho/all-the-icons-dired.git
+	ignore = untracked
 [submodule "annalist"]
 	path = lib/annalist
 	url = git@github.com:noctuid/annalist.el.git
+	ignore = untracked
 [submodule "async"]
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git
@@ -54,6 +56,7 @@
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
+	ignore = untracked
 [submodule "calfw"]
 	path = lib/calfw
 	url = git@github.com:kiwanami/emacs-calfw.git
@@ -68,9 +71,11 @@
 [submodule "consult"]
 	path = lib/consult
 	url = git@github.com:minad/consult.git
+	ignore = untracked
 [submodule "corfu"]
 	path = lib/corfu
 	url = git@github.com:minad/corfu.git
+	ignore = untracked
 [submodule "dash"]
 	path = lib/dash
 	url = git@github.com:magnars/dash.el.git
@@ -91,6 +96,7 @@
 [submodule "dired-sidebar"]
 	path = lib/dired-sidebar
 	url = git@github.com:jojojames/dired-sidebar.git
+	ignore = untracked
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = git@github.com:hlissner/emacs-doom-themes.git
@@ -106,6 +112,7 @@
 [submodule "electric-operator"]
 	path = lib/electric-operator
 	url = git@github.com:davidshepherd7/electric-operator.git
+	ignore = untracked
 [submodule "elfeed"]
 	path = lib/elfeed
 	url = git@github.com:skeeto/elfeed.git
@@ -118,9 +125,11 @@
 [submodule "epkg"]
 	path = lib/epkg
 	url = git@github.com:emacscollective/epkg.git
+	ignore = untracked
 [submodule "ess"]
 	path = lib/ess
 	url = git@github.com:emacs-ess/ESS.git
+	ignore = untracked
 [submodule "evil"]
 	path = lib/evil
 	url = git@github.com:emacs-evil/evil.git
@@ -164,6 +173,7 @@
 [submodule "ghub"]
 	path = lib/ghub
 	url = git@github.com:magit/ghub.git
+	ignore = untracked
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
@@ -219,6 +229,7 @@
 [submodule "libgit"]
 	path = lib/libgit
 	url = git@github.com:magit/libegit2.git
+	ignore = untracked
 [submodule "lispy"]
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
@@ -228,6 +239,7 @@
 	url = git@github.com:magit/magit.git
 	recursive-byte-compile = true
 	info-path = Documentation
+	ignore = untracked
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
@@ -259,6 +271,7 @@
 [submodule "orderless"]
 	path = lib/orderless
 	url = git@github.com:oantolin/orderless.git
+	ignore = untracked
 [submodule "org"]
 	path = lib/org
 	url = https://code.orgmode.org/bzg/org-mode.git
@@ -325,9 +338,11 @@
 [submodule "prescient"]
 	path = lib/prescient
 	url = git@github.com:raxod502/prescient.el.git
+	ignore = untracked
 [submodule "project"]
 	path = lib/project
 	url = git@github.com:emacsmirror/project.git
+	ignore = untracked
 [submodule "projectile"]
 	path = lib/projectile
 	url = git@github.com:bbatsov/projectile.git
@@ -343,6 +358,7 @@
 [submodule "rust-mode"]
 	path = lib/rust-mode
 	url = git@github.com:rust-lang/rust-mode.git
+	ignore = untracked
 [submodule "s"]
 	path = lib/s
 	url = git@github.com:magnars/s.el.git
@@ -350,6 +366,7 @@
 [submodule "selectrum"]
 	path = lib/selectrum
 	url = git@github.com:raxod502/selectrum.git
+	ignore = untracked
 [submodule "shell-pop"]
 	path = lib/shell-pop
 	url = git@github.com:kyagi/shell-pop-el.git
