@@ -268,6 +268,9 @@
   :config
   (electric-pair-mode))
 
+(use-package electric-operator
+  :hook rust-mode)
+
 (use-package elfeed)
 
 (use-package epkg
