@@ -161,10 +161,6 @@
 	path = lib/flycheck
 	url = git@github.com:flycheck/flycheck.git
 	ignore = untracked
-[submodule "forge"]
-	path = lib/forge
-	url = git@github.com:magit/forge.git
-	ignore = untracked
 [submodule "gams-mode"]
 	path = lib/gams-mode
 	url = git@github.com:ShiroTakeda/gams-mode.git
@@ -261,6 +257,9 @@
 	path = lib/multiple-cursors
 	url = git@github.com:magnars/multiple-cursors.el.git
 	ignore = untracked
+[submodule "nix-mode"]
+	path = lib/nix-mode
+	url = git@github.com:NixOS/nix-mode.git
 [submodule "notmuch"]
 	path = lib/notmuch
 	url = https://git.notmuchmail.org/git/notmuch
@@ -350,6 +349,9 @@
 	path = lib/projectile
 	url = git@github.com:bbatsov/projectile.git
 	ignore = untracked
+[submodule "reformatter"]
+	path = lib/reformatter
+	url = git@github.com:purcell/emacs-reformatter.git
 [submodule "request"]
 	path = lib/request
 	url = git@github.com:tkf/emacs-request.git
@@ -386,6 +388,9 @@
 	path = lib/spinner
 	url = git@github.com:Malabarba/spinner.el.git
 	ignore = untracked
+[submodule "sqlformat"]
+	path = lib/sqlformat
+	url = git@github.com:purcell/sqlformat.git
 [submodule "tablist"]
 	path = lib/tablist
 	url = git@github.com:politza/tablist.git
@@ -393,13 +398,6 @@
 	path = lib/transient
 	url = git@github.com:magit/transient.git
 	info-path = docs
-	ignore = untracked
-[submodule "tree-sitter"]
-	path = lib/tree-sitter
-	url = git@github.com:ubolonton/emacs-tree-sitter.git
-	load-path = core
-	load-path = lisp
-	load-path = langs
 	ignore = untracked
 [submodule "treepy"]
 	path = lib/treepy
@@ -424,6 +422,10 @@
 [submodule "vterm"]
 	path = lib/vterm
 	url = git@github.com:akermu/emacs-libvterm.git
+	build-step = mkdir -p build
+	build-step = cd build
+	build-step = cmake ..
+	build-step = make
 	ignore = untracked
 [submodule "wgrep"]
 	path = lib/wgrep
@@ -437,6 +439,9 @@
 	path = lib/with-editor
 	url = git@github.com:magit/with-editor.git
 	ignore = untracked
+[submodule "yafolding"]
+	path = lib/yafolding
+	url = git@github.com:emacsorphanage/yafolding.git
 [submodule "yaml"]
 	path = lib/yaml
 	url = git@github.com:zkry/yaml.el.git

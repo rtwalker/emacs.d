@@ -793,6 +793,14 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (inferior-lisp-program "/usr/local/bin/clisp")
   (slime-contribs '(slime-fancy)))
 
+(use-package sqlformat
+  :custom
+  (sqlformat-command 'pgformatter)
+  (sqlformat-args '("--comma-start" "-s4" "-C" "-w120"))
+  :config
+  (define-key sql-mode-map (kbd "C-c C-f") 'sqlformat)
+  (add-hook 'sql-mode-hook #'sqlformat-on-save-mode))
+
 (progn ;    `text-mode'
   (add-hook 'text-mode-hook #'indicate-buffer-boundaries-left))
 
