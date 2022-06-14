@@ -97,6 +97,9 @@
 	path = lib/dired-sidebar
 	url = git@github.com:jojojames/dired-sidebar.git
 	ignore = untracked
+[submodule "dockerfile-mode"]
+	path = lib/dockerfile-mode
+	url = git@github.com:spotify/dockerfile-mode.git
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = git@github.com:hlissner/emacs-doom-themes.git
