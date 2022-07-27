@@ -770,7 +770,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package rust-mode
   :custom
-  (rust-format-on-save t)
+  (rust-format-on-save nil)
   (rust-indent-method-chain t)
   (rust-indent-where-clause t))
 
