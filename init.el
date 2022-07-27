@@ -843,6 +843,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package yaml-mode)
 
 (use-package yasnippet
+  :bind (:map global-map
+              ("M-i" . nil))
   :bind (:map yas-minor-mode-map
               ("M-i" . yas-expand)
               ("M-I" . yas-insert-snippet))
