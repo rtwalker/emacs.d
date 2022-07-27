@@ -61,6 +61,9 @@
   (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
   (require 'pragmatapro-prettify-symbols-v0.829))
 
+(defun brew-prefix (command)
+  "Prepend appropriate hoomebrew prefix to COMMAND"
+  (concat (substring (shell-command-to-string "brew --prefix") 0 -1) command))
 
 (use-package use-package-hydra)
 
@@ -213,7 +216,7 @@
   :custom
   (dired-use-ls-dired t)
   (dired-dwim-target t)
-  (insert-directory-program "/usr/local/bin/gls")
+  (insert-directory-program (brew-prefix "/bin/gls"))
   (dired-listing-switches "-alh --group-directories-first"))
 
 (use-package dired-sidebar
@@ -599,7 +602,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :bind (("C-x g" . magit-status)
          ("C-x M-g" . magit-dispatch))
   :custom
-  (magit-git-executable "/usr/local/bin/git")
+  (magit-git-executable (brew-prefix "/bin/git"))
   :config
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
@@ -756,6 +759,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config (add-to-list 'recentf-exclude "^/\\(?:ssh\\|su\\|sudo\\)?:"))
 
 (use-package rg
+  :custom
+  (rg-executable (brew-prefix "/bin/rg"))
   :config (rg-enable-menu))
 
 (use-package rust-mode
@@ -826,7 +831,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package vterm
   :custom
-  (vterm-shell "/usr/local/bin/fish"))
+  (vterm-shell (brew-prefix "/bin/fish"))
 
 (use-package yaml-mode)
 
