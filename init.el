@@ -536,6 +536,10 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :defer t
   :config (temp-buffer-resize-mode))
 
+(use-package hideshow
+  :config
+  (add-hook 'rust-mode-hook #'hs-minor-mode))
+
 (use-package hydra
   :config
   (defhydra hydra-zoom (:color amaranth)
