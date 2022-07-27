@@ -20,7 +20,6 @@
   (setq-default truncate-lines t)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
-  (setq mac-auto-operator-composition-mode t)
   (global-unset-key (kbd "<wheel-left>"))
   (global-unset-key (kbd "<wheel-right>")))
 
