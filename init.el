@@ -787,7 +787,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package shell-pop
   :custom
-  (shell-pop-shell-type '("eshell" "*eshell*" (lambda nil (eshell))))
+  (shell-pop-shell-type '("vterm" "*vterm*" (lambda nil (vterm))))
   (shell-pop-full-span t)
   (shell-pop-universal-key "s-SPC")
   (shell-pop-window-position "bottom"))
@@ -842,6 +842,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package vterm
   :custom
   (vterm-shell (brew-prefix "/bin/fish"))
+  (vterm-ignore-blink-cursor t))
 
 (use-package yaml-mode)
 
