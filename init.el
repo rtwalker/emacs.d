@@ -442,7 +442,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :custom
   (evil-collection-setup-minibuffer t)
   :config
-  (evil-collection-init '(dired eglot eshell forge ibuffer magit notmuch ripgrep selectrum)))
+  (evil-collection-init '(compile dired eglot elfeed eshell ibuffer magit notmuch ripgrep selectrum)))
 
 (use-package evil-lion
   :after evil
