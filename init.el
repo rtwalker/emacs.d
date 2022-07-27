@@ -615,6 +615,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config (setq Man-width 80))
 
 (use-package markdown-mode
+  :init (setq markdown-command "pandoc")
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
