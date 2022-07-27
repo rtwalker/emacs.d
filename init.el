@@ -549,6 +549,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
     ("d" (enlarge-window 2 t) "left")
     ("s" (shrink-window 2) "bottom")
     ("a" (shrink-window 2 t) "right")
+    ("b" (balance-windows) "balance" :color blue)
     ("q" nil "quit" :color blue)))
 
 (use-package ibuffer
