@@ -276,7 +276,10 @@
   (electric-pair-mode))
 
 (use-package electric-operator
-  :hook rust-mode)
+  :hook rust-mode
+  :config
+  (electric-operator-add-rules-for-mode 'rust-mode
+                                        (cons "||" nil)))
 
 (use-package elfeed)
 
