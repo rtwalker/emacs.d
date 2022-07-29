@@ -532,6 +532,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
    "c" 'org-capture
    "j" 'org-journal-new-entry))
 
+(use-package go-mode)
+
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
