@@ -289,6 +289,9 @@
 	path = lib/org-journal
 	url = git@github.com:bastibe/org-journal.git
 	ignore = untracked
+[submodule "org-modern"]
+	path = lib/org-modern
+	url = git@github.com:minad/org-modern.git
 [submodule "org-ql"]
 	path = lib/org-ql
 	url = git@github.com:alphapapa/org-ql.git
