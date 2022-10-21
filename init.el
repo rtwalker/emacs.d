@@ -652,6 +652,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
   (add-hook 'emacs-lisp-mode-hook 'reveal-mode))
 
+(use-package lua-mode)
 
 (use-package magit
   :defer t

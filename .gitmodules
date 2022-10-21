@@ -223,6 +223,12 @@
 	path = lib/julia-snail
 	url = git@github.com:gcv/julia-snail.git
 	ignore = untracked
+[submodule "just-mode"]
+	path = lib/just-mode
+	url = git@github.com:leon-barrett/just-mode.el.git
+[submodule "justl"]
+	path = lib/justl
+	url = git@github.com:psibi/justl.el.git
 [submodule "ledger-mode"]
 	path = lib/ledger-mode
 	url = git@github.com:ledger/ledger-mode.git
@@ -236,6 +242,9 @@
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
 	ignore = untracked
+[submodule "lua-mode"]
+	path = lib/lua-mode
+	url = git@github.com:immerrr/lua-mode.git
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
