@@ -885,7 +885,33 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (add-to-list 'tramp-default-proxies-alist
                (list (regexp-quote (system-name)) nil nil)))
 
-(use-package tree-sitter)
+(use-package tree-sitter
+  :after tsc
+  :load-path "lib/tree-sitter/lisp"
+  :hook
+  (rust-mode . tree-sitter-mode))
+
+(use-package tree-sitter-debug
+  :after tsc tree-sitter
+  :load-path "lib/tree-sitter/lisp")
+
+(use-package tree-sitter-hl
+  :after tsc tree-sitter
+  :load-path "lib/tree-sitter/lisp"
+  :config
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(use-package tree-sitter-langs
+  :after tsc tree-sitter
+  :config
+  (tree-sitter-require 'rust))
+
+(use-package tree-sitter-query
+  :after tsc tree-sitter
+  :load-path "lib/tree-sitter/lisp")
+
+(use-package tsc
+  :load-path "lib/tree-sitter/core")
 
 (use-package which-key
   :custom

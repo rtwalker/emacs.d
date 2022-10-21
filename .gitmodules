@@ -405,6 +405,12 @@
 	url = git@github.com:magit/transient.git
 	info-path = docs
 	ignore = untracked
+[submodule "tree-sitter"]
+	path = lib/tree-sitter
+	url = git@github.com:emacs-tree-sitter/elisp-tree-sitter.git
+[submodule "tree-sitter-langs"]
+	path = lib/tree-sitter-langs
+	url = git@github.com:emacs-tree-sitter/tree-sitter-langs.git
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
