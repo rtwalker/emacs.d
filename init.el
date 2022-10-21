@@ -650,10 +650,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package lisp-mode
   :config
   (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
-  (add-hook 'emacs-lisp-mode-hook 'reveal-mode)
-  (defun indent-spaces-mode ()
-    (setq indent-tabs-mode nil))
-  (add-hook 'lisp-interaction-mode-hook #'indent-spaces-mode))
+  (add-hook 'emacs-lisp-mode-hook 'reveal-mode))
+
 
 (use-package magit
   :defer t
@@ -801,6 +799,9 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
   (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left)
+  (defun indent-spaces-mode ()
+    (setq indent-tabs-mode nil))
+  (add-hook 'prog-mode-hook #'indent-spaces-mode)
   (add-hook 'prog-mode-hook #'prettify-hook))
 
 (use-package project)
