@@ -64,6 +64,18 @@
   "Prepend appropriate homebrew prefix to COMMAND."
   (concat (substring (shell-command-to-string "brew --prefix") 0 -1) command))
 
+(use-package evil
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  :custom
+  (evil-mode-line-format nil)
+  (evil-insert-state-message nil)
+  :config
+  (evil-mode 1)
+  (add-to-list 'evil-emacs-state-modes 'special-mode))
+
+
 (use-package use-package-hydra)
 
 
@@ -472,17 +484,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
                         (ess-skip-blanks-forward 'multiline)
                         (point))))
         (ess-eval-region beg end vis)))))
-
-(use-package evil
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  :custom
-  (evil-mode-line-format nil)
-  (evil-insert-state-message nil)
-  :config
-  (evil-mode 1)
-  (add-to-list 'evil-emacs-state-modes 'special-mode))
 
 (use-package evil-collection
   :after evil
