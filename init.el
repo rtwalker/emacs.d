@@ -729,7 +729,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((emacs-lisp)
-     (R . t)))
+     (R . t)
+     (sql . t)))
   (setq org-agenda-custom-commands
         '(("c" "Custom Agenda View"
            ((org-ql-block '(and (priority "A")
