@@ -61,7 +61,7 @@
   (require 'pragmatapro-prettify-symbols-v0.829))
 
 (defun brew-prefix (command)
-  "Prepend appropriate hoomebrew prefix to COMMAND"
+  "Prepend appropriate homebrew prefix to COMMAND."
   (concat (substring (shell-command-to-string "brew --prefix") 0 -1) command))
 
 (use-package use-package-hydra)
