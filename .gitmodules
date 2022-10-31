@@ -24,6 +24,9 @@
 	path = lib/annalist
 	url = git@github.com:noctuid/annalist.el.git
 	ignore = untracked
+[submodule "apheleia"]
+	path = lib/apheleia
+	url = git@github.com:raxod502/apheleia.git
 [submodule "async"]
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git

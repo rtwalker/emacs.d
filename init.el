@@ -101,6 +101,9 @@
   :config
   (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
 
+(use-package apheleia
+  :config (apheleia-global-mode +1))
+
 (use-package beacon
   :bind ("<s-escape>" . beacon-blink)
   :custom
