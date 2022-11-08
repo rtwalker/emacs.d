@@ -71,6 +71,9 @@
 [submodule "closql"]
 	path = lib/closql
 	url = git@github.com:emacscollective/closql.git
+[submodule "compat"]
+	path = lib/compat
+	url = git@github.com:emacsmirror/compat.git
 [submodule "consult"]
 	path = lib/consult
 	url = git@github.com:minad/consult.git
