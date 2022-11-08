@@ -875,8 +875,8 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package sqlformat
   :after sql
   :custom
-  (sqlformat-command 'pgformatter)
-  (sqlformat-args '("--comma-start" "-s4" "-C" "-w120"))
+  (sqlformat-command 'sqlfluff)
+  (sqlformat-args '("--dialect" "postgres"))
   :config
   (define-key sql-mode-map (kbd "C-c C-f") 'sqlformat)
   (add-hook 'sql-mode-hook #'sqlformat-on-save-mode))
