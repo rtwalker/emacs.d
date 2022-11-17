@@ -935,6 +935,21 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   (vterm-shell (brew-prefix "/bin/fish"))
   (vterm-ignore-blink-cursor t))
 
+(use-package window
+  :config
+  (setq display-buffer-alist
+        `(("^\\*compilation"
+           (display-buffer-in-side-window)
+           (side . bottom)
+           (window-height . 40)
+           (reusable-frames . nil))
+          ("^\\*Help"
+           (display-buffer-reuse-window display-buffer-in-side-window)
+           (side . right)
+           (slot . 1)
+           (window-width . 0.33)
+           (reusable-frames . nil)))))
+
 (use-package yaml-mode)
 
 (use-package yasnippet
