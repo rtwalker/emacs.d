@@ -104,6 +104,10 @@
 (use-package apheleia
   :config (apheleia-global-mode +1))
 
+(use-package avy
+  :bind
+  ("M-j" . 'avy-goto-char-timer))
+
 (use-package beacon
   :bind ("<s-escape>" . beacon-blink)
   :custom
