@@ -251,6 +251,9 @@
 	path = lib/lispy
 	url = git@github.com:abo-abo/lispy.git
 	ignore = untracked
+[submodule "llama"]
+	path = lib/llama
+	url = git@github.com:emacsmirror/llama.git
 [submodule "lua-mode"]
 	path = lib/lua-mode
 	url = git@github.com:immerrr/lua-mode.git
