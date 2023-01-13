@@ -368,10 +368,6 @@
 	path = lib/prescient
 	url = git@github.com:raxod502/prescient.el.git
 	ignore = untracked
-[submodule "project"]
-	path = lib/project
-	url = git@github.com:emacsmirror/project.git
-	ignore = untracked
 [submodule "projectile"]
 	path = lib/projectile
 	url = git@github.com:bbatsov/projectile.git
