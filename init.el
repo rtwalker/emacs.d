@@ -555,6 +555,7 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 ;;   "f" '(counsel-find-file :wk "find file")
    "g" 'magit-status
    "p" 'projectile-command-map
+   "r" 'rg-menu
    "w" 'hydra-window/body
    "z" 'hydra-zoom/body)
 
