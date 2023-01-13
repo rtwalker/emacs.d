@@ -943,6 +943,12 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
            (side . bottom)
            (window-height . 40)
            (reusable-frames . nil))
+          ("^magit: "
+           (display-buffer-reuse-window display-buffer-in-side-window)
+           (side . left)
+           (slot . 1)
+           (window-width . 0.33)
+           (reusable-frames . nil))
           ("^\\*Help"
            (display-buffer-reuse-window display-buffer-in-side-window)
            (side . right)
