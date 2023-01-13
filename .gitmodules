@@ -167,6 +167,9 @@
 	path = lib/flycheck
 	url = git@github.com:flycheck/flycheck.git
 	ignore = untracked
+[submodule "forge"]
+	path = lib/forge
+	url = git@github.com:magit/forge.git
 [submodule "gams-mode"]
 	path = lib/gams-mode
 	url = git@github.com:ShiroTakeda/gams-mode.git

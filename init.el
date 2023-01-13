@@ -539,9 +539,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :hook
   (org-mode . flyspell-mode))
 
-(use-package forge
-  :after magit)
-
 (use-package gams-mode
   :custom
   (gams-system-directory "/Applications/GAMS29.1/")
