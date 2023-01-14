@@ -966,24 +966,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
     (when (file-exists-p file)
       (load file))))
 
-(defun use-fancy-splash-screens-p ()
-  "Return t if fancy splash screens should be used."
-  (when (and (display-graphic-p)
-             (or (and (display-color-p)
-          (image-type-available-p 'xpm))
-                 (image-type-available-p 'pbm)))
-    (let ((frame (fancy-splash-frame)))
-      (when frame
-  (let* ((img (create-image (fancy-splash-image-file)))
-         (image-height (and img (cdr (image-size img nil frame))))
-         ;; We test frame-height so that, if the frame is split
-         ;; by displaying a warning, that doesn't cause the normal
-         ;; splash screen to be used.
-         (frame-height (1- (frame-height frame))))
-   ;; The original value added to the `image-height' for the test was 19; however,
-   ;; that causes the test to fail on X11 by about 1.5 -- so use 17 instead.
-    (> frame-height (+ image-height 17)))))))
-
 ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; End:
