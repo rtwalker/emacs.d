@@ -181,6 +181,9 @@
 [submodule "go-mode"]
 	path = lib/go-mode
 	url = git@github.com:dominikh/go-mode.el.git
+[submodule "goto-chg"]
+	path = lib/goto-chg
+	url = https://github.com/emacs-evil/goto-chg
 [submodule "graphql"]
 	path = lib/graphql
 	url = git@github.com:vermiculus/graphql.el.git
@@ -334,7 +337,8 @@
 	ignore = untracked
 [submodule "pdf-tools"]
 	path = lib/pdf-tools
-	url = git@github.com:politza/pdf-tools.git
+        url = git@github.com:vedang/pdf-tools
+	# url = git@github.com:politza/pdf-tools.git
 	# build-step = sudo dnf install make automake autoconf gcc gcc-c++ ImageMagick libpng-devel zlib-devel poppler-glib-devel
 	build-step = make
 	build-step = borg-byte-compile
@@ -394,6 +398,9 @@
 [submodule "sqlformat"]
 	path = lib/sqlformat
 	url = git@github.com:purcell/sqlformat.git
+[submodule "sqlite3"]
+	path = lib/sqlite3
+	url = https://github.com/pekingduck/emacs-sqlite3-api
 [submodule "tablist"]
 	path = lib/tablist
 	url = git@github.com:politza/tablist.git
