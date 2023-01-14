@@ -179,10 +179,6 @@
   :hook
   (calendar-today-visible . calendar-mark-today))
 
-(use-package calfw
-  :config
-  (use-package calfw-org))
-
 (use-package cdlatex
   :custom
   (cdlatex-use-dollar-to-ensure-math nil)
@@ -538,11 +534,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 (use-package flyspell
   :hook
   (org-mode . flyspell-mode))
-
-(use-package gams-mode
-  :custom
-  (gams-system-directory "/Applications/GAMS29.1/")
-  (gams-docs-directory "/Applications/GAMS29.1/Resources/docs/"))
 
 (use-package general
   :config

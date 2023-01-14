@@ -60,10 +60,6 @@
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
 	ignore = untracked
-[submodule "calfw"]
-	path = lib/calfw
-	url = git@github.com:kiwanami/emacs-calfw.git
-	ignore = untracked
 [submodule "cdlatex"]
 	path = lib/cdlatex
 	url = git@github.com:cdominik/cdlatex.git
@@ -170,10 +166,6 @@
 [submodule "forge"]
 	path = lib/forge
 	url = git@github.com:magit/forge.git
-[submodule "gams-mode"]
-	path = lib/gams-mode
-	url = git@github.com:ShiroTakeda/gams-mode.git
-	ignore = untracked
 [submodule "general"]
 	path = lib/general
 	url = git@github.com:noctuid/general.el.git
