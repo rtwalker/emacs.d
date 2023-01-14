@@ -364,10 +364,6 @@
 	path = lib/prescient
 	url = git@github.com:raxod502/prescient.el.git
 	ignore = untracked
-[submodule "projectile"]
-	path = lib/projectile
-	url = git@github.com:bbatsov/projectile.git
-	ignore = untracked
 [submodule "reformatter"]
 	path = lib/reformatter
 	url = git@github.com:purcell/emacs-reformatter.git
@@ -395,10 +391,6 @@
 	path = lib/shell-pop
 	url = git@github.com:kyagi/shell-pop-el.git
 	ignore = untracked
-[submodule "slime"]
-	path = lib/slime
-	url = git@github.com:slime/slime.git
-	ignore = dirty
 [submodule "spacemacs-theme"]
 	path = lib/spacemacs-theme
 	url = git@github.com:nashamri/spacemacs-theme.git

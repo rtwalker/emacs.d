@@ -555,7 +555,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 ;;   "SPC" '(counsel-M-x :wk "M-x")
 ;;   "f" '(counsel-find-file :wk "find file")
    "g" 'magit-status
-   "p" 'projectile-command-map
    "r" 'rg-menu
    "w" 'hydra-window/body
    "z" 'hydra-zoom/body)
@@ -810,12 +809,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
 
 (use-package project)
 
-(use-package projectile
-  :config
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
-
 (use-package python
   :custom
   (python-flymake-command '("flake8", "-"))
@@ -860,11 +853,6 @@ Prefix arg VIS toggles visibility of ess-code as for `ess-eval-region'."
   :config (column-number-mode)
   :hook
   (org-mode . auto-fill-mode))
-
-(use-package slime
-  :custom
-  (inferior-lisp-program "/usr/local/bin/clisp")
-  (slime-contribs '(slime-fancy)))
 
 (use-package sql
   :defer t
