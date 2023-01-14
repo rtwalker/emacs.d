@@ -27,6 +27,7 @@
 [submodule "apheleia"]
 	path = lib/apheleia
 	url = git@github.com:raxod502/apheleia.git
+	ignore = untracked
 [submodule "async"]
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git
@@ -70,6 +71,7 @@
 [submodule "compat"]
 	path = lib/compat
 	url = https://git.sr.ht/~pkal/compat
+	ignore = untracked
 [submodule "consult"]
 	path = lib/consult
 	url = git@github.com:minad/consult.git
@@ -102,6 +104,7 @@
 [submodule "dockerfile-mode"]
 	path = lib/dockerfile-mode
 	url = git@github.com:spotify/dockerfile-mode.git
+	ignore = untracked
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = git@github.com:hlissner/emacs-doom-themes.git
@@ -181,9 +184,11 @@
 [submodule "go-mode"]
 	path = lib/go-mode
 	url = git@github.com:dominikh/go-mode.el.git
+	ignore = untracked
 [submodule "goto-chg"]
 	path = lib/goto-chg
 	url = https://github.com/emacs-evil/goto-chg
+	ignore = untracked
 [submodule "graphql"]
 	path = lib/graphql
 	url = git@github.com:vermiculus/graphql.el.git
@@ -249,9 +254,11 @@
 [submodule "llama"]
 	path = lib/llama
 	url = git@github.com:emacsmirror/llama.git
+	ignore = untracked
 [submodule "lua-mode"]
 	path = lib/lua-mode
 	url = git@github.com:immerrr/lua-mode.git
+	ignore = untracked
 [submodule "magit"]
 	path = lib/magit
 	url = git@github.com:magit/magit.git
@@ -307,6 +314,7 @@
 [submodule "org-modern"]
 	path = lib/org-modern
 	url = git@github.com:minad/org-modern.git
+	ignore = untracked
 [submodule "org-ql"]
 	path = lib/org-ql
 	url = git@github.com:alphapapa/org-ql.git
@@ -363,6 +371,7 @@
 [submodule "reformatter"]
 	path = lib/reformatter
 	url = git@github.com:purcell/emacs-reformatter.git
+	ignore = untracked
 [submodule "request"]
 	path = lib/request
 	url = git@github.com:tkf/emacs-request.git
@@ -398,9 +407,11 @@
 [submodule "sqlformat"]
 	path = lib/sqlformat
 	url = git@github.com:purcell/sqlformat.git
+	ignore = untracked
 [submodule "sqlite3"]
 	path = lib/sqlite3
 	url = https://github.com/pekingduck/emacs-sqlite3-api
+	ignore = untracked
 [submodule "tablist"]
 	path = lib/tablist
 	url = git@github.com:politza/tablist.git
@@ -412,9 +423,11 @@
 [submodule "tree-sitter"]
 	path = lib/tree-sitter
 	url = git@github.com:emacs-tree-sitter/elisp-tree-sitter.git
+	ignore = untracked
 [submodule "tree-sitter-langs"]
 	path = lib/tree-sitter-langs
 	url = git@github.com:emacs-tree-sitter/tree-sitter-langs.git
+	ignore = untracked
 [submodule "treepy"]
 	path = lib/treepy
 	url = git@github.com:volrath/treepy.el.git
@@ -461,6 +474,7 @@
 [submodule "yaml"]
 	path = lib/yaml
 	url = git@github.com:zkry/yaml.el.git
+	ignore = untracked
 [submodule "yaml-mode"]
 	path = lib/yaml-mode
 	url = git@github.com:yoshiki/yaml-mode.git
