@@ -187,8 +187,7 @@
             t))
 
 (progn ;     personalize
-  (let ((file (expand-file-name (concat (user-real-login-name) ".el")
-                                user-emacs-directory)))
+  (let ((file (expand-file-name "rtwalker.el" user-emacs-directory)))
     (when (file-exists-p file)
       (load file))))
 
