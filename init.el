@@ -44,6 +44,8 @@
   (setq auto-compile-toggle-deletes-nonlib-dest   t)
   (setq auto-compile-update-autoloads             t))
 
+(use-package no-littering)
+
 (use-package epkg
   :defer t
   :init
@@ -171,6 +173,11 @@
 (use-package tramp-sh
   :defer t
   :config (cl-pushnew 'tramp-own-remote-path tramp-remote-path))
+
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode)
+  (setq undo-tree-mode-lighter ""))
 
 ;;; Tequila worms
 
