@@ -89,6 +89,9 @@
     (set-face-attribute 'diff-refine-removed nil :extend t)
     (set-face-attribute 'diff-refine-added   nil :extend t)))
 
+(use-package dim-autoload
+  :config (global-dim-autoload-cookies-mode))
+
 (use-package dired
   :defer t
   :config (setq dired-listing-switches "-alh"))
@@ -100,6 +103,9 @@
 (use-package help
   :defer t
   :config (temp-buffer-resize-mode))
+
+(use-package hl-todo
+  :config (global-hl-todo-mode))
 
 (progn ;    `isearch'
   (setq isearch-allow-scroll t))
@@ -125,8 +131,17 @@
   :defer t
   :config (setq Man-width 80))
 
+(use-package mode-line-debug
+  :config (mode-line-debug-mode))
+
+(use-package morlock
+  :config (global-morlock-mode))
+
 (use-package paren
   :config (show-paren-mode))
+
+(use-package paren-face
+  :config (global-paren-face-mode))
 
 (use-package prog-mode
   :config (global-prettify-symbols-mode)

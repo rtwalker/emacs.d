@@ -21,6 +21,9 @@
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
+[submodule "dim-autoload"]
+	path = lib/dim-autoload
+	url = git@github.com:tarsius/dim-autoload.git
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
@@ -31,6 +34,9 @@
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
+[submodule "hl-todo"]
+	path = lib/hl-todo
+	url = git@github.com:tarsius/hl-todo.git
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama
@@ -41,12 +47,27 @@
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "mode-line-debug"]
+	path = lib/mode-line-debug
+	url = git@github.com:tarsius/mode-line-debug.git
+[submodule "morlock"]
+	path = lib/morlock
+	url = git@github.com:tarsius/morlock.git
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = git@github.com:emacscollective/no-littering.git
+[submodule "orglink"]
+	path = lib/orglink
+	url = git@github.com:tarsius/orglink.git
+[submodule "paren-face"]
+	path = lib/paren-face
+	url = git@github.com:tarsius/paren-face.git
 [submodule "queue"]
 	path = lib/queue
 	url = git@github.com:emacsmirror/queue.git
+[submodule "rainbow-mode"]
+	path = lib/rainbow-mode
+	url = git@github.com:emacsmirror/rainbow-mode.git
 [submodule "sqlite3"]
 	build-step = make
 	path = lib/sqlite3
