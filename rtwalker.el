@@ -1,3 +1,13 @@
+(use-package ace-window
+  :bind
+  ("M-o" . 'ace-window)
+  :custom
+  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
+
+(use-package avy
+  :bind
+  ("M-j" . 'avy-goto-char-timer))
+
 (use-package evil
   :init
   (setq evil-want-integration t)

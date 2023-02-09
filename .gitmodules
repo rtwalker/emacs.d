@@ -1,9 +1,15 @@
 [borg]
 	pushDefault = locutus
 	collective = emacsg
+[submodule "ace-window"]
+	path = lib/ace-window
+	url = https://github.com/abo-abo/ace-window
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:emacscollective/auto-compile.git
+[submodule "avy"]
+	path = lib/avy
+	url = https://github.com/abo-abo/avy
 [submodule "borg"]
 	path = lib/borg
 	url = git@github.com:emacscollective/borg.git
@@ -71,6 +77,9 @@
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = git@github.com:tarsius/paren-face.git
+[submodule "posframe"]
+	path = lib/posframe
+	url = https://github.com/tumashu/posframe
 [submodule "queue"]
 	path = lib/queue
 	url = git@github.com:emacsmirror/queue.git
