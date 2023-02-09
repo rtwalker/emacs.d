@@ -147,7 +147,10 @@
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
-  (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left))
+  (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left)
+  (defun indent-spaces-mode ()
+    (setq indent-tabs-mode nil))
+  (add-hook 'prog-mode-hook #'indent-spaces-mode))
 
 (use-package recentf
   :demand t
