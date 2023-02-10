@@ -29,6 +29,10 @@
   :hook
   (calendar-today-visible . calendar-mark-today))
 
+(use-package doom-themes
+  :config
+  (load-theme 'doom-tomorrow-day t))
+
 (use-package evil
   :init
   (setq evil-want-integration t)

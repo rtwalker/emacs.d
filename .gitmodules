@@ -36,6 +36,9 @@
 [submodule "dim-autoload"]
 	path = lib/dim-autoload
 	url = git@github.com:tarsius/dim-autoload.git
+[submodule "doom-themes"]
+	path = lib/doom-themes
+	url = https://github.com/doomemacs/themes
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
