@@ -22,7 +22,11 @@
   (blink-cursor-mode 0)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
-  (setq-default truncate-lines t))
+  (setq-default truncate-lines t)
+  (global-unset-key (kbd "<wheel-left>"))
+  (global-unset-key (kbd "<wheel-right>"))
+  (setq ring-bell-function #'ignore)
+  (global-hl-line-mode 1))
 
 (eval-and-compile ; `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
