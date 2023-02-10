@@ -1,3 +1,8 @@
+(progn ;
+  (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+  (load "pragmatapro-prettify-symbols-v0.829")
+  (add-hook 'prog-mode-hook #'prettify-hook))
+
 (use-package ace-window
   :bind
   ("M-o" . 'ace-window)
@@ -54,6 +59,10 @@
 (use-package evil-surround
   :after evil
   :config (global-evil-surround-mode 1))
+
+(use-package faces
+  :config
+  (set-face-attribute 'default nil :family "PragmataPro Mono" :height 130))
 
 (use-package window
   :config
