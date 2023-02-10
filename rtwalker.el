@@ -4,6 +4,9 @@
   :custom
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
+(use-package apheleia
+  :config (apheleia-global-mode +1))
+
 (use-package avy
   :bind
   ("M-j" . 'avy-goto-char-timer))
