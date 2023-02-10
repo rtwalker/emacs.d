@@ -7,6 +7,13 @@
 (use-package apheleia
   :config (apheleia-global-mode +1))
 
+(use-package autorevert
+  :custom
+  (global-auto-revert-non-file-buffers t)
+  (auto-revert-verbose nil)
+  :config
+  (global-auto-revert-mode 1))
+
 (use-package avy
   :bind
   ("M-j" . 'avy-goto-char-timer))
