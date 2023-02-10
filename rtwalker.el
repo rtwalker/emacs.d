@@ -18,6 +18,17 @@
   :bind
   ("M-j" . 'avy-goto-char-timer))
 
+(use-package calc
+  :defer t
+  :bind ("M-+" . calc))
+
+(use-package calendar
+  :bind ("M-C" . calendar)
+  :custom
+  (calendar-week-start-day 1)
+  :hook
+  (calendar-today-visible . calendar-mark-today))
+
 (use-package evil
   :init
   (setq evil-want-integration t)
