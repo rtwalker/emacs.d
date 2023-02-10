@@ -19,6 +19,13 @@
   (evil-mode 1)
   (add-to-list 'evil-emacs-state-modes 'special-mode))
 
+(use-package evil-collection
+  :after evil
+  :custom
+  (evil-collection-setup-minibuffer t)
+  :config
+  (evil-collection-init '(compile dired eglot ibuffer magit)))
+
 (use-package evil-surround
   :after evil
   :config (global-evil-surround-mode 1))

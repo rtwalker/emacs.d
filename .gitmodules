@@ -4,6 +4,9 @@
 [submodule "ace-window"]
 	path = lib/ace-window
 	url = https://github.com/abo-abo/ace-window
+[submodule "annalist"]
+	path = lib/annalist
+	url = https://github.com/noctuid/annalist.el
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = git@github.com:emacscollective/auto-compile.git
@@ -40,6 +43,9 @@
 [submodule "evil"]
 	path = lib/evil
 	url = https://github.com/emacs-evil/evil
+[submodule "evil-collection"]
+	path = lib/evil-collection
+	url = https://github.com/emacs-evil/evil-collection
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
