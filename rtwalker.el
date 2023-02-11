@@ -55,6 +55,11 @@
   :config
   (load-theme 'doom-tomorrow-day t))
 
+(use-package eglot
+  :after eldoc flymake project
+  :custom
+  (eglot-extend-to-xref t))
+
 (use-package evil
   :init
   (setq evil-want-integration t)
