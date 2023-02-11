@@ -1,3 +1,4 @@
+;;; rtwalker.el --- user-init-file                    -*- lexical-binding: t -*-
 (progn ;
   (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
   (load "pragmatapro-prettify-symbols-v0.829")
