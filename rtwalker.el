@@ -117,6 +117,11 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
+(use-package minions
+  :custom (minions-mode-line-lighter "&")
+  :config
+  (minions-mode))
+
 (use-package window
   :config
   (setq display-buffer-alist

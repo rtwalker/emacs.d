@@ -80,6 +80,9 @@
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = git@github.com:jrblevin/markdown-mode.git
+[submodule "minions"]
+	path = lib/minions
+	url = https://github.com/tarsius/minions
 [submodule "mode-line-debug"]
 	path = lib/mode-line-debug
 	url = git@github.com:tarsius/mode-line-debug.git
