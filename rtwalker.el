@@ -111,6 +111,12 @@
 (use-package flyspell
   :hook (org-mode text-mode))
 
+(use-package markdown-mode
+  :init (setq markdown-command "pandoc")
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode)))
+
 (use-package window
   :config
   (setq display-buffer-alist
