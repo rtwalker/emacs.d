@@ -107,6 +107,9 @@
               ("M-p" . flymake-goto-prev-error))
   :hook prog-mode)
 
+(use-package flyspell
+  :hook (org-mode text-mode))
+
 (use-package window
   :config
   (setq display-buffer-alist
