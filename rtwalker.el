@@ -60,6 +60,21 @@
   :custom
   (eglot-extend-to-xref t))
 
+(use-package eshell
+  :defer t
+  :config
+  (setq eshell-prompt-header "\n┌─ ")
+  (setq eshell-prompt-regexp "└─>> ")
+  (setq eshell-prompt-string "└─>> ")
+  (defun esh-prompt-func ()
+    "Build `eshell-prompt-function'"
+    (concat eshell-prompt-header
+            "\xf115 "
+            (abbreviate-file-name (eshell/pwd))
+            "\n"
+            eshell-prompt-string))
+  (setq eshell-prompt-function 'esh-prompt-func))
+
 (use-package evil
   :init
   (setq evil-want-integration t)
