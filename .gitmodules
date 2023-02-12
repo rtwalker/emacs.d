@@ -92,6 +92,12 @@
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = git@github.com:emacscollective/no-littering.git
+[submodule "org"]
+	build-step = touch local.mk
+	build-step = make all
+	load-path = lisp
+	path = lib/org
+	url = https://git.savannah.gnu.org/git/emacs/org-mode.git
 [submodule "orglink"]
 	path = lib/orglink
 	url = git@github.com:tarsius/orglink.git
