@@ -148,5 +148,4 @@
   (which-key-allow-evil-operators 1)
   (which-key-idle-delay 0.1)
   :config
-  (which-key-mode)
-  (which-key-show-major-mode))
+  (which-key-mode))
