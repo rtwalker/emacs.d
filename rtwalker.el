@@ -140,6 +140,8 @@
   :config
   (minions-mode))
 
+(use-package racket-mode)
+
 (use-package window
   :config
   (setq display-buffer-alist

@@ -116,6 +116,9 @@
 [submodule "queue"]
 	path = lib/queue
 	url = git@github.com:emacsmirror/queue.git
+[submodule "racket-mode"]
+	path = lib/racket-mode
+	url = https://github.com/greghendershott/racket-mode
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
