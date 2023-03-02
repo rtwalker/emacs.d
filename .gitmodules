@@ -107,6 +107,9 @@
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = git@github.com:tarsius/paren-face.git
+[submodule "pdf-tools"]
+	path = lib/pdf-tools
+	url = https://github.com/vedang/pdf-tools
 [submodule "posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe
@@ -120,6 +123,9 @@
 	build-step = make
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git
+[submodule "tablist"]
+	path = lib/tablist
+	url = https://github.com/politza/tablist
 [submodule "transient"]
 	path = lib/transient
 	url = git@github.com:magit/transient.git
