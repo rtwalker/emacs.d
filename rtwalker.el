@@ -91,6 +91,7 @@
   :after evil
   :custom
   (evil-collection-setup-minibuffer t)
+  (evil-collection-want-unimpaired-p nil)
   :config
   (evil-collection-init '(compile dired eglot ibuffer magit)))
 
@@ -141,6 +142,10 @@
   (minions-mode))
 
 (use-package racket-mode)
+
+(use-package vertico
+  :init
+  (vertico-mode))
 
 (use-package window
   :config
