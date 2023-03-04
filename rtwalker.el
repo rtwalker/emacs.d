@@ -58,6 +58,8 @@
 
 (use-package eglot
   :after eldoc flymake project
+  :init
+  (add-hook 'rust-mode-hook 'eglot-ensure)
   :custom
   (eglot-extend-to-xref t))
 
@@ -112,6 +114,10 @@
 (use-package flyspell
   :hook (org-mode text-mode))
 
+(use-package hideshow
+  :config
+  (add-hook 'rust-mode-hook #'hs-minor-mode))
+
 (use-package hydra
   :config
   (defhydra hydra-zoom (:color amaranth)
@@ -142,6 +148,12 @@
   (minions-mode))
 
 (use-package racket-mode)
+
+(use-package rust-mode
+  :custom
+  (rust-format-on-save nil)
+  (rust-indent-method-chain t)
+  (rust-indent-where-clause t))
 
 (use-package vertico
   :init

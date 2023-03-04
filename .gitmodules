@@ -122,6 +122,9 @@
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
+[submodule "rust-mode"]
+	path = lib/rust-mode
+	url = https://github.com/rust-lang/rust-mode
 [submodule "sqlite3"]
 	build-step = make
 	path = lib/sqlite3
