@@ -78,6 +78,10 @@
   :custom
   (eglot-extend-to-xref t))
 
+(use-package eldoc-box
+  :config
+  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t))
+
 
 (use-package emacs
   :init

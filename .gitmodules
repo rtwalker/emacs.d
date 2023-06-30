@@ -48,6 +48,9 @@
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = https://github.com/doomemacs/themes
+[submodule "eldoc-box"]
+	path = lib/eldoc-box
+	url = https://github.com/casouri/eldoc-box
 [submodule "emacsql"]
 	no-byte-compile = emacsql-pg.el
 	path = lib/emacsql
