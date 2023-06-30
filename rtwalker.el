@@ -222,3 +222,11 @@
   (which-key-idle-delay 0.1)
   :config
   (which-key-mode))
+
+;;; Finishing touches
+
+(use-package envrc
+  :config
+  (envrc-global-mode))
+
+;;; rtwalker.el ends here
