@@ -157,7 +157,8 @@
     (setq indicate-buffer-boundaries 'left))
   (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left)
   (defun indent-spaces-mode ()
-    (setq indent-tabs-mode nil))
+    (unless (derived-mode-p 'makefile-mode)
+      (setq indent-tabs-mode nil)))
   (add-hook 'prog-mode-hook #'indent-spaces-mode))
 
 (use-package recentf
