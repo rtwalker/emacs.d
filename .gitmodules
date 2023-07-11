@@ -104,6 +104,9 @@
 [submodule "morlock"]
 	path = lib/morlock
 	url = git@github.com:tarsius/morlock.git
+[submodule "nix-mode"]
+	path = lib/nix-mode
+	url = https://github.com/NixOS/nix-mode
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = git@github.com:emacscollective/no-littering.git

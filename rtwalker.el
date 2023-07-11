@@ -181,8 +181,9 @@
   :config
   (minions-mode))
 
-(use-package racket-mode)
+(use-package nix-mode)
 
+(use-package racket-mode)
 
 (use-package rust-mode
   :custom
