@@ -185,6 +185,10 @@
 
 (use-package racket-mode)
 
+(use-package rg
+  :config
+  (rg-enable-menu))
+
 (use-package rust-mode
   :custom
   (rust-rustfmt-bin "~/.cargo/bin/rustfmt")

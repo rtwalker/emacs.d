@@ -4,6 +4,9 @@
 [submodule "ace-window"]
 	path = lib/ace-window
 	url = https://github.com/abo-abo/ace-window
+[submodule "ag"]
+	path = lib/ag
+	url = https://github.com/Wilfred/ag.el
 [submodule "all-the-icons"]
 	path = lib/all-the-icons
 	url = https://github.com/domtronn/all-the-icons.el
@@ -130,9 +133,15 @@
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = git@github.com:emacsmirror/rainbow-mode.git
+[submodule "rg"]
+	path = lib/rg
+	url = https://github.com/dajva/rg.el
 [submodule "rust-mode"]
 	path = lib/rust-mode
 	url = https://github.com/rust-lang/rust-mode
+[submodule "s"]
+	path = lib/s
+	url = https://github.com/magnars/s.el
 [submodule "sqlite3"]
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git
@@ -155,6 +164,9 @@
 [submodule "vertico"]
 	path = lib/vertico
 	url = https://github.com/minad/vertico
+[submodule "wgrep"]
+	path = lib/wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep
 [submodule "which-key"]
 	path = lib/which-key
 	url = https://github.com/justbur/emacs-which-key
