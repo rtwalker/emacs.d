@@ -202,24 +202,35 @@
 
 (use-package window
   :config
-  (setq display-buffer-alist
-        `(("^\\*compilation"
-           (display-buffer-in-side-window)
-           (side . bottom)
-           (window-height . 40)
-           (reusable-frames . nil))
-          ("^magit: "
-           (display-buffer-reuse-window display-buffer-in-side-window)
-           (side . left)
-           (slot . 1)
-           (window-width . 0.33)
-           (reusable-frames . nil))
-          ("^\\*Help"
-           (display-buffer-reuse-window display-buffer-in-side-window)
-           (side . right)
-           (slot . 1)
-           (window-width . 0.33)
-           (reusable-frames . nil)))))
+  (defun is-portrait ()
+    (> (frame-native-height) (frame-native-width)))
+  (defun update-display-buffer-alist ()
+    (setq display-buffer-alist
+          `(("^\\*compilation"
+             (display-buffer-in-side-window)
+             (side . bottom)
+             (window-height . 40)
+             (reusable-frames . nil))
+            ("^magit: "
+             (display-buffer-reuse-window display-buffer-in-side-window)
+             (side . ,(if (is-portrait) 'top 'left))
+             (slot . 1)
+	     ,(if (is-portrait)
+		  '(window-height . 0.33)
+		  '(window-width . 0.33))
+             (reusable-frames . nil))
+            ("^\\*Help"
+             (display-buffer-reuse-window display-buffer-in-side-window)
+             (side . ,(if (is-portrait) 'bottom 'right))
+             (slot . 1)
+	     ,(if (is-portrait)
+		  '(window-height . 0.33)
+		  '(window-width . 0.33))
+             (reusable-frames . nil)))))
+  (defun display-buffer-focus-change-function ()
+    (when (frame-focus-state)
+      (update-display-buffer-alist)))
+  (add-function :after after-focus-change-function 'display-buffer-focus-change-function))
 
 (use-package which-key
   :custom
