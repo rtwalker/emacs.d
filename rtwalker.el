@@ -95,7 +95,12 @@
 
   ;; Enable indentation+completion using the TAB key.
   ;; `completion-at-point' is often bound to M-TAB.
-  (setq tab-always-indent 'complete))
+  (setq tab-always-indent 'complete)
+
+  ;; Emacs 28: Hide commands in M-x which do not work in the current mode.
+  ;; Vertico commands are hidden in normal buffers.
+  (setq read-extended-command-predicate
+        #'command-completion-default-include-p))
 
 (use-package eshell
   :defer t
@@ -199,7 +204,9 @@
 
 (use-package vertico
   :init
-  (vertico-mode))
+  (vertico-mode)
+  :config
+  (setq vertico-cycle t))
 
 (use-package window
   :config
