@@ -225,7 +225,7 @@
              (slot . 1)
 	     ,(if (is-portrait)
 		  '(window-height . 0.33)
-		  '(window-width . 0.33))
+		'(window-width . 0.33))
              (reusable-frames . nil))
             ("^\\*Help"
              (display-buffer-reuse-window display-buffer-in-side-window)
@@ -233,7 +233,7 @@
              (slot . 1)
 	     ,(if (is-portrait)
 		  '(window-height . 0.33)
-		  '(window-width . 0.33))
+		'(window-width . 0.33))
              (reusable-frames . nil)))))
   (defun display-buffer-focus-change-function ()
     (when (frame-focus-state)
