@@ -72,7 +72,7 @@
   (load-theme 'doom-tomorrow-day t))
 
 (use-package eglot
-  :after eldoc flymake project
+  :after eldoc project
   :init
   (add-hook 'rust-mode-hook 'eglot-ensure)
   :custom
@@ -144,14 +144,14 @@
   :config
   (set-face-attribute 'default nil :family "PragmataPro Mono" :height 130))
 
-(use-package flymake
-  :bind (:map flymake-mode-map
-              ("M-n" . flymake-goto-next-error)
-              ("M-p" . flymake-goto-prev-error))
-  :hook prog-mode)
-
-(use-package flyspell
-  :hook (org-mode text-mode))
+;; (use-package flymake
+;;   :bind (:map flymake-mode-map
+;;               ("M-n" . flymake-goto-next-error)
+;;               ("M-p" . flymake-goto-prev-error))
+;;   :hook prog-mode)
+;; 
+;; (use-package flyspell
+;;   :hook (org-mode text-mode))
 
 (use-package hideshow
   :config
