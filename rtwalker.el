@@ -153,6 +153,7 @@
   (add-hook 'rust-mode-hook #'hs-minor-mode))
 
 (use-package hydra
+  :bind ("M-z" . hydra-zoom/body)
   :config
   (defhydra hydra-zoom (:color amaranth)
     "zoom"
