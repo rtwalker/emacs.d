@@ -191,6 +191,8 @@
 
 (use-package racket-mode)
 
+(use-package raku-mode)
+
 (use-package rg
   :config
   (rg-enable-menu))
