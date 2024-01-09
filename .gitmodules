@@ -85,6 +85,9 @@
 [submodule "inheritenv"]
 	path = lib/inheritenv
 	url = https://github.com/purcell/inheritenv
+[submodule "julia-mode"]
+	path = lib/julia-mode
+	url = https://github.com/JuliaEditorSupport/julia-emacs
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama

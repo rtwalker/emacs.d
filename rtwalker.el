@@ -176,6 +176,9 @@
     ("b" (balance-windows) "balance" :color blue)
     ("q" nil "quit" :color blue)))
 
+
+(use-package julia-mode)
+
 (use-package markdown-mode
   :init (setq markdown-command "pandoc")
   :mode (("README\\.md\\'" . gfm-mode)
