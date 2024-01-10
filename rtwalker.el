@@ -58,6 +58,16 @@
   :init
   (global-corfu-mode))
 
+(use-package dimmer
+  :custom
+  (dimmer-adjustment-mode :both)
+  (dimmer-fraction 0.1)
+  :config
+  (dimmer-configure-magit)
+  (dimmer-configure-posframe)
+  (dimmer-configure-which-key)
+  (dimmer-mode))
+
 (use-package display-line-numbers
   :config
   (defun show-line-numbers-mode ()

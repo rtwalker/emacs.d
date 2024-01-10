@@ -46,6 +46,9 @@
 [submodule "dim-autoload"]
 	path = lib/dim-autoload
 	url = git@github.com:tarsius/dim-autoload.git
+[submodule "dimmer"]
+	path = lib/dimmer
+	url = https://github.com/gonewest818/dimmer.el
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = https://github.com/doomemacs/themes
