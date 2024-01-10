@@ -88,6 +88,9 @@
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = https://github.com/JuliaEditorSupport/julia-emacs
+[submodule "kotlin-ts-mode"]
+	path = lib/kotlin-ts-mode
+	url = https://gitlab.com/bricka/emacs-kotlin-ts-mode
 [submodule "llama"]
 	path = lib/llama
 	url = https://git.sr.ht/~tarsius/llama

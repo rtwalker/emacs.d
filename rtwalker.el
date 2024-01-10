@@ -179,6 +179,9 @@
 
 (use-package julia-mode)
 
+(use-package kotlin-ts-mode
+  :mode "\\.kt\\'")
+
 (use-package markdown-mode
   :init (setq markdown-command "pandoc")
   :mode (("README\\.md\\'" . gfm-mode)
@@ -206,6 +209,10 @@
   (rust-format-on-save nil)
   (rust-indent-method-chain t)
   (rust-indent-where-clause t))
+
+(use-package treesit
+  :config
+  (add-to-list 'treesit-language-source-alist '(kotlin . ("https://github.com/fwcd/tree-sitter-kotlin"))))
 
 (use-package vertico
   :init
