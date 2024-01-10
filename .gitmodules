@@ -103,9 +103,6 @@
 [submodule "minions"]
 	path = lib/minions
 	url = https://github.com/tarsius/minions
-[submodule "mode-line-debug"]
-	path = lib/mode-line-debug
-	url = git@github.com:tarsius/mode-line-debug.git
 [submodule "morlock"]
 	path = lib/morlock
 	url = git@github.com:tarsius/morlock.git
