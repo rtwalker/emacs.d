@@ -144,10 +144,10 @@
   :config
   (set-face-attribute 'default nil :family "PragmataPro Mono" :height 160))
 
-;; (use-package flymake
-;;   :bind (:map flymake-mode-map
-;;               ("M-n" . flymake-goto-next-error)
-;;               ("M-p" . flymake-goto-prev-error))
+(use-package flymake
+  :bind (:map flymake-mode-map
+              ("M-n" . flymake-goto-next-error)
+              ("M-p" . flymake-goto-prev-error)))
 ;;   :hook prog-mode)
 ;; 
 ;; (use-package flyspell
