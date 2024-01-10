@@ -142,7 +142,7 @@
 
 (use-package faces
   :config
-  (set-face-attribute 'default nil :family "PragmataPro Mono" :height 130))
+  (set-face-attribute 'default nil :family "PragmataPro Mono" :height 160))
 
 ;; (use-package flymake
 ;;   :bind (:map flymake-mode-map
