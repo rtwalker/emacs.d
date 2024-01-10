@@ -225,6 +225,10 @@
   (rust-indent-method-chain t)
   (rust-indent-where-clause t))
 
+(use-package tcl
+  :custom
+  (tcl-application "tclsh"))
+
 (use-package treesit
   :config
   (add-to-list 'treesit-language-source-alist '(kotlin . ("https://github.com/fwcd/tree-sitter-kotlin"))))
