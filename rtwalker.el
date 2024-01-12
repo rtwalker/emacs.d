@@ -189,9 +189,11 @@
     ("q" nil "quit" :color blue)))
 
 
-(use-package julia-mode)
+(use-package julia-mode
+  :defer t)
 
 (use-package kotlin-ts-mode
+  :defer t
   :mode "\\.kt\\'")
 
 (use-package markdown-mode
@@ -212,15 +214,18 @@
   (completion-styles '(orderless basic))
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
-(use-package racket-mode)
+(use-package racket-mode
+  :defer t)
 
-(use-package raku-mode)
+(use-package raku-mode
+  :defer t)
 
 (use-package rg
   :config
   (rg-enable-menu))
 
 (use-package rust-mode
+  :defer t
   :custom
   (rust-rustfmt-bin "~/.cargo/bin/rustfmt")
   (rust-format-on-save nil)
