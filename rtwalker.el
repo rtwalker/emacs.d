@@ -163,6 +163,8 @@
 ;; (use-package flyspell
 ;;   :hook (org-mode text-mode))
 
+(use-package gptel)
+
 (use-package hideshow
   :config
   (add-hook 'rust-mode-hook #'hs-minor-mode))
