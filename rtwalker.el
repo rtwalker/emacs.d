@@ -227,6 +227,17 @@
   (rust-indent-method-chain t)
   (rust-indent-where-clause t))
 
+(use-package spacious-padding
+  :config
+  (setq spacious-padding-widths
+        '( :internal-border-width 20
+           :header-line-width 4
+           :mode-line-width 6
+           :tab-width 4
+           :right-divider-width 30
+           :scroll-bar-width 10))
+  (spacious-padding-mode 1))
+
 (use-package tcl
   :custom
   (tcl-application "tclsh"))

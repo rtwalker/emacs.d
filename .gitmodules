@@ -157,6 +157,9 @@
 [submodule "s"]
 	path = lib/s
 	url = https://github.com/magnars/s.el
+[submodule "spacious-padding"]
+	path = lib/spacious-padding
+	url = https://git.sr.ht/~protesilaos/spacious-padding
 [submodule "sqlite3"]
 	path = lib/sqlite3
 	url = git@github.com:pekingduck/emacs-sqlite3-api.git
