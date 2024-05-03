@@ -10,10 +10,14 @@
 (let ((dir (file-name-directory (or load-file-name buffer-file-name))))
   (add-to-list 'load-path (expand-file-name "lib/compat" dir))
   (add-to-list 'load-path (expand-file-name "lib/packed" dir))
-  (add-to-list 'load-path (expand-file-name "lib/auto-compile" dir)))
+  (add-to-list 'load-path (expand-file-name "lib/auto-compile" dir))
+  (add-to-list 'load-path (expand-file-name "lib/gcmh" dir)))
 (require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
+
+(require 'gcmh)
+(gcmh-mode 1)
 
 (setq package-enable-at-startup nil)
 

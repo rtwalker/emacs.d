@@ -73,6 +73,9 @@
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+[submodule "gcmh"]
+	path = lib/gcmh
+	url = https://gitlab.com/koral/gcmh
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = git@github.com:magit/git-modes.git
