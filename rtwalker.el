@@ -346,6 +346,8 @@
   :config
   (which-key-mode))
 
+(use-package wgrep)
+
 ;;; Finishing touches
 
 (use-package envrc
