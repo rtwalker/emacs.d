@@ -4,6 +4,11 @@
   (load "pragmatapro-prettify-symbols-v0.830")
   (add-hook 'prog-mode-hook #'prettify-hook))
 
+(progn
+  (setq make-backup-files nil)
+  (setq create-lockfiles nil)
+  (setq backup-inhibited nil))
+
 (use-package ace-window
   :bind
   ("M-o" . 'ace-window)
