@@ -43,6 +43,14 @@
   :hook
   (calendar-today-visible . calendar-mark-today))
 
+(use-package consult
+  :bind
+  (("M-s M-g" . consult-ripgrep)
+   ("M-s M-f" . consult-fd)
+   ("M-s M-o" . consult-outline)
+   ("M-s M-l" . consult-line)
+   ("M-s M-b" . consult-buffer)))
+
 (use-package corfu
   ;; Optional customizations
   ;; :custom
@@ -115,6 +123,28 @@
   ;; Vertico commands are hidden in normal buffers.
   (setq read-extended-command-predicate
         #'command-completion-default-include-p))
+
+(use-package embark
+  :bind
+  (("C-;" . embark-act)
+   ("M-;" . embark-dwim)
+   ("C-h B" . embark-bindings)
+   :map minibuffer-local-map
+   ("C-c C-c" . embark-collect)
+   ("C-c C-e" . embark-export))
+  :init
+  ;; Optionally replace the key help with a completing-read interface
+  (setq prefix-help-command #'embark-prefix-help-command)
+  :config
+  ;; Hide the mode line of the Embark live/completions buffers
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+                 nil
+                 (window-parameters (mode-line-format . none)))))
+
+(use-package embark-consult
+  :hook
+  (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package eshell
   :defer t
