@@ -96,7 +96,7 @@
 
 (use-package doom-themes
   :config
-  (load-theme 'doom-tomorrow-day t))
+  (load-theme 'doom-oksolar-light t))
 
 (use-package eglot
   :after eldoc project
