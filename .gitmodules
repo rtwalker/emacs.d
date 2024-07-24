@@ -145,6 +145,9 @@
 [submodule "pdf-tools"]
 	path = lib/pdf-tools
 	url = https://github.com/vedang/pdf-tools
+[submodule "popper"]
+	path = lib/popper
+	url = https://github.com/karthink/popper
 [submodule "posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe
