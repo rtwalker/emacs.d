@@ -37,6 +37,8 @@
   (require  'use-package)
   (setq use-package-verbose t))
 
+(use-package compat)
+
 (use-package dash
   :config (global-dash-fontify-mode))
 
