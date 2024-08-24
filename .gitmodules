@@ -21,19 +21,19 @@
 	url = https://github.com/radian-software/apheleia
 [submodule "auto-compile"]
 	path = lib/auto-compile
-	url = git@github.com:emacscollective/auto-compile.git
+	url = https://github.com/emacscollective/auto-compile.git
 [submodule "avy"]
 	path = lib/avy
 	url = https://github.com/abo-abo/avy
 [submodule "borg"]
 	path = lib/borg
-	url = git@github.com:emacscollective/borg.git
+	url = https://github.com/emacscollective/borg.git
 [submodule "closql"]
 	path = lib/closql
-	url = git@github.com:magit/closql.git
+	url = https://github.com/magit/closql.git
 [submodule "compat"]
 	path = lib/compat
-	url = git@github.com:emacs-compat/compat.git
+	url = https://github.com/emacs-compat/compat.git
 [submodule "consult"]
 	path = lib/consult
 	url = https://github.com/minad/consult
@@ -42,10 +42,10 @@
 	url = https://github.com/minad/corfu
 [submodule "dash"]
 	path = lib/dash
-	url = git@github.com:magnars/dash.el.git
+	url = https://github.com/magnars/dash.el.git
 [submodule "diff-hl"]
 	path = lib/diff-hl
-	url = git@github.com:dgutov/diff-hl.git
+	url = https://github.com/dgutov/diff-hl.git
 [submodule "dim-autoload"]
 	path = lib/dim-autoload
 	url = git@github.com:tarsius/dim-autoload.git
@@ -112,12 +112,21 @@
 [submodule "kotlin-ts-mode"]
 	path = lib/kotlin-ts-mode
 	url = https://gitlab.com/bricka/emacs-kotlin-ts-mode
+[submodule "emacsql"]
+	path = lib/emacsql
+	url = https://github.com/magit/emacsql.git
+[submodule "epkg"]
+	path = lib/epkg
+	url = https://github.com/emacscollective/epkg.git
+[submodule "git-modes"]
+	path = lib/git-modes
+	url = https://github.com/magit/git-modes.git
 [submodule "llama"]
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git
 [submodule "magit"]
 	path = lib/magit
-	url = git@github.com:magit/magit.git
+	url = https://github.com/magit/magit.git
 [submodule "marginalia"]
 	path = lib/marginalia
 	url = https://github.com/minad/marginalia
@@ -192,10 +201,10 @@
 	url = https://github.com/politza/tablist
 [submodule "transient"]
 	path = lib/transient
-	url = git@github.com:magit/transient.git
+	url = https://github.com/magit/transient.git
 [submodule "treepy"]
 	path = lib/treepy
-	url = git@github.com:volrath/treepy.el.git
+	url = https://github.com/volrath/treepy.el.git
 [submodule "undo-tree"]
 	remote = silent http://www.dr-qubit.org/git/undo-tree.git
 	path = lib/undo-tree
@@ -215,3 +224,6 @@
 [submodule "yaml-mode"]
 	path = lib/yaml-mode
 	url = git@github.com:yoshiki/yaml-mode.git
+[submodule "with-editor"]
+	path = lib/with-editor
+	url = https://github.com/magit/with-editor.git
