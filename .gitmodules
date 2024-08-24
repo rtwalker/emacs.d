@@ -200,9 +200,6 @@
 	remote = silent http://www.dr-qubit.org/git/undo-tree.git
 	path = lib/undo-tree
 	url = git@github.com:tarsiiformes/undo-tree.git
-[submodule "use-package"]
-	path = lib/use-package
-	url = git@github.com:jwiegley/use-package.git
 [submodule "vertico"]
 	path = lib/vertico
 	url = https://github.com/minad/vertico
