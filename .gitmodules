@@ -187,9 +187,6 @@
 [submodule "spacious-padding"]
 	path = lib/spacious-padding
 	url = https://git.sr.ht/~protesilaos/spacious-padding
-[submodule "sqlite3"]
-	path = lib/sqlite3
-	url = git@github.com:pekingduck/emacs-sqlite3-api.git
 [submodule "tablist"]
 	path = lib/tablist
 	url = https://github.com/politza/tablist
