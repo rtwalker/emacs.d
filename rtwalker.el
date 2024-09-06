@@ -98,6 +98,10 @@
   :config
   (load-theme 'doom-oksolar-light t))
 
+(use-package eat
+  :custom
+  (eat-shell "/etc/profiles/per-user/rtwalker/bin/fish"))
+
 (use-package eglot
   :after eldoc project
   :init
