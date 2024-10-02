@@ -211,7 +211,7 @@
 
 (use-package hideshow
   :config
-  (add-hook 'rust-mode-hook #'hs-minor-mode))
+  (add-hook 'prog-mode-hook #'hs-minor-mode))
 
 (use-package haskell-ts-mode
   :after eglot
