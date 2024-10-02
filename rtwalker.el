@@ -212,6 +212,11 @@
   :config
   (add-hook 'rust-mode-hook #'hs-minor-mode))
 
+(use-package haskell-ts-mode
+  :after eglot
+  :config
+  (haskell-ts-setup-eglot))
+
 (use-package hydra
   :bind ("M-z" . hydra-zoom/body)
   :config

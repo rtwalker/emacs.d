@@ -94,6 +94,9 @@
 [submodule "gptel"]
 	path = lib/gptel
 	url = https://github.com/karthink/gptel
+[submodule "haskell-ts-mode"]
+	path = lib/haskell-ts-mode
+	url = https://codeberg.org/pranshu/haskell-ts-mode.git
 [submodule "hl-todo"]
 	path = lib/hl-todo
 	url = git@github.com:tarsius/hl-todo.git
