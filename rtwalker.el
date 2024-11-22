@@ -114,6 +114,9 @@
   :config
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t))
 
+(use-package elec-pair
+  :config
+  (add-hook 'prog-mode-hook #'electric-pair-mode))
 
 (use-package emacs
   :init
