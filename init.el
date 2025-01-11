@@ -131,7 +131,19 @@
   (magit-add-section-hook 'magit-status-sections-hook
                           'magit-insert-modules
                           'magit-insert-stashes
-                          'append))
+                          'append)
+
+  (defun focus-magit ()
+    "Make an existing Magit status buffer the only visible buffer in the frame.
+Returns nil if no Magit buffer is found."
+    (interactive)
+    (let ((magit-buffer (catch 'found
+                          (dolist (b (buffer-list))
+                            (when (string-prefix-p "magit: " (buffer-name b))
+                              (throw 'found b))))))
+      (when magit-buffer
+        (delete-other-windows
+         (display-buffer-same-window magit-buffer nil))))))
 
 (use-package man
   :defer t
