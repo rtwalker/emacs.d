@@ -300,7 +300,9 @@
   :defer t)
 
 (use-package raku-mode
-  :defer t)
+  :defer t
+  :config
+  (setq raku-exec-path "/etc/profiles/per-user/rtwalker/bin/raku"))
 
 (use-package rg
   :config
