@@ -9,6 +9,10 @@
   (setq create-lockfiles nil)
   (setq backup-inhibited nil))
 
+(defun home-manager-prefix (command)
+  "Prepend appropriate prefix to COMMAND."
+  (concat "/etc/profiles/per-user/" user-login-name "/bin/" command))
+
 (use-package ace-window
   :bind
   ("M-o" . 'ace-window)
@@ -100,7 +104,7 @@
 
 (use-package eat
   :custom
-  (eat-shell "/etc/profiles/per-user/rtwalker/bin/fish"))
+  (eat-shell (home-manager-prefix "fish")))
 
 (use-package eglot
   :after eldoc project
@@ -302,11 +306,12 @@
 (use-package raku-mode
   :defer t
   :config
-  (setq raku-exec-path "/etc/profiles/per-user/rtwalker/bin/raku"))
+  (setq raku-exec-path (home-manager-prefix "raku")))
 
 (use-package rg
   :config
-  (rg-enable-menu))
+  (rg-enable-menu)
+  (setq rg-executable (home-manager-prefix "rg")))
 
 (use-package rust-mode
   :defer t
