@@ -316,8 +316,6 @@
 (use-package rust-mode
   :defer t
   :custom
-  (rust-rustfmt-bin "~/.cargo/bin/rustfmt")
-  (rust-format-on-save nil)
   (rust-indent-method-chain t)
   (rust-indent-where-clause t))
 
