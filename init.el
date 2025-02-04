@@ -100,7 +100,9 @@
 
 (use-package dired
   :defer t
-  :config (setq dired-listing-switches "-alh"))
+  :config
+  (setq dired-listing-switches "-alh")
+  (setq dired-dwim-target t))
 
 (use-package eldoc
   :when (version< "25" emacs-version)
