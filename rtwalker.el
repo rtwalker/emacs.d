@@ -195,7 +195,7 @@
   (evil-collection-setup-minibuffer t)
   (evil-collection-want-unimpaired-p nil)
   :config
-  (evil-collection-init '(compile dired eglot ibuffer magit)))
+  (evil-collection-init '(compile dired eglot ibuffer magit org)))
 
 (use-package evil-surround
   :after evil
