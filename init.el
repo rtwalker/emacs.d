@@ -134,6 +134,8 @@
                           'magit-insert-modules
                           'magit-insert-stashes
                           'append)
+  (dolist (section '(magit-insert-local-branches magit-insert-remote-branches))
+    (magit-add-section-hook 'magit-status-sections-hook section (car (last magit-status-sections-hook)) 'append))
 
   (defun focus-magit ()
     "Make an existing Magit status buffer the only visible buffer in the frame.
