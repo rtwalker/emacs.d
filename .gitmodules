@@ -86,6 +86,9 @@
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+[submodule "exec-path-from-shell"]
+	path = lib/exec-path-from-shell
+	url = https://github.com/purcell/exec-path-from-shell
 [submodule "gcmh"]
 	path = lib/gcmh
 	url = https://gitlab.com/koral/gcmh

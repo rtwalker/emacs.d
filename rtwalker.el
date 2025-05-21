@@ -9,10 +9,6 @@
   (setq create-lockfiles nil)
   (setq backup-inhibited nil))
 
-(defun home-manager-prefix (command)
-  "Prepend appropriate prefix to COMMAND."
-  (concat "/etc/profiles/per-user/" user-login-name "/bin/" command))
-
 (use-package ace-window
   :bind
   ("M-o" . 'ace-window)
