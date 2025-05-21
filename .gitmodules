@@ -66,7 +66,7 @@
 	url = https://github.com/casouri/eldoc-box
 [submodule "emacsql"]
 	path = lib/emacsql
-	url = git@github.com:magit/emacsql.git
+	url = https://github.com/magit/emacsql.git
 [submodule "embark"]
 	path = lib/embark
 	url = https://github.com/oantolin/embark
@@ -75,7 +75,7 @@
 	url = https://github.com/purcell/envrc
 [submodule "epkg"]
 	path = lib/epkg
-	url = git@github.com:emacscollective/epkg.git
+	url = https://github.com/emacscollective/epkg.git
 [submodule "evil"]
 	path = lib/evil
 	url = https://github.com/emacs-evil/evil
@@ -90,7 +90,7 @@
 	url = https://gitlab.com/koral/gcmh
 [submodule "git-modes"]
 	path = lib/git-modes
-	url = git@github.com:magit/git-modes.git
+	url = https://github.com/magit/git-modes.git
 [submodule "goto-chg"]
 	path = lib/goto-chg
 	url = https://github.com/emacs-evil/goto-chg
@@ -115,15 +115,6 @@
 [submodule "kotlin-ts-mode"]
 	path = lib/kotlin-ts-mode
 	url = https://gitlab.com/bricka/emacs-kotlin-ts-mode
-[submodule "emacsql"]
-	path = lib/emacsql
-	url = https://github.com/magit/emacsql.git
-[submodule "epkg"]
-	path = lib/epkg
-	url = https://github.com/emacscollective/epkg.git
-[submodule "git-modes"]
-	path = lib/git-modes
-	url = https://github.com/magit/git-modes.git
 [submodule "llama"]
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git
@@ -223,10 +214,7 @@
 	url = https://github.com/justbur/emacs-which-key
 [submodule "with-editor"]
 	path = lib/with-editor
-	url = git@github.com:magit/with-editor.git
+	url = https://github.com/magit/with-editor.git
 [submodule "yaml-mode"]
 	path = lib/yaml-mode
 	url = git@github.com:yoshiki/yaml-mode.git
-[submodule "with-editor"]
-	path = lib/with-editor
-	url = https://github.com/magit/with-editor.git
