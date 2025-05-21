@@ -390,7 +390,8 @@
 ;;; Finishing touches
 
 (use-package envrc
-  :config
-  (envrc-global-mode))
+  :init (setq envrc-debug t)
+  :hook (after-init . envrc-global-mode)
+  :config (envrc-global-mode))
 
 ;;; rtwalker.el ends here
