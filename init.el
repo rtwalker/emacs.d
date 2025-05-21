@@ -53,7 +53,8 @@
   (setq auto-compile-toggle-deletes-nonlib-dest   t)
   (setq auto-compile-update-autoloads             t))
 
-(use-package no-littering)
+(use-package no-littering
+  :config (no-littering-theme-backups))
 
 (use-package epkg
   :defer t
@@ -219,8 +220,7 @@ Returns nil if no Magit buffer is found."
 
 (use-package undo-tree
   :config
-  (global-undo-tree-mode)
-  (setq undo-tree-mode-lighter ""))
+  (global-undo-tree-mode))
 
 ;;; Tequila worms
 
