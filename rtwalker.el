@@ -41,6 +41,8 @@
   :bind
   ("M-j" . 'avy-goto-char-timer))
 
+(use-package biblio)
+
 (use-package calc
   :defer t
   :bind ("M-+" . calc))
