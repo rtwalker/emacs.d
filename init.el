@@ -165,7 +165,8 @@ Returns nil if no Magit buffer is found."
   :config (setq Man-width 80))
 
 (use-package morlock
-  :config (global-morlock-mode))
+  :config
+  (add-hook 'emacs-lisp-mode-hook 'morlock-mode))
 
 (use-package org
   :defer t
