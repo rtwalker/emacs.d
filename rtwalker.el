@@ -337,6 +337,10 @@
   :custom
   (tcl-application "tclsh"))
 
+(use-package timeclock
+  :custom
+  (timeclock-file "~/time/log"))
+
 (use-package treesit
   :config
   (add-to-list 'treesit-language-source-alist '(kotlin . ("https://github.com/fwcd/tree-sitter-kotlin"))))
