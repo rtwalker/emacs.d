@@ -97,6 +97,7 @@
     (setq display-line-numbers 'relative)
     (setq display-line-numbers-width 4))
   (add-hook 'prog-mode-hook 'show-line-numbers-mode)
+  (add-hook 'text-mode-hook 'show-line-numbers-mode)
   (set-face-attribute 'line-number-current-line nil :foreground "#ee7621")
   (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
 
