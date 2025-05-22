@@ -247,6 +247,9 @@
 (use-package julia-mode
   :defer t)
 
+(use-package just-ts-mode
+  :defer t)
+
 (use-package kotlin-ts-mode
   :defer t
   :mode "\\.kt\\'")

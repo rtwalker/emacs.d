@@ -116,6 +116,9 @@
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = https://github.com/JuliaEditorSupport/julia-emacs
+[submodule "just-ts-mode"]
+	path = lib/just-ts-mode
+	url = https://github.com/leon-barrett/just-ts-mode.el.git
 [submodule "kotlin-ts-mode"]
 	path = lib/kotlin-ts-mode
 	url = https://gitlab.com/bricka/emacs-kotlin-ts-mode
