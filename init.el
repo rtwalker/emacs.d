@@ -75,15 +75,12 @@
   :functions (server-running-p)
   :config (or (server-running-p) (server-mode)))
 
-(defun home-manager-prefix (command)
+(defun home-manager-prefix (&optional command)
   "Prepend appropriate prefix to COMMAND."
   (concat "/etc/profiles/per-user/" user-login-name "/bin/" command))
 
-(use-package exec-path-from-shell
-  :custom
-  (exec-path-from-shell-shell-name (home-manager-prefix "fish"))
-  :config
-  (exec-path-from-shell-initialize))
+(setq exec-path
+      (append (butlast exec-path) (list (home-manager-prefix)) (last exec-path)))
 
 (progn ;     startup
   (message "Loading early birds...done (%.3fs)"
