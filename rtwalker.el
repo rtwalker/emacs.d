@@ -20,8 +20,7 @@
 
 (use-package all-the-icons-dired
   :after dired
-  :config
-  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+  :hook dired-mode)
 
 (use-package apheleia
   :config (apheleia-global-mode +1))
@@ -123,8 +122,7 @@
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t))
 
 (use-package elec-pair
-  :config
-  (add-hook 'prog-mode-hook #'electric-pair-mode))
+  :hook prog-mode)
 
 (use-package emacs
   :init
@@ -224,8 +222,7 @@
 (use-package gptel)
 
 (use-package hideshow
-  :config
-  (add-hook 'prog-mode-hook #'hs-minor-mode))
+  :hook (prog-mode . hs-minor-mode))
 
 (use-package haskell-ts-mode
   :after eglot
