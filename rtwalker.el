@@ -110,11 +110,13 @@
 
 (use-package eglot
   :after eldoc project
-  :init
-  (add-hook 'rust-mode-hook 'eglot-ensure)
   :custom
   (eglot-extend-to-xref t)
-  (eglot-ignored-server-capabilities '(:inlayHintProvider)))
+  (eglot-ignored-server-capabilities '(:inlayHintProvider))
+  :config
+  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
+  :hook
+  ((nix-mode rust-mode) . eglot-ensure))
 
 (use-package eldoc-box
   :config
