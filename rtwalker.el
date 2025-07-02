@@ -26,6 +26,9 @@
 (use-package apheleia
   :config (apheleia-global-mode +1))
 
+(use-package auth-source
+  :config (setq auth-sources '("~/.authinfo")))
+
 (use-package autorevert
   :custom
   (global-auto-revert-non-file-buffers t)
@@ -194,7 +197,7 @@
   (evil-collection-setup-minibuffer t)
   (evil-collection-want-unimpaired-p nil)
   :config
-  (evil-collection-init '(compile dired eglot ibuffer magit org)))
+  (evil-collection-init '(compile dired eglot forge ibuffer magit org)))
 
 (use-package evil-surround
   :after evil
@@ -212,6 +215,9 @@
 ;; 
 ;; (use-package flyspell
 ;;   :hook (org-mode text-mode))
+
+(use-package forge
+  :after magit)
 
 (use-package gptel)
 
