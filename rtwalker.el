@@ -122,7 +122,7 @@
   (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t))
 
 (use-package elec-pair
-  :hook prog-mode)
+  :hook (prog-mode . electric-pair-mode))
 
 (use-package emacs
   :init
