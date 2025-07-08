@@ -110,7 +110,9 @@
   :defer t
   :config
   (setq dired-listing-switches "-alh")
-  (setq dired-dwim-target t))
+  (setq dired-maybe-use-globstar t)
+  (setq dired-dwim-target t)
+  (setq insert-directory-program (home-manager-prefix "uutils-ls")))
 
 (use-package eldoc
   :when (version< "25" emacs-version)

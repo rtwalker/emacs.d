@@ -85,10 +85,6 @@
   (dimmer-configure-which-key)
   (dimmer-mode))
 
-(use-package dired
-  :custom
-  (dired-maybe-use-globstar t))
-
 (use-package display-line-numbers
   :config
   (defun show-line-numbers-mode ()
