@@ -115,7 +115,7 @@
   :config
   (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
   :hook
-  ((nix-mode rust-mode) . eglot-ensure))
+  ((nix-mode rust-mode scala-mode) . eglot-ensure))
 
 (use-package eldoc-box
   :config
@@ -325,6 +325,14 @@
   :custom
   (rust-indent-method-chain t)
   (rust-indent-where-clause t))
+
+(use-package scala-mode
+  :interpreter "scala")
+
+(use-package sbt-mode
+  :commands sbt-start sbt-command
+  :config
+  (setq sbt:program-options '("-Dsbt.supershell=false")))
 
 (use-package spacious-padding
   :config
