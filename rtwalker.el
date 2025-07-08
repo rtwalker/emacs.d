@@ -226,7 +226,10 @@
   (haskell-ts-setup-eglot))
 
 (use-package hydra
-  :bind ("M-z" . hydra-zoom/body)
+  :bind
+  (("M-h" . nil)
+   ("M-h w" . hydra-window/body)
+   ("M-h z" . hydra-zoom/body))
   :config
   (defhydra hydra-zoom (:color amaranth)
     "zoom"
@@ -238,12 +241,11 @@
 
   (defhydra hydra-window (:color amaranth)
     ("w" (enlarge-window 2) "top")
-    ("d" (enlarge-window 2 t) "left")
+    ("a" (enlarge-window 2 t) "left")
     ("s" (shrink-window 2) "bottom")
-    ("a" (shrink-window 2 t) "right")
+    ("d" (shrink-window 2 t) "right")
     ("b" (balance-windows) "balance" :color blue)
     ("q" nil "quit" :color blue)))
-
 
 (use-package julia-mode
   :defer t)
