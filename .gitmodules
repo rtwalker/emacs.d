@@ -1,6 +1,9 @@
 [include]
 	path = .gitremotes
 	path = .borgconfig
+[submodule "a-janet-spork-client"]
+	path = lib/a-janet-spork-client
+	url = https://github.com/sogaiu/a-janet-spork-client.git
 [submodule "ace-window"]
 	path = lib/ace-window
 	url = https://github.com/abo-abo/ace-window
@@ -116,6 +119,9 @@
 [submodule "inheritenv"]
 	path = lib/inheritenv
 	url = https://github.com/purcell/inheritenv
+[submodule "janet-ts-mode"]
+	path = lib/janet-ts-mode
+	url = https://github.com/sogaiu/janet-ts-mode.git
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = https://github.com/JuliaEditorSupport/julia-emacs
