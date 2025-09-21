@@ -406,6 +406,10 @@
 
 (use-package wgrep)
 
+(use-package zig-mode
+  ;; :custom (zig-ast-check-on-format t)
+  )
+
 ;;; Finishing touches
 
 (use-package envrc
