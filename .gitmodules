@@ -164,6 +164,9 @@
 [submodule "org"]
 	path = lib/org
 	url = https://git.savannah.gnu.org/git/emacs/org-mode.git
+[submodule "org-present"]
+	path = lib/org-present
+	url = https://github.com/rlister/org-present
 [submodule "orglink"]
 	path = lib/orglink
 	url = git@github.com:tarsius/orglink.git
