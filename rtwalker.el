@@ -203,7 +203,7 @@
   (evil-collection-setup-minibuffer t)
   (evil-collection-want-unimpaired-p nil)
   :config
-  (evil-collection-init '(compile dired eglot forge ibuffer magit org)))
+  (evil-collection-init '(compile dired eglot forge ibuffer magit org org-present)))
 
 (use-package evil-surround
   :after evil
@@ -304,7 +304,7 @@
   (add-hook 'org-present-mode-quit-hook
             (lambda ()
               (org-present-small)
-              (org-display-remove-inline-images)
+              (org-remove-inline-images)
               (org-present-show-cursor)
               (org-present-read-write))))
 
