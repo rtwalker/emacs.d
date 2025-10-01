@@ -85,6 +85,10 @@
   (dimmer-configure-which-key)
   (dimmer-mode))
 
+(use-package difftastic
+  :custom
+  (difftastic-executable (home-manager-prefix "difft")))
+
 (use-package display-line-numbers
   :config
   (defun show-line-numbers-mode ()

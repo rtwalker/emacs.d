@@ -79,8 +79,23 @@
   "Prepend appropriate prefix to COMMAND."
   (concat "/etc/profiles/per-user/" user-login-name "/bin/" command))
 
-(setq exec-path
-      (append (butlast exec-path) (list (home-manager-prefix)) (last exec-path)))
+;; from https://github.com/purcell/envrc/issues/92#issuecomment-2415612472
+(use-package exec-path-from-shell
+  :config
+  (when (memq window-system '(mac ns x))
+    (dolist (var '("SSH_AUTH_SOCK"
+                   "SSH_AGENT_PID"
+                   "XDG_DATA_DIRS"
+                   "XDG_CONFIG_DIRS"
+                   "__fish_nixos_env_preinit_sourced"
+                   "__NIX_DARWIN_SET_ENVIRONMENT_DONE"
+                   "__HM_SESS_VARS_SOURCED"
+                   "NIX_USER_PROFILE_DIR"
+                   "NIX_SSL_CERT_FILE"
+                   "NIX_PROFILES"
+                   "NIX_PATH"))
+      (add-to-list 'exec-path-from-shell-variables var))
+    (exec-path-from-shell-initialize)))
 
 (progn ;     startup
   (message "Loading early birds...done (%.3fs)"
