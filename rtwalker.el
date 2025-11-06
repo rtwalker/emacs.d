@@ -91,13 +91,25 @@
     (setq display-line-numbers 'relative)
     (setq display-line-numbers-width 4))
   (add-hook 'prog-mode-hook 'show-line-numbers-mode)
-  (add-hook 'text-mode-hook 'show-line-numbers-mode)
-  (set-face-attribute 'line-number-current-line nil :foreground "#ee7621")
-  (set-face-attribute 'line-number-current-line nil :background "#f0f0f1"))
+  (add-hook 'text-mode-hook 'show-line-numbers-mode))
 
 (use-package doom-themes
+  :init
+  (setq doom-oksolar-light-brighter-comments t)
   :config
-  (load-theme 'doom-oksolar-light t))
+  (load-theme 'doom-oksolar-light t)
+  (set-face-attribute 'line-number-current-line nil :foreground (doom-color 'orange))
+  (set-face-attribute 'line-number-current-line nil :background (doom-color 'bg-alt))
+  (set-face-attribute 'line-number nil :background (doom-color 'bg))
+  (set-face-attribute 'font-lock-doc-face nil
+                      :foreground (doom-darken (doom-color 'green) 0.1)
+                      :background (doom-blend (doom-color 'green) (doom-color 'bg) 0.1))
+  (set-face-attribute 'font-lock-comment-face nil
+                      :foreground (doom-lighten (doom-color 'dark-cyan) 0.2)
+                      :background (doom-blend (doom-color 'dark-cyan) (doom-color 'bg) 0.1))
+  (set-face-attribute 'font-lock-string-face nil
+                      :foreground (doom-lighten (doom-color 'cyan) 0.2)
+                      :background (doom-blend (doom-color 'cyan) (doom-color 'bg) 0.1)))
 
 (use-package eat
   :custom
