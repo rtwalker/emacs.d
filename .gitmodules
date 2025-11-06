@@ -128,9 +128,6 @@
 [submodule "just-ts-mode"]
 	path = lib/just-ts-mode
 	url = https://github.com/leon-barrett/just-ts-mode.el.git
-[submodule "kotlin-ts-mode"]
-	path = lib/kotlin-ts-mode
-	url = https://gitlab.com/bricka/emacs-kotlin-ts-mode
 [submodule "llama"]
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git

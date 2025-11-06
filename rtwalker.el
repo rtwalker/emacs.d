@@ -250,10 +250,6 @@
 (use-package just-ts-mode
   :defer t)
 
-(use-package kotlin-ts-mode
-  :defer t
-  :mode "\\.kt\\'")
-
 ;; Enable rich annotations using the Marginalia package
 (use-package marginalia
   ;; Bind `marginalia-cycle' locally in the minibuffer.  To make the binding
@@ -362,10 +358,6 @@
 (use-package timeclock
   :custom
   (timeclock-file "~/time/log"))
-
-(use-package treesit
-  :config
-  (add-to-list 'treesit-language-source-alist '(kotlin . ("https://github.com/fwcd/tree-sitter-kotlin"))))
 
 (use-package vertico
   :init
