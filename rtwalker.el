@@ -218,11 +218,6 @@
 (use-package hideshow
   :hook (prog-mode . hs-minor-mode))
 
-(use-package haskell-ts-mode
-  :after eglot
-  :config
-  (haskell-ts-setup-eglot))
-
 (use-package hydra
   :bind
   (("M-h" . nil)
