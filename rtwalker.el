@@ -111,7 +111,7 @@
   :config
   (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
   :hook
-  ((janet-ts-mode nix-mode rust-mode scala-mode) . eglot-ensure))
+  ((nix-mode rust-mode scala-mode) . eglot-ensure))
 
 (use-package eldoc-box
   :config
@@ -240,9 +240,6 @@
     ("b" (balance-windows) "balance" :color blue)
     ("q" nil "quit" :color blue)))
 
-(use-package janet-ts-mode
-  :config
-  (use-package ajsc))
 
 (use-package julia-mode
   :defer t)
