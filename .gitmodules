@@ -122,6 +122,9 @@
 [submodule "just-ts-mode"]
 	path = lib/just-ts-mode
 	url = https://github.com/leon-barrett/just-ts-mode.el.git
+[submodule "ligature"]
+	path = lib/ligature
+	url = https://github.com/mickeynp/ligature.el
 [submodule "llama"]
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git
