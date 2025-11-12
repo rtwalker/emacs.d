@@ -336,6 +336,7 @@
         '("\\*Messages\\*"
           "Output\\*$"
           "\\*Async Shell Command\\*"
+          "*scratch*"
           help-mode
           compilation-mode))
   (popper-mode +1)
