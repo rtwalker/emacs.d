@@ -263,9 +263,11 @@ Returns nil if no Magit buffer is found."
             t))
 
 (progn ;     personalize
-  (let ((file (expand-file-name "rtwalker.el" user-emacs-directory)))
-    (when (file-exists-p file)
-      (load file))))
+  (require 'dash)
+  (--each (->> `("rtwalker.el" ,(concat "hosts/" (system-name) ".el"))
+               (--map (expand-file-name it user-emacs-directory))
+               (--filter (file-exists-p it)))
+    (load it)))
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
