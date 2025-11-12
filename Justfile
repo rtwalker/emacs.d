@@ -13,3 +13,6 @@ update:
     @echo "Building drones..."
     @make build
     @echo "Done!"
+
+font:
+    @curl -L -o assets/all-ligatures.txt https://raw.githubusercontent.com/fabrizioschiavi/pragmatapro/refs/heads/master/useful_files/All_ligatures.txt

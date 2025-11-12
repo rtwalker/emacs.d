@@ -1,9 +1,4 @@
 ;;; rtwalker.el --- user-init-file                    -*- lexical-binding: t -*-
-(progn ;
-  (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-  (load "pragmatapro-prettify-symbols-v0.830")
-  (add-hook 'prog-mode-hook #'prettify-hook))
-
 (progn
   (setq make-backup-files nil)
   (setq create-lockfiles nil)
@@ -255,6 +250,15 @@
 
 (use-package just-ts-mode
   :defer t)
+
+(use-package ligature
+  :config
+  (setq pragmatapro-ligatures-alist
+        (--remove (s-equals? "" it)
+                  (s-split "\n"
+                           (f-read (concat user-emacs-directory "assets/all-ligatures.txt")))))
+  (ligature-set-ligatures 'prog-mode pragmatapro-ligatures-alist)
+  (global-ligature-mode t))
 
 ;; Enable rich annotations using the Marginalia package
 (use-package marginalia
