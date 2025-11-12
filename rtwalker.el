@@ -396,7 +396,7 @@
 
 (use-package visual-fill-column
   :custom
-  (visual-fill-column-width 180)
+  (visual-fill-column-width 160)
   (visual-fill-column-center-text t))
 
 (use-package window
