@@ -111,11 +111,7 @@
   :after eldoc project
   :custom
   (eglot-extend-to-xref t)
-  (eglot-ignored-server-capabilities '(:inlayHintProvider))
-  :config
-  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
-  :hook
-  ((nix-mode rust-mode scala-mode) . eglot-ensure))
+  (eglot-ignored-server-capabilities '(:inlayHintProvider)))
 
 (use-package eldoc-box
   :config
@@ -309,7 +305,11 @@
   :hook
   (dired-mode . nerd-icons-dired-mode))
 
-(use-package nix-mode)
+(use-package nix-mode
+  :config
+  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
+  :hook
+  (nix-mode . eglot-ensure))
 
 (use-package orderless
   :custom
@@ -366,7 +366,8 @@
   (rust-indent-where-clause t))
 
 (use-package scala-mode
-  :interpreter "scala")
+  :interpreter "scala"
+  :hook (scala-mode . eglot-ensure))
 
 (use-package sbt-mode
   :commands sbt-start sbt-command
