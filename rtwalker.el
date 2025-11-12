@@ -15,13 +15,6 @@
   :custom
   (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
-(use-package all-the-icons
-  :if (display-graphic-p))
-
-(use-package all-the-icons-dired
-  :after dired
-  :hook dired-mode)
-
 (use-package apheleia
   :config (apheleia-global-mode +1))
 
