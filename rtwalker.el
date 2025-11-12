@@ -404,12 +404,7 @@
     (> (frame-native-height) (frame-native-width)))
   (defun update-display-buffer-alist ()
     (setq display-buffer-alist
-          `(("^\\*compilation"
-             (display-buffer-in-side-window)
-             (side . bottom)
-             (window-height . 40)
-             (reusable-frames . nil))
-            ("^magit: "
+          `(("^magit: "
              (display-buffer-reuse-window display-buffer-in-side-window)
              (side . ,(if (is-portrait) 'top 'left))
              (slot . 1)
