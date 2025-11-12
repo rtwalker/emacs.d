@@ -290,6 +290,28 @@
   :config
   (minions-mode))
 
+(use-package nerd-icons
+  :config
+  (setq nerd-icons-font-family "PragmataPro Mono Liga"))
+
+(use-package nerd-icons-completion
+  :after marginalia
+  :config
+  (nerd-icons-completion-mode)
+  (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup))
+
+(use-package nerd-icons-dired
+  :preface
+  (defun rtw/nerd-icons-icon-for-file (file)
+    (nerd-icons-icon-for-file file :height 1.25))
+  (defun rtw/nerd-icons-icon-for-dir (dir)
+    (nerd-icons-icon-for-dir dir :height 1.25))
+  :custom
+  (nerd-icons-dired-file-icon-function #'rtw/nerd-icons-icon-for-file)
+  (nerd-icons-dired-dir-icon-function #'rtw/nerd-icons-icon-for-dir)
+  :hook
+  (dired-mode . nerd-icons-dired-mode))
+
 (use-package nix-mode)
 
 (use-package orderless

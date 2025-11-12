@@ -20,6 +20,7 @@
   (when (fboundp 'tool-bar-mode)
     (tool-bar-mode 0))
   (blink-cursor-mode 0)
+  (set-default-coding-systems 'utf-8)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
   (setq-default truncate-lines t)
