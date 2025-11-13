@@ -199,7 +199,7 @@
 
 (use-package faces
   :config
-  (set-face-attribute 'default nil :family "PragmataPro Mono Liga" :height 160))
+  (set-face-attribute 'default nil :family "PragmataPro Mono Liga Serif" :height 160))
 
 (use-package flymake
   :bind (:map flymake-mode-map
