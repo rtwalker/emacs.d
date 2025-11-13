@@ -44,6 +44,9 @@
 (use-package dash
   :config (global-dash-fontify-mode))
 
+(require 'f)
+(require 's)
+
 (use-package eieio)
 
 (use-package auto-compile
@@ -305,7 +308,6 @@ Returns nil if no Magit buffer is found."
             t))
 
 (progn ;     personalize
-  (require 'dash)
   (--each (->> `("rtwalker.el" ,(concat "hosts/" (system-name) ".el"))
                (--map (expand-file-name it user-emacs-directory))
                (--filter (file-exists-p it)))
