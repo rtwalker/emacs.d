@@ -195,14 +195,56 @@ Returns nil if no Magit buffer is found."
   :config (global-paren-face-mode))
 
 (use-package prog-mode
+  :functions
+  (indicate-buffer-boundaries-left
+   indent-spaces-mode
+   pragmatapro-prettify-symbol
+   add-pragmatapro-prettify-symbols-alist
+   setup-compose-predicate)
   :config (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
-  (add-hook 'prog-mode-hook 'indicate-buffer-boundaries-left)
+  (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left)
+
   (defun indent-spaces-mode ()
     (unless (derived-mode-p 'makefile-mode)
       (setq indent-tabs-mode nil)))
-  (add-hook 'prog-mode-hook #'indent-spaces-mode))
+  (add-hook 'prog-mode-hook #'indent-spaces-mode)
+
+  (setq prettify-symbols-unprettify-at-point 'right-edge)
+
+  (defun pragmatapro-prettify-symbol (s)
+    `(,(car s)
+      .
+      ,(vconcat
+        (apply 'vconcat
+               (make-list
+                (- (length (car s)) 1)
+                (vector (decode-char 'ucs #X0020) '(Br . Bl))))
+        (vector (decode-char 'ucs (cadr s))))))
+
+  (defconst pragmatapro-prettify-symbols-alist
+    (mapcar #'pragmatapro-prettify-symbol
+            (read (f-read (concat user-emacs-directory "assets/comment-symbols.el")))))
+
+  (defun add-pragmatapro-prettify-symbols-alist ()
+    (setq-local prettify-symbols-alist
+                (append pragmatapro-prettify-symbols-alist
+                        prettify-symbols-alist)))
+  (add-hook 'prog-mode-hook #'add-pragmatapro-prettify-symbols-alist)
+
+  (defun setup-compose-predicate ()
+    (setq prettify-symbols-compose-predicate
+          (defun rtw/prettify-symbols-compose-p (start end _match)
+            "Same as the default except compose symbols in comments as well."
+            (let* ((syntaxes-beg (if (memq (char-syntax (char-after start)) '(?w ?_))
+                                     '(?w ?_) '(?. ?\\)))
+                   (syntaxes-end (if (memq (char-syntax (char-before end)) '(?w ?_))
+                                     '(?w ?_) '(?. ?\\))))
+              (not (or (memq (char-syntax (or (char-before start) ?\s)) syntaxes-beg)
+                       (memq (char-syntax (or (char-after end) ?\s)) syntaxes-end)
+                       (nth 3 (syntax-ppss))))))))
+  (add-hook 'prog-mode-hook #'setup-compose-predicate))
 
 (use-package recentf
   :demand t
