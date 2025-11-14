@@ -82,8 +82,8 @@
   (defun show-line-numbers-mode ()
     (setq display-line-numbers 'relative)
     (setq display-line-numbers-width 4))
-  (add-hook 'prog-mode-hook 'show-line-numbers-mode)
-  (add-hook 'text-mode-hook 'show-line-numbers-mode))
+  :hook
+  ((prog-mode text-mode) . #'show-line-numbers-mode))
 
 (use-package doom-themes
   :init
