@@ -241,12 +241,6 @@
     ("q" nil "quit" :color blue)))
 
 
-(use-package julia-mode
-  :defer t)
-
-(use-package just-ts-mode
-  :defer t)
-
 (use-package ligature
   :config
   (setq pragmatapro-ligatures-alist
@@ -271,12 +265,6 @@
   ;; the mode gets enabled right away. Note that this forces loading the
   ;; package.
   (marginalia-mode))
-
-(use-package markdown-mode
-  :init (setq markdown-command "pandoc")
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . markdown-mode)
-         ("\\.markdown\\'" . markdown-mode)))
 
 (use-package minions
   :custom (minions-mode-line-lighter "&")
@@ -304,12 +292,6 @@
   (nerd-icons-dired-dir-icon-function #'rtw/nerd-icons-icon-for-dir)
   :hook
   (dired-mode . nerd-icons-dired-mode))
-
-(use-package nix-mode
-  :config
-  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
-  :hook
-  (nix-mode . eglot-ensure))
 
 (use-package orderless
   :custom
@@ -346,33 +328,10 @@
   (popper-mode +1)
   (popper-echo-mode +1)) ; For echo area hints
 
-(use-package racket-mode
-  :defer t)
-
-(use-package raku-mode
-  :defer t
-  :config
-  (setq raku-exec-path (home-manager-prefix "raku")))
-
 (use-package rg
   :config
   (rg-enable-menu)
   (setq rg-executable (home-manager-prefix "rg")))
-
-(use-package rust-mode
-  :defer t
-  :custom
-  (rust-indent-method-chain t)
-  (rust-indent-where-clause t))
-
-(use-package scala-mode
-  :interpreter "scala"
-  :hook (scala-mode . eglot-ensure))
-
-(use-package sbt-mode
-  :commands sbt-start sbt-command
-  :config
-  (setq sbt:program-options '("-Dsbt.supershell=false")))
 
 (use-package spacious-padding
   :config
@@ -384,10 +343,6 @@
            :right-divider-width 30
            :scroll-bar-width 10))
   (spacious-padding-mode 1))
-
-(use-package tcl
-  :custom
-  (tcl-application "tclsh"))
 
 (use-package timeclock
   :custom
@@ -440,9 +395,12 @@
 
 (use-package wgrep)
 
-(use-package zig-mode
-  ;; :custom (zig-ast-check-on-format t)
-  )
+;;; Host- and Language-specific configurations
+
+(dolist (file-name `(,(concat "hosts/" (system-name) ".el") "langs/main.el"))
+  (let ((file (expand-file-name file-name user-emacs-directory)))
+    (when (file-exists-p file)
+      (load file))))
 
 ;;; Finishing touches
 
