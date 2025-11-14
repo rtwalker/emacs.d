@@ -35,12 +35,13 @@
   :config
   (add-hook 'emacs-lisp-mode-hook 'morlock-mode))
 
-(use-package nix-mode
-  :defer t
+(use-package nix-ts-mode
+  :after eglot
+  :mode "\\.nix\\'"
   :config
-  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
-  :hook
-  (nix-mode . eglot-ensure))
+  (add-to-list 'eglot-server-programs '((nix-ts-mode nix-mode) . ("nixd")))
+  (add-to-list 'treesit-language-source-alist '(nix . ("https://github.com/nix-community/tree-sitter-nix")))
+  :hook (nix-ts-mode . eglot-ensure))
 
 (use-package python
   :after apheleia
