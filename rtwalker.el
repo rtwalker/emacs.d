@@ -68,6 +68,10 @@
   (dimmer-adjustment-mode :both)
   (dimmer-fraction 0.1)
   :config
+  (defun rtw/dimmer-filter-more (faces)
+    (remove 'mode-line-inactive faces))
+  (advice-add 'dimmer-filtered-face-list :filter-return
+              #'rtw/dimmer-filter-more)
   (dimmer-configure-magit)
   (dimmer-configure-posframe)
   (dimmer-configure-which-key)
