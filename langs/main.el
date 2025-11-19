@@ -72,6 +72,10 @@
   :custom
   (tcl-application "tclsh"))
 
+(use-package toml-ts-mode
+  :config
+  (add-to-list 'treesit-language-source-alist '(toml . ("https://github.com/tree-sitter/tree-sitter-toml"))))
+
 (use-package zig-mode
   ;; :custom (zig-ast-check-on-format t)
   :defer t)
