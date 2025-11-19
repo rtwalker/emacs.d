@@ -243,6 +243,9 @@
 [submodule "yaml"]
 	path = lib/yaml
 	url = https://github.com/zkry/yaml.el
+[submodule "yaml-pro"]
+	path = lib/yaml-pro
+	url = https://github.com/zkry/yaml-pro
 [submodule "zig-mode"]
 	path = lib/zig-mode
 	url = https://github.com/ziglang/zig-mode

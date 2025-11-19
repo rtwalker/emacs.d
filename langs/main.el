@@ -76,6 +76,24 @@
   :config
   (add-to-list 'treesit-language-source-alist '(toml . ("https://github.com/tree-sitter/tree-sitter-toml"))))
 
+(use-package yaml-pro
+  :after yaml-ts-mode
+  :bind (:map yaml-ts-mode-map
+              ("C-M-n" . #'yaml-pro-ts-next-subtree)
+              ("C-M-p" . #'yaml-pro-ts-prev-subtree)
+              ("C-M-u" . #'yaml-pro-ts-up-level)
+              ("C-M-d" . #'yaml-pro-ts-down-level)
+              ("C-M-k" . #'yaml-pro-ts-kill-subtree)
+              ("C-M-<backspace>" . #'yaml-pro-ts-kill-subtree)
+              ("C-M-a" . #'yaml-pro-ts-first-sibling)
+              ("C-M-e" . #'yaml-pro-ts-last-sibling))
+  :hook
+  ((yaml-mode yaml-ts-mode) . yaml-pro-mode))
+
+(use-package yaml-ts-mode
+  :config
+  (add-to-list 'treesit-language-source-alist '(yaml . ("https://github.com/tree-sitter-grammars/tree-sitter-yaml.git"))))
+
 (use-package zig-mode
   ;; :custom (zig-ast-check-on-format t)
   :defer t)
