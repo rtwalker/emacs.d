@@ -12,9 +12,6 @@
     (unless (string-match-p "main\\.el$" file)
       (load file))))
 
-(use-package julia-mode
-  :defer t)
-
 (use-package just-ts-mode
   :config
   (add-to-list 'treesit-language-source-alist just-ts-mode-treesit-language-source))

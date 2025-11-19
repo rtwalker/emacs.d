@@ -116,9 +116,6 @@
 [submodule "inheritenv"]
 	path = lib/inheritenv
 	url = https://github.com/purcell/inheritenv
-[submodule "julia-mode"]
-	path = lib/julia-mode
-	url = https://github.com/JuliaEditorSupport/julia-emacs
 [submodule "just-ts-mode"]
 	path = lib/just-ts-mode
 	url = https://github.com/leon-barrett/just-ts-mode.el.git
