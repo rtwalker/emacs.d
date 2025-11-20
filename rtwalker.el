@@ -410,7 +410,14 @@
         '((consult-imenu buffer)
           (consult-imenu-multi buffer)
           (consult-ripgrep buffer)
+          (execute-extended-command
+           posframe
+           (vertico-posframe-poshandler . posframe-poshandler-frame-center)
+           (vertico-posframe-border-width . 1))
           (t reverse))))
+
+(use-package vertico-posframe
+  :commands vertico-multiform-posframe)
 
 (use-package vertico-quick
   :after (vertico embark)
