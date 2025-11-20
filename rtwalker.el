@@ -202,7 +202,7 @@
   (evil-collection-setup-minibuffer t)
   (evil-collection-want-unimpaired-p nil)
   :config
-  (evil-collection-init '(compile dired eglot forge ibuffer magit org org-present)))
+  (evil-collection-init '(compile difftastic dired eglot forge hideshow ibuffer info magit org org-present vertico)))
 
 (use-package evil-surround
   :after evil
