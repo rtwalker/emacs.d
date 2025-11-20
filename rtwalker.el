@@ -45,8 +45,14 @@
   (("M-s M-g" . consult-ripgrep)
    ("M-s M-f" . consult-fd)
    ("M-s M-o" . consult-outline)
+   ("M-s M-i" . consult-imenu)
+   ("M-s M-I" . consult-imenu-multi)
    ("M-s M-l" . consult-line)
    ("M-s M-b" . consult-buffer)))
+
+(use-package consult-xref
+  :config
+  (setq xref-show-xrefs-function #'consult-xref))
 
 (use-package corfu
   ;; Optional customizations
