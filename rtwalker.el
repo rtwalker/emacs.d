@@ -275,6 +275,26 @@
   :config
   (minions-mode))
 
+(use-package modus-themes
+  :config
+  (setq modus-themes-bold-constructs t)
+  (setq modus-themes-italic-constructs t)
+  (setq modus-themes-common-palette-overrides
+        '((border-mode-line-active unspecified)
+          (string green-cooler)
+          (comment yellow-cooler)
+          (fg-line-number-active slate)
+          (bg-line-number-active bg-hl-line)))
+  (defun my-modus-themes-faces (&rest _)
+    (custom-set-faces
+     `(font-lock-comment-face ((t :background ,(modus-themes-get-color-value 'bg-yellow-nuanced))))
+     `(font-lock-doc-face ((t :background ,(modus-themes-get-color-value 'bg-blue-nuanced) :weight semibold)))
+     `(font-lock-string-face ((t :background ,(modus-themes-get-color-value 'bg-green-nuanced))))
+     `(vertico-quick1 ((t :inherit modus-themes-completion-match-0 :background ,(modus-themes-get-color-value 'bg-blue-nuanced))))
+     `(vertico-quick2 ((t :inherit modus-themes-completion-match-1 :background ,(modus-themes-get-color-value 'bg-magenta-nuanced))))))
+  (add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-faces)
+  (modus-themes-load-theme 'modus-operandi-tinted))
+
 (use-package nerd-icons
   :config
   (setq nerd-icons-font-family "PragmataPro Mono Liga"))

@@ -137,6 +137,9 @@
 [submodule "minions"]
 	path = lib/minions
 	url = https://github.com/tarsius/minions
+[submodule "modus-themes"]
+	path = lib/modus-themes
+	url = https://github.com/protesilaos/modus-themes
 [submodule "morlock"]
 	path = lib/morlock
 	url = https://github.com/tarsius/morlock
