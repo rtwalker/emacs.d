@@ -144,6 +144,7 @@
         #'command-completion-default-include-p))
 
 (use-package embark
+  :demand t
   :bind
   (("C-;" . embark-act)
    ("M-;" . embark-dwim)
@@ -375,8 +376,51 @@
 (use-package vertico
   :init
   (vertico-mode)
+  :custom
+  (vertico-cycle t)
+  (vertico-resize t)
+  :bind (:map vertico-map
+              ("M-n" . #'vertico-next-group)
+              ("M-p" . #'vertico-previous-group)))
+
+(use-package vertico-buffer
+  :after vertico
   :config
-  (setq vertico-cycle t))
+  (setq vertico-buffer-display-action 'display-buffer-reuse-window))
+
+(use-package vertico-indexed
+  :after (vertico vertico-reverse)
+  :config (vertico-indexed-mode))
+
+(use-package vertico-multiform
+  :commands vertico-multiform-mode
+  :after vertico
+  :init (vertico-multiform-mode 1)
+  :config
+  (setq vertico-multiform-categories
+        '((imenu buffer)
+          (t reverse)))
+  (setq vertico-multiform-commands
+        '((consult-imenu buffer)
+          (consult-imenu-multi buffer)
+          (consult-ripgrep buffer)
+          (t reverse))))
+
+(use-package vertico-quick
+  :after (vertico embark)
+  :bind (:map vertico-map
+              ("M-i" . #'vertico-quick-insert)
+              ("C-'" . #'vertico-quick-exit)
+              ("M-'" . #'vertico-quick-embark))
+  :config
+  (defun vertico-quick-embark (&optional arg)
+    "Embark on candidate using quick keys."
+    (interactive)
+    (when (vertico-quick-jump)
+      (embark-act arg))))
+
+(use-package vertico-reverse
+  :after vertico)
 
 (use-package visual-fill-column
   :custom
