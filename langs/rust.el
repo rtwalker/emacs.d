@@ -12,60 +12,79 @@
                   (face-attribute 'default :family))
        :weight bold
        :slant italic
-       :foreground ,(doom-color 'red)))
+       :inherit warning))
   "Face for the `unsafe` keyword."
   :group 'rust)
 
 (defface rust-unsafe-block-face
-  `((((class color) (background light))
-     :background ,(doom-blend (doom-color 'red) (doom-color 'bg-alt) 0.25) :extend t)
-    (((class color) (background dark))
-     :background ,(doom-blend (doom-color 'red) (doom-color 'bg-alt) 0.5) :extend t)
-    (t
-     :background ,(doom-blend (doom-color 'red) (doom-color 'bg-alt) 0.25) :extend t))
+  `((t :background ,(modus-themes-get-color-value 'bg-red-nuanced) :extend t :foreground unspecified))
   "Face for `unsafe` block content."
   :group 'rust)
 
-(defun rtw/rust-font-lock ()
-  (face-remap-add-relative 'font-lock-type-face '(:slant normal))
+(defun rtw/rust-ts-font-lock ()
   (when (treesit-ready-p 'rust)
-    ;; make this a "level 3" feature
+    ;; make "unsafe-block" a "level 3" feature
     (setq-local treesit-font-lock-feature-list
-                `(,(car treesit-font-lock-feature-list)
-                  ,(cadr treesit-font-lock-feature-list)
-                  ,(append (nth 2 treesit-font-lock-feature-list) '(unsafe-block))
-                  ,(nth 3 treesit-font-lock-feature-list)))
-
-    (let ((unsafe-rules (treesit-font-lock-rules
-                         :language 'rust
-                         :feature 'keyword
-                         :override 'append
-                         '(("unsafe" @rust-unsafe-keyword-face))
-                         :language 'rust
-                         :feature 'unsafe-block
-                         :override 'append
-                         '((unsafe_block) @rust-unsafe-block-face))))
-
+                '(( comment definition)
+                  ( keyword string)
+                  ( assignment attribute builtin constant escape-sequence
+                    number type unsafe-block )
+                  ( bracket delimiter error function operator property variable)))
+    (let ((unsafe-rules
+           (treesit-font-lock-rules
+            :language 'rust :feature 'keyword :override t '(("unsafe" @rust-unsafe-keyword-face))
+            :language 'rust :feature 'unsafe-block :override 'keep "(unsafe_block) @rust-unsafe-block-face")))
       (setq-local treesit-font-lock-settings
                   (append unsafe-rules treesit-font-lock-settings))
-
       (treesit-font-lock-recompute-features))))
 
-(defun rtw/rust-font-lock-refresh (&rest _)
-  (interactive)
-  (face-spec-recalc 'rust-unsafe-block-face (selected-frame))
-  (dolist (buffer (buffer-list))
-    (with-current-buffer buffer
-      (when (and (eq major-mode 'rust-mode)
-                 (treesit-ready-p 'rust))
-        (font-lock-flush)))))
+(defun rtw/rust-ts-imenu ()
+  (when (treesit-ready-p 'rust)
+    (setq-local treesit-simple-imenu-settings
+                `(("Module" "\\`mod_item\\'" nil nil)
+                  ("Enum" "\\`enum_item\\'" nil nil)
+                  ("Impl Trait"
+                   "\\`impl_item\\'"
+                   (lambda (node)
+                     (treesit-node-child-by-field-name node "trait"))
+                   nil)
+                  ("Impl"
+                   "\\`impl_item\\'"
+                   (lambda (node)
+                     (not (treesit-node-child-by-field-name node "trait")))
+                   nil)
+                  ("Type" "\\`type_item\\'" nil nil)
+                  ("Struct" "\\`struct_item\\'" nil nil)
+                  ("Fn" "\\`function_item\\'" nil nil)
+                  ("Macro" "\\`macro_definition\\'" nil nil)
+                  ("Trait" "\\`trait_item\\'" nil nil)
+                  ("Union" "\\`union_item\\'" nil nil)))))
+
+(use-package rust-ts-mode
+  :config
+  (add-hook 'rust-ts-mode-hook #'rtw/rust-ts-font-lock)
+  (add-hook 'rust-ts-mode-hook #'rtw/rust-ts-imenu)
+  (add-to-list 'treesit-language-source-alist '(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git"))))
 
 (use-package rust-mode
-  :after apheleia eglot
-  :hook ((rust-mode . eglot-ensure)
-         (rust-mode . #'rtw/rust-font-lock))
+  :after (apheleia consult eglot rust-ts-mode)
+  :init (setq rust-mode-treesitter-derive t)
   :config
-  (push '(rustfmt-nightly . ("rustfmt-nightly" "--quiet" "--emit" "stdout"))
-        apheleia-formatters))
+  (add-hook 'rust-mode-hook  #'eglot-ensure)
+  (unless (assoc 'rustfmt-nightly apheleia-formatters)
+    (push '(rustfmt-nightly . ("rustfmt-nightly" "--quiet" "--emit" "stdout"))
+          apheleia-formatters))
+  (add-to-list 'consult-imenu-config
+               '((rust-mode :types
+                            ((?f "Fn" font-lock-function-name-face)
+                             (?e "Enum" font-lock-type-face)
+                             (?i "Impl" font-lock-type-face)
+                             (?I "Impl Trait" font-lock-type-face)
+                             (?m "Macro" font-lock-preprocessor-face)
+                             (?M "Module" font-lock-constant-face)
+                             (?s "Struct" font-lock-type-face)
+                             (?t "Trait" font-lock-type-face)
+                             (?T "Type" font-lock-type-face)
+                             (?u "Union" font-lock-type-face))))))
 
 ;;; rust.el ends here
