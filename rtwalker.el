@@ -359,6 +359,23 @@
   (popper-mode +1)
   (popper-echo-mode +1)) ; For echo area hints
 
+(use-package posframe
+  :config
+  (defun rtw/posframe-poshandler-frame-almost-top-center (info)
+    "A custom posframe position handler.
+
+Designed to be in between `posframe-poshandler-frame-center' and
+`posframe-poshandler-frame-top-center'.
+
+The structure of INFO can be found in docstring of
+`posframe-show'."
+    (cons (/ (- (plist-get info :parent-frame-width)
+                (plist-get info :posframe-width))
+             2)
+          (/ (- (plist-get info :parent-frame-height)
+                (plist-get info :posframe-height))
+             4))))
+
 (use-package rg
   :config
   (rg-enable-menu)
@@ -417,15 +434,21 @@
   (setq vertico-multiform-commands
         '((consult-imenu buffer)
           (consult-imenu-multi buffer)
+          (consult-line buffer)
           (consult-ripgrep buffer)
-          (execute-extended-command
-           posframe
-           (vertico-posframe-poshandler . posframe-poshandler-frame-center)
-           (vertico-posframe-border-width . 1))
+          (execute-extended-command posframe)
           (t reverse))))
 
 (use-package vertico-posframe
-  :commands vertico-multiform-posframe)
+  :after (vertico posframe)
+  :commands vertico-multiform-posframe
+  :config
+  (setq vertico-posframe-poshandler #'rtw/posframe-poshandler-frame-almost-top-center)
+  (setq vertico-posframe-border-width 1)
+  (setq vertico-posframe-min-width 120)
+  (setq vertico-posframe-parameters
+        '((left-fringe . 10)
+          (right-fringe . 10))))
 
 (use-package vertico-quick
   :after (vertico embark)
