@@ -396,7 +396,15 @@
 
 (use-package vertico-indexed
   :after (vertico vertico-reverse)
-  :config (vertico-indexed-mode))
+  :config (vertico-indexed-mode)
+  (defun rtw/vertico-indexed-add-space (args)
+    (if (and vertico-indexed-mode
+             (bound-and-true-p vertico-indexed--min))
+        (seq-let [cand prefix &rest rest] args
+          `(,cand ,(concat " " prefix) ,@rest))
+      args))
+  (advice-add 'vertico--format-candidate :filter-args
+              #'rtw/vertico-indexed-add-space))
 
 (use-package vertico-multiform
   :commands vertico-multiform-mode
