@@ -12,6 +12,19 @@
     (unless (string-match-p "main\\.el$" file)
       (load file))))
 
+(use-package janet-mode
+  :after apheleia
+  :bind ( :map janet-mode-map
+          ("C-c C-f" . apheleia-format-buffer))
+  :config
+  (unless (assoc 'janet-format apheleia-formatters)
+    (push '(janet-format . ("janet-format" "--input" filepath))
+          apheleia-formatters))
+  (setf (alist-get 'janet-mode apheleia-mode-alist) 'janet-format)
+
+  (use-package ajsc
+    :hook (janet-mode . ajsc-interaction-mode)))
+
 (use-package just-ts-mode
   :config
   (add-to-list 'treesit-language-source-alist just-ts-mode-treesit-language-source))
