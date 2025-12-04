@@ -135,6 +135,7 @@
 
 (use-package eldoc
   :when (version< "25" emacs-version)
+  :custom (eldoc-echo-area-use-multiline-p nil)
   :config (global-eldoc-mode))
 
 (use-package help
