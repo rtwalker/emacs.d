@@ -41,6 +41,7 @@
   (calendar-today-visible . calendar-mark-today))
 
 (use-package consult
+  :demand t
   :bind
   (("M-s M-g" . consult-ripgrep)
    ("M-s M-f" . consult-fd)
@@ -49,6 +50,8 @@
    ("M-s M-I" . consult-imenu-multi)
    ("M-s M-l" . consult-line)
    ("M-s M-b" . consult-buffer)))
+
+(use-package consult-imenu)
 
 (use-package consult-xref
   :config

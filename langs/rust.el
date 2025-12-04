@@ -67,7 +67,7 @@
   (add-to-list 'treesit-language-source-alist '(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git"))))
 
 (use-package rust-mode
-  :after (apheleia consult eglot rust-ts-mode)
+  :after (apheleia consult consult-imenu eglot rust-ts-mode)
   :init (setq rust-mode-treesitter-derive t)
   :config
   (add-hook 'rust-mode-hook  #'eglot-ensure)
