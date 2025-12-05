@@ -14,8 +14,9 @@ update:
     @make build
     @echo "Done!"
 
+pragmatapro-ligatures-file := "https://raw.githubusercontent.com/fabrizioschiavi/pragmatapro/refs/heads/master/useful_files/All_ligatures.txt"
 font:
-    @curl -L -o assets/all-ligatures.txt https://raw.githubusercontent.com/fabrizioschiavi/pragmatapro/refs/heads/master/useful_files/All_ligatures.txt
+    @curl -L -o assets/all-ligatures.txt {{pragmatapro-ligatures-file}}
 
 libname := "libtree-sitter-rust." + if `uname -s` =~ "Darwin" { "dylib" } else { "so" }
 emacs_tree_sitter_home := `pwd` / "tree-sitter"
