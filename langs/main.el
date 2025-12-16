@@ -7,6 +7,10 @@
 
 (require 'eglot)
 
+(use-package treesit-fold
+  :config
+  (global-treesit-fold-mode))
+
 (let ((langs-directory (expand-file-name "langs/" user-emacs-directory)))
   (dolist (file (directory-files langs-directory t "\\.el$"))
     (unless (string-match-p "main\\.el$" file)
