@@ -102,6 +102,11 @@
   :custom
   (eat-shell (home-manager-prefix "fish")))
 
+(use-package ediff
+  :config
+  (setq ediff-split-window-function #'split-window-horizontally)
+  (setq ediff-window-setup-function #'ediff-setup-windows-plain))
+
 (use-package eglot
   :after eldoc project
   :custom
