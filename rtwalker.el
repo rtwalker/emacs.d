@@ -287,6 +287,7 @@
      `(font-lock-comment-face ((t :background ,(modus-themes-get-color-value 'bg-yellow-nuanced))))
      `(font-lock-doc-face ((t :background ,(modus-themes-get-color-value 'bg-blue-nuanced) :weight semibold)))
      `(font-lock-string-face ((t :background ,(modus-themes-get-color-value 'bg-green-nuanced))))
+     `(vertico-posframe-border ((t :background ,(modus-themes-get-color-value 'bg-dim))))
      `(vertico-quick1 ((t :inherit modus-themes-completion-match-0 :background ,(modus-themes-get-color-value 'bg-blue-nuanced))))
      `(vertico-quick2 ((t :inherit modus-themes-completion-match-1 :background ,(modus-themes-get-color-value 'bg-magenta-nuanced))))))
   (add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-faces)
@@ -434,7 +435,7 @@ The structure of INFO can be found in docstring of
   :commands vertico-multiform-posframe
   :config
   (setq vertico-posframe-poshandler #'rtw/posframe-poshandler-frame-almost-top-center)
-  (setq vertico-posframe-border-width 1)
+  (setq vertico-posframe-border-width 5)
   (setq vertico-posframe-min-width 120)
   (setq vertico-posframe-parameters
         '((left-fringe . 10)
