@@ -28,6 +28,9 @@
 [submodule "borg"]
 	path = lib/borg
 	url = https://github.com/emacscollective/borg.git
+[submodule "capf-autosuggest"]
+	path = lib/capf-autosuggest
+	url = https://repo.or.cz/emacs-capf-autosuggest.git
 [submodule "closql"]
 	path = lib/closql
 	url = https://github.com/magit/closql.git
