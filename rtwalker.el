@@ -98,10 +98,6 @@
   :hook
   ((prog-mode text-mode) . #'show-line-numbers-mode))
 
-(use-package eat
-  :custom
-  (eat-shell (home-manager-prefix "fish")))
-
 (use-package ediff
   :config
   (setq ediff-split-window-function #'split-window-horizontally)

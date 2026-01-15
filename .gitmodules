@@ -61,10 +61,6 @@
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = https://github.com/doomemacs/themes
-[submodule "eat"]
-	path = lib/eat
-	remote = upstream https://codeberg.org/akib/emacs-eat
-	url = https://codeberg.org/vifon/emacs-eat
 [submodule "eldoc-box"]
 	path = lib/eldoc-box
 	url = https://github.com/casouri/eldoc-box
