@@ -62,6 +62,7 @@
 
 (use-package rust-ts-mode
   :config
+  (setq rust-ts-mode-prettify-symbols-alist nil)
   (add-hook 'rust-ts-mode-hook #'rtw/rust-ts-font-lock)
   (add-hook 'rust-ts-mode-hook #'rtw/rust-ts-imenu)
   (add-to-list 'treesit-language-source-alist '(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git"))))
