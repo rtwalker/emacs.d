@@ -346,6 +346,8 @@
           "\\*Async Shell Command\\*"
           "*scratch*"
           help-mode
+          eshell-mode
+          comint-mode
           compilation-mode))
   (popper-mode +1)
   (popper-echo-mode +1)) ; For echo area hints
