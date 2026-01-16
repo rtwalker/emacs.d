@@ -4,3 +4,6 @@
 /eln-cache
 /elpa
 /var
+*.elc
+history
+tree-sitter/*.dylib
