@@ -181,6 +181,9 @@
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = https://github.com/tarsius/paren-face
+[submodule "pcmpl-args"]
+	path = lib/pcmpl-args
+	url = https://github.com/JonWaltman/pcmpl-args.el
 [submodule "pdf-tools"]
 	path = lib/pdf-tools
 	url = https://github.com/vedang/pdf-tools
