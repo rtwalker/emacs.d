@@ -72,6 +72,23 @@
   :init
   (global-corfu-mode))
 
+(use-package corfu-indexed
+  :after corfu
+  :config (corfu-indexed-mode))
+
+(use-package corfu-popupinfo
+  :after corfu
+  :config
+  (corfu-popupinfo-mode)
+  (setq corfu-popupinfo-delay '(1.0 . 0.5))
+  (setq corfu-popupinfo-max-height 30))
+
+(use-package corfu-quick
+  :after corfu
+  :bind (:map corfu-map
+              ("M-q" . #'corfu-quick-complete)
+              ("C-q" . #'corfu-quick-insert)))
+
 (use-package dimmer
   :custom
   (dimmer-adjustment-mode :both)
