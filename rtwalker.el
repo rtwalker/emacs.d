@@ -186,7 +186,19 @@
             (abbreviate-file-name (eshell/pwd))
             "\n"
             eshell-prompt-string))
-  (setq eshell-prompt-function 'rtw/esh-prompt-func))
+  (setq eshell-prompt-function 'rtw/esh-prompt-func)
+
+  (defun rtw/eshell-hook ()
+    (interactive)
+    (setq-local completion-in-region-function #'consult-completion-in-region)
+    (setq-local global-hl-line-mode nil))
+  (add-hook 'eshell-mode-hook #'rtw/eshell-hook)
+
+  (use-package em-hist
+    :bind (:map eshell-hist-mode-map
+                ("M-r" . #'consult-history))
+    :config
+    (setq eshell-history-size 1000)))
 
 (use-package evil
   :init
