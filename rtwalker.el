@@ -175,18 +175,18 @@
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
 
-(use-package eshell
-  :defer t
+
+(use-package esh-mode
   :config
-  (setq eshell-prompt-header "\n┌─ ")
-  (setq eshell-prompt-string "└─>> ")
-  (defun esh-prompt-func ()
+  (defun rtw/esh-prompt-func ()
     "Build `eshell-prompt-function'"
+    (setq eshell-prompt-header "\n┌─ ")
+    (setq eshell-prompt-string "└─>> ")
     (concat eshell-prompt-header
             (abbreviate-file-name (eshell/pwd))
             "\n"
             eshell-prompt-string))
-  (setq eshell-prompt-function 'esh-prompt-func))
+  (setq eshell-prompt-function 'rtw/esh-prompt-func))
 
 (use-package evil
   :init
