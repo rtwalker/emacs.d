@@ -211,10 +211,6 @@
   :after evil
   :config (global-evil-surround-mode 1))
 
-(use-package faces
-  :config
-  (set-face-attribute 'default nil :family "PragmataPro Mono Liga Serif" :height 160))
-
 (use-package flymake
   :bind (:map flymake-mode-map
               ("M-n" . flymake-goto-next-error)
@@ -223,6 +219,22 @@
 
 ;; (use-package flyspell
 ;;   :hook (org-mode text-mode))
+
+(use-package fontaine
+  :config
+  (setq fontaine-presets
+        '((regular
+           :default-family "PragmataPro Mono Liga Serif"
+           :default-height 160
+           :fixed-pitch-family "PragmataPro Mono Liga Serif"
+           :variable-pitch-family "PragmataPro Liga")))
+  (fontaine-set-preset (or (fontaine-restore-latest-preset) 'regular))
+  (add-hook 'enable-theme-functions #'fontaine-apply-current-preset)
+  (defun rtw/enable-variable-pitch ()
+    (unless (derived-mode-p '(yaml-mode yaml-ts-mode))
+      (when (bound-and-true-p modus-themes-mixed-fonts)
+        (variable-pitch-mode 1))))
+  (add-hook 'text-mode-hook #'rtw/enable-variable-pitch))
 
 (use-package forge
   :after magit)
@@ -289,6 +301,7 @@
   :config
   (setq modus-themes-bold-constructs t)
   (setq modus-themes-italic-constructs t)
+  (setq modus-themes-mixed-fonts t)
   (setq modus-themes-common-palette-overrides
         '((border-mode-line-active unspecified)
           (string green-cooler)
