@@ -51,7 +51,11 @@
    ("M-s M-l" . consult-line)
    ("M-s M-b" . consult-buffer)))
 
-(use-package consult-imenu)
+(use-package consult-imenu
+  :config
+  (add-to-list 'consult-imenu-config
+               '(eshell-mode :toplevel "Prompts" :types ((?p "Prompts")))))
+
 
 (use-package consult-xref
   :config
@@ -191,10 +195,13 @@
   (defun rtw/eshell-hook ()
     (interactive)
     (setq-local completion-in-region-function #'consult-completion-in-region)
-    (setq-local global-hl-line-mode nil))
+    (setq-local global-hl-line-mode nil)
+    (setq-local imenu-generic-expression '(("Prompts" "└─>> \\(.+\\)" 1))))
   (add-hook 'eshell-mode-hook #'rtw/eshell-hook)
 
   (use-package em-hist
+    :init
+    (unbind-key "M-s" eshell-hist-mode-map)
     :bind (:map eshell-hist-mode-map
                 ("M-r" . #'consult-history))
     :config
