@@ -64,6 +64,7 @@
   (add-to-list 'treesit-language-source-alist '(python . ("https://github.com/tree-sitter/tree-sitter-python")))
   (setf (alist-get 'python-mode apheleia-mode-alist) '(ruff-isort ruff))
   (setf (alist-get 'python-ts-mode apheleia-mode-alist) '(ruff-isort ruff))
+  (setq python-prettify-symbols-alist nil)
   :hook (python-mode . eglot-ensure))
 
 (use-package racket-mode
