@@ -1,1 +1,2 @@
+alias ff find-file $@*
 alias ez eza -al --group-directories-first $@*
