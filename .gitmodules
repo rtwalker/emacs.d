@@ -121,6 +121,9 @@
 [submodule "hydra"]
 	path = lib/hydra
 	url = https://github.com/abo-abo/hydra
+[submodule "idris-mode"]
+	path = lib/idris-mode
+	url = https://github.com/idris-hackers/idris-mode
 [submodule "inheritenv"]
 	path = lib/inheritenv
 	url = https://github.com/purcell/inheritenv
@@ -196,6 +199,9 @@
 [submodule "posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe
+[submodule "prop-menu"]
+	path = lib/prop-menu
+	url = https://github.com/david-christiansen/prop-menu-el
 [submodule "queue"]
 	path = lib/queue
 	url = https://github.com/emacsmirror/queue

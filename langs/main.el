@@ -16,6 +16,10 @@
     (unless (string-match-p "main\\.el$" file)
       (load file))))
 
+(use-package idris-mode
+  :custom
+  (idris-interpreter-path "idris2"))
+
 (use-package janet-mode
   :after apheleia
   :bind ( :map janet-mode-map
