@@ -71,6 +71,7 @@
   :after (apheleia consult consult-imenu eglot rust-ts-mode)
   :init (setq rust-mode-treesitter-derive t)
   :config
+  (setq rust-mode-prettify-symbols-alist nil)
   (add-hook 'rust-mode-hook  #'eglot-ensure)
   (unless (assoc 'rustfmt-nightly apheleia-formatters)
     (push '(rustfmt-nightly . ("rustfmt-nightly" "--quiet" "--emit" "stdout"))
