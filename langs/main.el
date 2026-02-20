@@ -16,6 +16,12 @@
     (unless (string-match-p "main\\.el$" file)
       (load file))))
 
+(use-package dockerfile-ts-mode
+  :mode (("Dockerfile\\'" . dockerfile-ts-mode))
+  :config
+  (add-to-list 'treesit-language-source-alist
+               '(dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile.git"))))
+
 (use-package idris-mode
   :custom
   (idris-interpreter-path "idris2"))
