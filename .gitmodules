@@ -118,6 +118,7 @@
 [submodule "gptel"]
 	path = lib/gptel
 	url = https://github.com/karthink/gptel
+	ignore = dirty
 [submodule "hydra"]
 	path = lib/hydra
 	url = https://github.com/abo-abo/hydra
@@ -190,6 +191,7 @@
 [submodule "pcmpl-args"]
 	path = lib/pcmpl-args
 	url = https://github.com/JonWaltman/pcmpl-args.el
+	ignore = dirty
 [submodule "pdf-tools"]
 	path = lib/pdf-tools
 	url = https://github.com/vedang/pdf-tools
