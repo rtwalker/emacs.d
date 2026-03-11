@@ -164,6 +164,7 @@
 
 
 (use-package esh-mode
+  :after with-editor
   :config
   (defun rtw/esh-prompt-func ()
     "Build `eshell-prompt-function'"
@@ -181,6 +182,8 @@
     (setq-local global-hl-line-mode nil)
     (setq-local imenu-generic-expression '(("Prompts" "└─>> \\(.+\\)" 1))))
   (add-hook 'eshell-mode-hook #'rtw/eshell-hook)
+
+  (add-hook 'eshell-mode-hook (apply-partially #'with-editor-export-editor "EDITOR"))
 
   (use-package em-hist
     :init
@@ -526,6 +529,8 @@ The structure of INFO can be found in docstring of
   (which-key-idle-delay 0.1)
   :config
   (which-key-mode))
+
+(use-package with-editor)
 
 (use-package wgrep)
 
