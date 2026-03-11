@@ -5,6 +5,8 @@
 
 ;;; Code:
 
+(use-package flycheck-rust)
+
 (use-package rust-ts-mode
   :config
   (setq rust-ts-mode-prettify-symbols-alist nil)
@@ -71,14 +73,47 @@
   (add-to-list 'treesit-language-source-alist '(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git"))))
 
 (use-package rust-mode
-  :after (apheleia consult consult-imenu eglot rust-ts-mode)
+  :after (apheleia consult consult-imenu eglot flycheck flycheck-eglot flycheck-rust rust-ts-mode)
   :init (setq rust-mode-treesitter-derive t)
   :config
   (setq rust-mode-prettify-symbols-alist nil)
-  (add-hook 'rust-mode-hook  #'eglot-ensure)
+
+  (setf (flycheck-checker-get 'rust-clippy 'enabled)
+        (lambda ()
+          (and (funcall flycheck-executable-find "cargo-clippy")
+               (flycheck-rust-manifest-directory))))
+  (setf (flycheck-checker-get 'rust-clippy 'verify)
+        (lambda (_)
+          (and buffer-file-name
+               (let ((has-toml (flycheck-rust-manifest-directory))
+                     (has-clippy (funcall flycheck-executable-find "cargo-clippy")))
+                 (list
+                  (flycheck-verification-result-new
+                   :label "Clippy"
+                   :message (if has-clippy "Found"
+                              "Cannot find the `cargo clippy' command")
+                   :face (if has-clippy 'success '(bold warning)))
+                  (flycheck-verification-result-new
+                   :label "Cargo.toml"
+                   :message (if has-toml "Found" "Missing")
+                   :face (if has-toml 'success '(bold warning))))))))
+
+  (defun rtw/rust-mode-hook ()
+    (interactive)
+    (setq flycheck-eglot-exclusive nil)
+    (eglot-ensure)
+    (flycheck-mode)
+    (flycheck-rust-setup)
+    (flycheck-eglot-mode 1)
+    (setq-local flycheck-checker 'eglot-check)
+    (flycheck-add-next-checker 'eglot-check 'rust-cargo)
+    (flycheck-add-next-checker 'rust-cargo '(warning . rust-clippy)))
+  (add-hook 'rust-mode-hook  #'rtw/rust-mode-hook)
+
   (unless (assoc 'rustfmt-nightly apheleia-formatters)
     (push '(rustfmt-nightly . ("rustfmt-nightly" "--quiet" "--emit" "stdout"))
           apheleia-formatters))
+
   (add-to-list 'consult-imenu-config
                '((rust-mode :types
                             ((?f "Fn" font-lock-function-name-face)

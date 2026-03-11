@@ -5,7 +5,20 @@
 
 ;;; Code:
 
-(require 'eglot)
+(use-package eglot
+  :after eldoc project
+  :custom
+  (eglot-extend-to-xref t)
+  (eglot-ignored-server-capabilities '(:inlayHintProvider)))
+
+(use-package eldoc-box
+  :config
+  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t))
+
+(use-package flycheck)
+
+(use-package flycheck-eglot
+  :after (flycheck eglot))
 
 (use-package treesit-fold
   :config

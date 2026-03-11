@@ -117,16 +117,6 @@
   (setq ediff-split-window-function #'split-window-horizontally)
   (setq ediff-window-setup-function #'ediff-setup-windows-plain))
 
-(use-package eglot
-  :after eldoc project
-  :custom
-  (eglot-extend-to-xref t)
-  (eglot-ignored-server-capabilities '(:inlayHintProvider)))
-
-(use-package eldoc-box
-  :config
-  (add-hook 'eglot-managed-mode-hook #'eldoc-box-hover-mode t))
-
 (use-package elec-pair
   :hook (prog-mode . electric-pair-mode))
 
@@ -223,11 +213,11 @@
   :after evil
   :config (global-evil-surround-mode 1))
 
-(use-package flymake
-  :bind (:map flymake-mode-map
-              ("M-n" . flymake-goto-next-error)
-              ("M-p" . flymake-goto-prev-error))
-  :hook prog-mode)
+;; (use-package flymake
+;;   :bind (:map flymake-mode-map
+;;               ("M-n" . flymake-goto-next-error)
+;;               ("M-p" . flymake-goto-prev-error))
+;;   :hook prog-mode)
 
 ;; (use-package flyspell
 ;;   :hook (org-mode text-mode))
