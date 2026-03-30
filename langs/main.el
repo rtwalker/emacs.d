@@ -52,6 +52,8 @@
   (use-package ajsc
     :hook (janet-mode . ajsc-interaction-mode)))
 
+(use-package julia-mode)
+
 (use-package just-ts-mode
   :config
   (add-to-list 'treesit-language-source-alist just-ts-mode-treesit-language-source))

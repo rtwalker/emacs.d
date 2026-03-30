@@ -140,6 +140,9 @@
 [submodule "janet-mode"]
 	path = lib/janet-mode
 	url = https://github.com/ALSchwalm/janet-mode
+[submodule "julia-mode"]
+	path = lib/julia-mode
+	url = https://github.com/JuliaEditorSupport/julia-emacs
 [submodule "just-ts-mode"]
 	path = lib/just-ts-mode
 	url = https://github.com/leon-barrett/just-ts-mode.el.git
