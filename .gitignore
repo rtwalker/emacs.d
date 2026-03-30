@@ -7,3 +7,4 @@
 *.elc
 history
 tree-sitter/*.dylib
+tree-sitter/*.so
