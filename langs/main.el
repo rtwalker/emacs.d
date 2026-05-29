@@ -35,6 +35,8 @@
   (add-to-list 'treesit-language-source-alist
                '(dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile.git"))))
 
+(use-package geiser)
+
 (use-package idris-mode
   :custom
   (idris-interpreter-path "idris2"))

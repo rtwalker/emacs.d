@@ -115,6 +115,12 @@
 [submodule "gcmh"]
 	path = lib/gcmh
 	url = https://gitlab.com/koral/gcmh
+[submodule "geiser"]
+	path = lib/geiser
+	url = https://codeberg.org/geiser/geiser
+[submodule "geiser-guile"]
+	path = lib/geiser-guile
+	url = https://codeberg.org/geiser/guile
 [submodule "ghub"]
 	path = lib/ghub
 	url = https://github.com/magit/ghub
