@@ -185,6 +185,9 @@
 [submodule "nerd-icons-dired"]
 	path = lib/nerd-icons-dired
 	url = https://github.com/rainstormstudio/nerd-icons-dired
+[submodule "nickel-mode"]
+	path = lib/nickel-mode
+	url = https://github.com/nickel-lang/nickel-mode
 [submodule "nix-ts-mode"]
 	path = lib/nix-ts-mode
 	url = https://github.com/nix-community/nix-ts-mode

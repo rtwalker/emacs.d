@@ -76,6 +76,8 @@
   :config
   (add-hook 'emacs-lisp-mode-hook 'morlock-mode))
 
+(use-package nickel-mode)
+
 (use-package nix-ts-mode
   :after eglot
   :mode "\\.nix\\'"
