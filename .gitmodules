@@ -270,6 +270,9 @@
 [submodule "tree-sitter/tree-sitter-just"]
 	path = tree-sitter/tree-sitter-just
 	url = https://github.com/casey/tree-sitter-just.git
+[submodule "tree-sitter/tree-sitter-lua"]
+	path = tree-sitter/tree-sitter-lua
+	url = https://github.com/tree-sitter-grammars/tree-sitter-lua.git
 [submodule "tree-sitter/tree-sitter-nix"]
 	path = tree-sitter/tree-sitter-nix
 	url = https://github.com/nix-community/tree-sitter-nix.git

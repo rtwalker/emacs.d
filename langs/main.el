@@ -65,6 +65,9 @@
   (add-hook 'emacs-lisp-mode-hook 'outline-minor-mode)
   (add-hook 'emacs-lisp-mode-hook 'reveal-mode))
 
+(use-package lua-ts-mode
+  :mode "\\.lua\\'")
+
 (use-package markdown-mode
   :defer t
   :init (setq markdown-command "pandoc")

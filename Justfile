@@ -18,13 +18,15 @@ pragmatapro-ligatures-file := "https://raw.githubusercontent.com/fabrizioschiavi
 font:
     @curl -L -o assets/all-ligatures.txt {{pragmatapro-ligatures-file}}
 
-treesit: tree-sitter-dockerfile tree-sitter-julia tree-sitter-just tree-sitter-nix tree-sitter-python tree-sitter-rust tree-sitter-toml tree-sitter-yaml
+treesit: tree-sitter-dockerfile tree-sitter-julia tree-sitter-just tree-sitter-lua tree-sitter-nix tree-sitter-python tree-sitter-rust tree-sitter-toml tree-sitter-yaml
 
 tree-sitter-dockerfile: (_install-tree-sitter-grammar "dockerfile")
 
 tree-sitter-julia: (_install-tree-sitter-grammar "julia")
 
 tree-sitter-just: (_install-tree-sitter-grammar "just")
+
+tree-sitter-lua: (_install-tree-sitter-grammar "lua")
 
 tree-sitter-nix: (_install-tree-sitter-grammar "nix")
 
