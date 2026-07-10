@@ -75,8 +75,14 @@
 (use-package rust-mode
   :after (apheleia consult consult-imenu eglot flycheck flycheck-eglot flycheck-rust rust-ts-mode)
   :init (setq rust-mode-treesitter-derive t)
+  :bind (:map rust-mode-map
+              ("C-c C-m" . #'rtw/find-cargo-toml))
   :config
   (setq rust-mode-prettify-symbols-alist nil)
+
+  (defun rtw/find-cargo-toml ()
+    (interactive)
+    (find-file-other-frame (concat (rust-buffer-crate) "Cargo.toml")))
 
   (setf (flycheck-checker-get 'rust-clippy 'enabled)
         (lambda ()
