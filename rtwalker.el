@@ -87,18 +87,24 @@
               ("C-q" . #'corfu-quick-insert)))
 
 (use-package dimmer
+  :bind (("H-d" . #'rtw/toggle-dimmer-mode))
   :custom
-  (dimmer-adjustment-mode :both)
-  (dimmer-fraction 0.1)
+  (dimmer-adjustment-mode :foreground)
+  (dimmer-fraction 0.50)
   :config
   (defun rtw/dimmer-filter-more (faces)
     (remove 'mode-line-inactive faces))
-  (advice-add 'dimmer-filtered-face-list :filter-return
-              #'rtw/dimmer-filter-more)
-  (dimmer-configure-magit)
-  (dimmer-configure-posframe)
+
+  (advice-add 'dimmer-filtered-face-list :filter-return #'rtw/dimmer-filter-more)
+
+  (defun rtw/toggle-dimmer-mode ()
+    (interactive)
+    (call-interactively #'dimmer-mode)
+    (when dimmer-mode
+      (dimmer-process-all t)))
+
   (dimmer-configure-which-key)
-  (dimmer-mode))
+  (dimmer-mode t))
 
 (use-package difftastic
   :custom
