@@ -9,7 +9,7 @@ sync:
 
 update:
     @echo "Updating submodules..."
-    @git submodule foreach 'git pull origin $(git symbolic-ref --short HEAD) || :'
+    @git submodule foreach 'git pull origin $(git symbolic-ref --short HEAD) && git fetch --tags || :'
     @echo "Building drones..."
     @make build
     @echo "Done!"
