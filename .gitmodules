@@ -4,132 +4,175 @@
 [submodule "a-janet-spork-client"]
 	path = lib/a-janet-spork-client
 	url = https://github.com/sogaiu/a-janet-spork-client.git
+	ignore = dirty
 [submodule "ace-window"]
 	path = lib/ace-window
 	url = https://github.com/abo-abo/ace-window
+	ignore = dirty
 [submodule "ag"]
 	path = lib/ag
 	url = https://github.com/Wilfred/ag.el
+	ignore = dirty
 [submodule "annalist"]
 	path = lib/annalist
 	url = https://github.com/noctuid/annalist.el
+	ignore = dirty
 [submodule "apheleia"]
 	path = lib/apheleia
 	url = https://github.com/radian-software/apheleia
+	ignore = dirty
 [submodule "auto-compile"]
 	path = lib/auto-compile
 	url = https://github.com/emacscollective/auto-compile.git
+	ignore = dirty
 [submodule "avy"]
 	path = lib/avy
 	url = https://github.com/abo-abo/avy
+	ignore = dirty
 [submodule "biblio"]
 	path = lib/biblio
 	url = https://github.com/cpitclaudel/biblio.el
+	ignore = dirty
 [submodule "borg"]
 	path = lib/borg
 	url = https://github.com/emacscollective/borg.git
+	ignore = dirty
 [submodule "cape"]
 	path = lib/cape
 	url = https://github.com/minad/cape
+	ignore = dirty
 [submodule "capf-autosuggest"]
 	path = lib/capf-autosuggest
 	url = https://repo.or.cz/emacs-capf-autosuggest.git
+	ignore = dirty
 [submodule "closql"]
 	path = lib/closql
 	url = https://github.com/magit/closql.git
+	ignore = dirty
 [submodule "compat"]
 	path = lib/compat
 	url = https://github.com/emacs-compat/compat.git
+	ignore = dirty
 [submodule "cond-let"]
 	path = lib/cond-let
 	url = https://github.com/tarsius/cond-let
+	ignore = dirty
 [submodule "consult"]
 	path = lib/consult
 	url = https://github.com/minad/consult
+	ignore = dirty
 [submodule "corfu"]
 	path = lib/corfu
 	url = https://github.com/minad/corfu
+	ignore = dirty
 [submodule "dash"]
 	path = lib/dash
 	url = https://github.com/magnars/dash.el.git
+	ignore = dirty
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
+	ignore = dirty
 [submodule "difftastic"]
 	path = lib/difftastic
 	url = https://github.com/pkryger/difftastic.el
+	ignore = dirty
 [submodule "dim-autoload"]
 	path = lib/dim-autoload
 	url = https://github.com/tarsius/dim-autoload
+	ignore = dirty
 [submodule "dimmer"]
 	path = lib/dimmer
 	url = https://github.com/gonewest818/dimmer.el
+	ignore = dirty
 [submodule "doom-themes"]
 	path = lib/doom-themes
 	url = https://github.com/doomemacs/themes
+	ignore = dirty
 [submodule "eldoc-box"]
 	path = lib/eldoc-box
 	url = https://github.com/casouri/eldoc-box
+	ignore = dirty
 [submodule "emacsql"]
 	path = lib/emacsql
 	url = https://github.com/magit/emacsql.git
+	ignore = dirty
 [submodule "embark"]
 	path = lib/embark
 	url = https://github.com/oantolin/embark
+	ignore = dirty
 [submodule "envrc"]
 	path = lib/envrc
 	url = https://github.com/purcell/envrc
+	ignore = dirty
 [submodule "epkg"]
 	path = lib/epkg
 	url = https://github.com/emacscollective/epkg.git
+	ignore = dirty
 [submodule "evil"]
 	path = lib/evil
 	url = https://github.com/emacs-evil/evil
+	ignore = dirty
 [submodule "evil-collection"]
 	path = lib/evil-collection
 	url = https://github.com/emacs-evil/evil-collection
+	ignore = dirty
 [submodule "evil-surround"]
 	path = lib/evil-surround
 	url = https://github.com/emacs-evil/evil-surround
+	ignore = dirty
 [submodule "exec-path-from-shell"]
 	path = lib/exec-path-from-shell
 	url = https://github.com/purcell/exec-path-from-shell
+	ignore = dirty
 [submodule "f"]
 	path = lib/f
 	url = https://github.com/rejeep/f.el
+	ignore = dirty
 [submodule "flycheck"]
 	path = lib/flycheck
 	url = https://github.com/flycheck/flycheck
+	ignore = dirty
 [submodule "flycheck-eglot"]
 	path = lib/flycheck-eglot
 	url = https://github.com/flycheck/flycheck-eglot
+	ignore = dirty
 [submodule "flycheck-rust"]
 	path = lib/flycheck-rust
 	url = https://github.com/flycheck/flycheck-rust
+	ignore = dirty
 [submodule "fontaine"]
 	path = lib/fontaine
 	url = https://git.sr.ht/~protesilaos/fontaine
+	ignore = dirty
 [submodule "forge"]
 	path = lib/forge
 	url = https://github.com/magit/forge
+	ignore = dirty
 [submodule "gcmh"]
 	path = lib/gcmh
 	url = https://gitlab.com/koral/gcmh
+	ignore = dirty
 [submodule "geiser"]
 	path = lib/geiser
 	url = https://codeberg.org/geiser/geiser
+	ignore = dirty
 [submodule "geiser-guile"]
 	path = lib/geiser-guile
 	url = https://codeberg.org/geiser/guile
+	ignore = dirty
 [submodule "ghub"]
 	path = lib/ghub
 	url = https://github.com/magit/ghub
+	ignore = dirty
 [submodule "git-modes"]
 	path = lib/git-modes
 	url = https://github.com/magit/git-modes.git
+	ignore = dirty
 [submodule "goto-chg"]
 	path = lib/goto-chg
 	url = https://github.com/emacs-evil/goto-chg
+	ignore = dirty
 [submodule "gptel"]
 	path = lib/gptel
 	url = https://github.com/karthink/gptel
@@ -137,78 +180,107 @@
 [submodule "hydra"]
 	path = lib/hydra
 	url = https://github.com/abo-abo/hydra
+	ignore = dirty
 [submodule "idris-mode"]
 	path = lib/idris-mode
 	url = https://github.com/idris-hackers/idris-mode
+	ignore = dirty
 [submodule "inheritenv"]
 	path = lib/inheritenv
 	url = https://github.com/purcell/inheritenv
+	ignore = dirty
 [submodule "janet-mode"]
 	path = lib/janet-mode
 	url = https://github.com/ALSchwalm/janet-mode
+	ignore = dirty
+[submodule "jjanitor"]
+	path = lib/jjanitor
+	url = github-pajamasproductroulette:pajamasproductroulette/jjanitor.git
+	ignore = dirty
 [submodule "julia-mode"]
 	path = lib/julia-mode
 	url = https://github.com/JuliaEditorSupport/julia-emacs
+	ignore = dirty
 [submodule "just-ts-mode"]
 	path = lib/just-ts-mode
 	url = https://github.com/leon-barrett/just-ts-mode.el.git
+	ignore = dirty
 [submodule "ligature"]
 	path = lib/ligature
 	url = https://github.com/mickeynp/ligature.el
+	ignore = dirty
 [submodule "llama"]
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git
+	ignore = dirty
 [submodule "magit"]
 	path = lib/magit
 	url = https://github.com/magit/magit.git
+	ignore = dirty
 [submodule "marginalia"]
 	path = lib/marginalia
 	url = https://github.com/minad/marginalia
+	ignore = dirty
 [submodule "markdown-mode"]
 	path = lib/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode
+	ignore = dirty
 [submodule "minions"]
 	path = lib/minions
 	url = https://github.com/tarsius/minions
+	ignore = dirty
 [submodule "modus-themes"]
 	path = lib/modus-themes
 	url = https://github.com/protesilaos/modus-themes
+	ignore = dirty
 [submodule "morlock"]
 	path = lib/morlock
 	url = https://github.com/tarsius/morlock
+	ignore = dirty
 [submodule "nerd-icons"]
 	path = lib/nerd-icons
 	url = https://github.com/rainstormstudio/nerd-icons.el
+	ignore = dirty
 [submodule "nerd-icons-completion"]
 	path = lib/nerd-icons-completion
 	url = https://github.com/rainstormstudio/nerd-icons-completion
+	ignore = dirty
 [submodule "nerd-icons-dired"]
 	path = lib/nerd-icons-dired
 	url = https://github.com/rainstormstudio/nerd-icons-dired
+	ignore = dirty
 [submodule "nickel-mode"]
 	path = lib/nickel-mode
 	url = https://github.com/nickel-lang/nickel-mode
+	ignore = dirty
 [submodule "nix-ts-mode"]
 	path = lib/nix-ts-mode
 	url = https://github.com/nix-community/nix-ts-mode
+	ignore = dirty
 [submodule "no-littering"]
 	path = lib/no-littering
 	url = https://github.com/emacscollective/no-littering
+	ignore = dirty
 [submodule "orderless"]
 	path = lib/orderless
 	url = https://github.com/oantolin/orderless
+	ignore = dirty
 [submodule "org"]
 	path = lib/org
 	url = https://git.savannah.gnu.org/git/emacs/org-mode.git
+	ignore = dirty
 [submodule "org-present"]
 	path = lib/org-present
 	url = https://github.com/rlister/org-present
+	ignore = dirty
 [submodule "orglink"]
 	path = lib/orglink
 	url = https://github.com/tarsius/orglink
+	ignore = dirty
 [submodule "paren-face"]
 	path = lib/paren-face
 	url = https://github.com/tarsius/paren-face
+	ignore = dirty
 [submodule "pcmpl-args"]
 	path = lib/pcmpl-args
 	url = https://github.com/JonWaltman/pcmpl-args.el
@@ -216,112 +288,149 @@
 [submodule "pdf-tools"]
 	path = lib/pdf-tools
 	url = https://github.com/vedang/pdf-tools
+	ignore = dirty
 [submodule "popper"]
 	path = lib/popper
 	url = https://github.com/karthink/popper
+	ignore = dirty
 [submodule "posframe"]
 	path = lib/posframe
 	url = https://github.com/tumashu/posframe
+	ignore = dirty
 [submodule "prop-menu"]
 	path = lib/prop-menu
 	url = https://github.com/david-christiansen/prop-menu-el
+	ignore = dirty
 [submodule "queue"]
 	path = lib/queue
 	url = https://github.com/emacsmirror/queue
+	ignore = dirty
 [submodule "racket-mode"]
 	path = lib/racket-mode
 	url = https://github.com/greghendershott/racket-mode
+	ignore = dirty
 [submodule "rainbow-mode"]
 	path = lib/rainbow-mode
 	url = https://github.com/emacsmirror/rainbow-mode
+	ignore = dirty
 [submodule "raku-mode"]
 	path = lib/raku-mode
 	url = https://github.com/Raku/raku-mode
+	ignore = dirty
 [submodule "rg"]
 	path = lib/rg
 	url = https://github.com/dajva/rg.el
+	ignore = dirty
 [submodule "rust-mode"]
 	path = lib/rust-mode
 	url = https://github.com/rust-lang/rust-mode
+	ignore = dirty
 [submodule "s"]
 	path = lib/s
 	url = https://github.com/magnars/s.el
+	ignore = dirty
 [submodule "sbt-mode"]
 	path = lib/sbt-mode
 	url = https://github.com/hvesalai/emacs-sbt-mode
+	ignore = dirty
 [submodule "scala-mode"]
 	path = lib/scala-mode
 	url = https://github.com/hvesalai/emacs-scala-mode
+	ignore = dirty
 [submodule "spacious-padding"]
 	path = lib/spacious-padding
 	url = https://github.com/protesilaos/spacious-padding.git
+	ignore = dirty
 [submodule "tablist"]
 	path = lib/tablist
 	url = https://github.com/politza/tablist
+	ignore = dirty
 [submodule "transient"]
 	path = lib/transient
 	url = https://github.com/magit/transient.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-dockerfile"]
 	path = tree-sitter/tree-sitter-dockerfile
 	url = https://github.com/camdencheek/tree-sitter-dockerfile.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-julia"]
 	path = tree-sitter/tree-sitter-julia
 	url = https://github.com/tree-sitter/tree-sitter-julia.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-just"]
 	path = tree-sitter/tree-sitter-just
 	url = https://github.com/casey/tree-sitter-just.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-lua"]
 	path = tree-sitter/tree-sitter-lua
 	url = https://github.com/tree-sitter-grammars/tree-sitter-lua.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-nix"]
 	path = tree-sitter/tree-sitter-nix
 	url = https://github.com/nix-community/tree-sitter-nix.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-python"]
 	path = tree-sitter/tree-sitter-python
 	url = https://github.com/tree-sitter/tree-sitter-python.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-rust"]
 	path = tree-sitter/tree-sitter-rust
 	url = https://github.com/tree-sitter/tree-sitter-rust.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-toml"]
 	path = tree-sitter/tree-sitter-toml
 	url = https://github.com/tree-sitter/tree-sitter-toml.git
+	ignore = dirty
 [submodule "tree-sitter/tree-sitter-yaml"]
 	path = tree-sitter/tree-sitter-yaml
 	url = https://github.com/tree-sitter-grammars/tree-sitter-yaml.git
+	ignore = dirty
 [submodule "treepy"]
 	path = lib/treepy
 	url = https://github.com/volrath/treepy.el.git
+	ignore = dirty
 [submodule "treesit-fold"]
 	path = lib/treesit-fold
 	url = https://github.com/emacs-tree-sitter/treesit-fold
+	ignore = dirty
 [submodule "undo-tree"]
 	remote = silent http://www.dr-qubit.org/git/undo-tree.git
 	path = lib/undo-tree
 	url = https://github.com/tarsiiformes/undo-tree
+	ignore = dirty
 [submodule "vertico"]
 	path = lib/vertico
 	url = https://github.com/minad/vertico
+	ignore = dirty
 [submodule "vertico-posframe"]
 	path = lib/vertico-posframe
 	url = https://github.com/tumashu/vertico-posframe
+	ignore = dirty
 [submodule "visual-fill-column"]
 	path = lib/visual-fill-column
 	url = https://codeberg.org/joostkremers/visual-fill-column
+	ignore = dirty
 [submodule "wgrep"]
 	path = lib/wgrep
 	url = https://github.com/mhayashi1120/Emacs-wgrep
+	ignore = dirty
 [submodule "which-key"]
 	path = lib/which-key
 	url = https://github.com/justbur/emacs-which-key
+	ignore = dirty
 [submodule "with-editor"]
 	path = lib/with-editor
 	url = https://github.com/magit/with-editor.git
+	ignore = dirty
 [submodule "yaml"]
 	path = lib/yaml
 	url = https://github.com/zkry/yaml.el
+	ignore = dirty
 [submodule "yaml-pro"]
 	path = lib/yaml-pro
 	url = https://github.com/zkry/yaml-pro
+	ignore = dirty
 [submodule "zig-mode"]
 	path = lib/zig-mode
 	url = https://github.com/ziglang/zig-mode
+	ignore = dirty
