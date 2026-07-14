@@ -303,6 +303,25 @@
   ;; package.
   (marginalia-mode))
 
+(use-package minibuffer
+  :bind (:map minibuffer-mode-map
+              ("M-<backspace>" . #'rtw/minibuffer-backward-delete-dir))
+  :config
+  (defun rtw/minibuffer-backward-delete-dir (arg)
+    "Delete the last directory component before point in the minibuffer.
+With prefix ARG, do it that many times."
+    (interactive "p")
+    (let ((end (point))
+          (start (minibuffer-prompt-end)))
+      (when (> end start)
+        ;; step over the trailing "/"
+        (when (eq (char-before) ?/)
+          (backward-char))
+        (if (search-backward "/" start t arg)
+            (delete-region (1+ (point)) end)
+          (delete-region start end))
+        (goto-char (point-max))))))
+
 (use-package minions
   :custom (minions-mode-line-lighter "&")
   :config
