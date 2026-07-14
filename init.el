@@ -112,7 +112,47 @@
   :config
   (setq diff-hl-draw-borders nil)
   (global-diff-hl-mode)
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t))
+  (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh t)
+
+  (defface diff-hl-insert-inactive
+    '((t :inherit default))
+    "Face for `diff-hl-insert` when its buffer is inactive."
+    :group 'diff-hl)
+
+  (defface diff-hl-delete-inactive
+    '((t :inherit default))
+    "Face for `diff-hl-delete` when its buffer is inactive."
+    :group 'diff-hl)
+
+  (defface diff-hl-change-inactive
+    '((t :inherit default))
+    "Face for `diff-hl-change` when its buffer is inactive."
+    :group 'diff-hl)
+
+  (defun rtw/diff-hl-fringe-face-active (type _pos)
+    (intern (format "diff-hl-%s" type)))
+
+  (defun rtw/diff-hl-fringe-face-inactive (type _pos)
+    (intern (format "diff-hl-%s-inactive" type)))
+
+  (defun rtw/diff-hl-buffer-active-p ()
+    (eq (current-buffer) (window-buffer (selected-window))))
+
+  (define-advice diff-hl--update-overlays (:around (orig changes reuse) rtw/active-face)
+    (let ((diff-hl-fringe-face-function
+           (if (rtw/diff-hl-buffer-active-p)
+               #'rtw/diff-hl-fringe-face-active
+             #'rtw/diff-hl-fringe-face-inactive)))
+      (funcall orig changes reuse)))
+
+  (defun rtw/diff-hl-refresh-on-selection-change (frame)
+    (dolist (win (window-list frame))
+      (let ((buf (window-buffer win)))
+        (when (buffer-local-value 'diff-hl-mode buf)
+          (with-current-buffer buf (diff-hl-update))))))
+
+  (add-hook 'window-selection-change-functions #'rtw/diff-hl-refresh-on-selection-change))
 
 (use-package diff-mode
   :defer t
