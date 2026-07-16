@@ -92,7 +92,7 @@
 (use-package python
   :after apheleia
   :config
-  (add-to-list 'eglot-server-programs '(python-mode . ("ruff" "server")))
+  (add-to-list 'eglot-server-programs '(python-mode . ("ty" "server")))
   (add-to-list 'treesit-language-source-alist '(python . ("https://github.com/tree-sitter/tree-sitter-python")))
   (setf (alist-get 'python-mode apheleia-mode-alist) '(ruff-isort ruff))
   (setf (alist-get 'python-ts-mode apheleia-mode-alist) '(ruff-isort ruff))
