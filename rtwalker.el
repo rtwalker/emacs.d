@@ -477,7 +477,8 @@ The structure of INFO can be found in docstring of
         '((imenu buffer)
           (t reverse)))
   (setq vertico-multiform-commands
-        '((consult-imenu buffer)
+        '((consult-fd buffer)
+          (consult-imenu buffer)
           (consult-imenu-multi buffer)
           (consult-line buffer)
           (consult-ripgrep buffer)
