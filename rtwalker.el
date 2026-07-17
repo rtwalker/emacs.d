@@ -385,6 +385,12 @@ With prefix ARG, do it that many times."
               (org-present-show-cursor)
               (org-present-read-write))))
 
+(use-package pcmpl-args)
+
+(use-package pcmpl-jj
+  :after pcmpl-args
+  :load-path (expand-file-name "lisp/" user-emacs-directory))
+
 (use-package popper
   :bind (("C-`"   . popper-toggle)
          ("M-`"   . popper-cycle)
