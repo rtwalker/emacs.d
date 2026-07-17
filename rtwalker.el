@@ -341,6 +341,7 @@ With prefix ARG, do it that many times."
   (defun my-modus-themes-faces (&rest _)
     (custom-set-faces
      `(corfu-border ((t :background ,(modus-themes-get-color-value 'bg-main))))
+     `(corfu-indexed ((t :height 0.75 :background ,(modus-themes-get-color-value 'bg-popup))))
      `(font-lock-comment-face ((t :background ,(modus-themes-get-color-value 'bg-yellow-nuanced))))
      `(font-lock-doc-face ((t :background ,(modus-themes-get-color-value 'bg-blue-nuanced) :weight semibold)))
      `(font-lock-string-face ((t :background ,(modus-themes-get-color-value 'bg-green-nuanced))))
