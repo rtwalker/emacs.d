@@ -442,6 +442,18 @@ The structure of INFO can be found in docstring of
   :custom
   (timeclock-file "~/time/log"))
 
+(use-package transient
+  :bind ("H-e" . #'user-emacs-menu)
+  :config
+  (transient-define-prefix user-emacs-menu ()
+    "Quick access to Emacs configuration files."
+    ["~/.emacs.d/"
+     ("d" "Dired" (lambda () (interactive) (dired user-emacs-directory)))
+     ("g" "Magit status" (lambda () (interactive) (magit-status user-emacs-directory)))]
+    ["User Emacs Files"
+     ("i" "init.el" (lambda () (interactive) (find-file user-init-file)))
+     ("r" "rtwalker.el" (lambda () (interactive) (find-file (locate-user-emacs-file "rtwalker.el"))))]))
+
 (use-package vertico
   :init
   (vertico-mode)
