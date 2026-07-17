@@ -168,8 +168,7 @@
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
 
-
-(use-package esh-mode
+(use-package eshell
   :after with-editor
   :config
   (defun rtw/esh-prompt-func ()
@@ -184,20 +183,18 @@
 
   (defun rtw/eshell-hook ()
     (interactive)
-    (setq-local completion-in-region-function #'consult-completion-in-region)
     (setq-local global-hl-line-mode nil)
     (setq-local imenu-generic-expression '(("Prompts" "└─>> \\(.+\\)" 1))))
   (add-hook 'eshell-mode-hook #'rtw/eshell-hook)
 
-  (add-hook 'eshell-mode-hook (apply-partially #'with-editor-export-editor "EDITOR"))
+  (add-hook 'eshell-mode-hook 'with-editor-export-editor)
 
   (use-package em-hist
-    :init
-    (unbind-key "M-s" eshell-hist-mode-map)
     :bind (:map eshell-hist-mode-map
                 ("M-r" . #'consult-history))
     :config
-    (setq eshell-history-size 1000)))
+    (setq eshell-history-size 1000)
+    (unbind-key "M-s" eshell-hist-mode-map)))
 
 (use-package evil
   :init
