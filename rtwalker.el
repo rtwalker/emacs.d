@@ -385,11 +385,20 @@ With prefix ARG, do it that many times."
               (org-present-show-cursor)
               (org-present-read-write))))
 
-(use-package pcmpl-args)
+(use-package pcmpl-args
+  :after inheritenv
+  :config
+  (advice-add 'pcmpl-args-extract-argspecs-from-shell-command :around #'inheritenv-apply))
+
+(use-package pcmpl-cargo
+  :after pcmpl-args
+  :load-path "lisp/"
+  :config
+  (advice-add 'pcmpl-args-cargo-commands :around #'inheritenv-apply))
 
 (use-package pcmpl-jj
   :after pcmpl-args
-  :load-path (expand-file-name "lisp/" user-emacs-directory))
+  :load-path "lisp/")
 
 (use-package popper
   :bind (("C-`"   . popper-toggle)
