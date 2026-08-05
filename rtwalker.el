@@ -320,7 +320,7 @@ With prefix ARG, do it that many times."
         (goto-char (point-max))))))
 
 (use-package minions
-  :custom (minions-mode-line-lighter "&")
+  :custom (minions-mode-line-lighter " &")
   :config
   (minions-mode))
 
