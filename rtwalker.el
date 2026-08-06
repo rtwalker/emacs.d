@@ -228,6 +228,9 @@
 ;; (use-package flyspell
 ;;   :hook (org-mode text-mode))
 
+(use-package frame
+  :bind (("M-`" . other-frame)))
+
 (use-package fontaine
   :config
   (setq fontaine-presets
@@ -402,7 +405,7 @@ With prefix ARG, do it that many times."
 
 (use-package popper
   :bind (("C-`"   . popper-toggle)
-         ("M-`"   . popper-cycle)
+         ;; ("M-`"   . popper-cycle)
          ("C-M-`" . popper-toggle-type))
   :init
   (setq popper-reference-buffers
