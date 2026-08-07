@@ -27,6 +27,21 @@
   :bind
   ("M-j" . 'avy-goto-char-timer))
 
+(use-package beframe
+  :after consult
+  :bind ("C-c b" . #'beframe-transient)
+  :custom
+  (beframe-functions-in-frames '(project-prompt-project-dir))
+  :config
+  (beframe-mode 1)
+
+  (defun consult-beframe-buffer-list (&optional frame)
+    "Return the list of buffers from `beframe-buffer-names' sorted by visibility.
+With optional argument FRAME, return the list of buffers of FRAME."
+    (beframe-buffer-list frame :sort #'beframe-buffer-sort-visibility))
+
+  (setq consult-buffer-list-function #'consult-beframe-buffer-list))
+
 (use-package biblio)
 
 (use-package calc

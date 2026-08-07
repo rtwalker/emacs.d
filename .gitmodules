@@ -29,6 +29,9 @@
 	path = lib/avy
 	url = https://github.com/abo-abo/avy
 	ignore = dirty
+[submodule "beframe"]
+	path = lib/beframe
+	url = https://github.com/protesilaos/beframe
 [submodule "biblio"]
 	path = lib/biblio
 	url = https://github.com/cpitclaudel/biblio.el
