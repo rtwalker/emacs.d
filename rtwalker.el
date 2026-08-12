@@ -59,7 +59,8 @@ With optional argument FRAME, return the list of buffers of FRAME."
   :demand t
   :bind
   (("M-s M-g" . consult-ripgrep)
-   ("M-s M-f" . consult-fd)
+   ("M-s M-f" . consult-flymake)
+   ("M-s M-F" . consult-fd)
    ("M-s M-o" . consult-outline)
    ("M-s M-i" . consult-imenu)
    ("M-s M-I" . consult-imenu-multi)
@@ -71,6 +72,7 @@ With optional argument FRAME, return the list of buffers of FRAME."
   (add-to-list 'consult-imenu-config
                '(eshell-mode :toplevel "Prompts" :types ((?p "Prompts")))))
 
+(use-package consult-flymake)
 
 (use-package consult-xref
   :config
@@ -234,11 +236,11 @@ With optional argument FRAME, return the list of buffers of FRAME."
   :after evil
   :config (global-evil-surround-mode 1))
 
-;; (use-package flymake
-;;   :bind (:map flymake-mode-map
-;;               ("M-n" . flymake-goto-next-error)
-;;               ("M-p" . flymake-goto-prev-error))
-;;   :hook prog-mode)
+(use-package flymake
+  :bind (:map flymake-mode-map
+              ("M-n" . flymake-goto-next-error)
+              ("M-p" . flymake-goto-prev-error))
+  :hook prog-mode)
 
 ;; (use-package flyspell
 ;;   :hook (org-mode text-mode))
