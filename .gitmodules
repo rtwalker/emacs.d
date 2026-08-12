@@ -92,6 +92,9 @@
 	path = lib/doom-themes
 	url = https://github.com/doomemacs/themes
 	ignore = dirty
+[submodule "ef-themes"]
+	path = lib/ef-themes
+	url = https://github.com/protesilaos/ef-themes
 [submodule "eldoc-box"]
 	path = lib/eldoc-box
 	url = https://github.com/casouri/eldoc-box

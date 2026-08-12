@@ -343,28 +343,33 @@ With prefix ARG, do it that many times."
   (minions-mode))
 
 (use-package modus-themes
+  :after oklch
   :config
   (setq modus-themes-bold-constructs t)
   (setq modus-themes-italic-constructs t)
   (setq modus-themes-mixed-fonts t)
   (setq modus-themes-common-palette-overrides
-        '((border-mode-line-active unspecified)
-          (string green-cooler)
-          (comment yellow-cooler)
-          (fg-line-number-active slate)
-          (bg-line-number-active bg-hl-line)))
+        '((border-mode-line-active unspecified)))
   (defun my-modus-themes-faces (&rest _)
+    (defun mono-bg (color)
+      (if (eq (alist-get color (modus-themes-get-theme-palette)) '(fg-dim))
+          'bg-dim
+        (oklch-mono-bg (modus-themes-get-color-value color))))
     (custom-set-faces
      `(corfu-border ((t :background ,(modus-themes-get-color-value 'bg-main))))
      `(corfu-indexed ((t :height 0.75 :background ,(modus-themes-get-color-value 'bg-popup))))
-     `(font-lock-comment-face ((t :background ,(modus-themes-get-color-value 'bg-yellow-nuanced))))
-     `(font-lock-doc-face ((t :background ,(modus-themes-get-color-value 'bg-blue-nuanced) :weight semibold)))
-     `(font-lock-string-face ((t :background ,(modus-themes-get-color-value 'bg-green-nuanced))))
+     `(font-lock-comment-face ((t :background ,(mono-bg 'comment))))
+     `(font-lock-doc-face ((t :background ,(mono-bg 'docstring) :weight semibold)))
+     `(font-lock-string-face ((t :background ,(mono-bg 'string))))
+     `(line-number-current-line ((t :background ,(modus-themes-get-color-value 'bg-hl-line))))
      `(vertico-posframe-border ((t :background ,(modus-themes-get-color-value 'bg-dim))))
      `(vertico-quick1 ((t :inherit modus-themes-completion-match-0 :background ,(modus-themes-get-color-value 'bg-blue-nuanced))))
      `(vertico-quick2 ((t :inherit modus-themes-completion-match-1 :background ,(modus-themes-get-color-value 'bg-magenta-nuanced))))))
   (add-hook 'modus-themes-after-load-theme-hook #'my-modus-themes-faces)
-  (modus-themes-load-theme 'modus-operandi-tinted))
+
+  (use-package ef-themes
+    :config
+    (modus-themes-load-theme 'ef-kassio)))
 
 (use-package nerd-icons
   :config
@@ -382,6 +387,9 @@ With prefix ARG, do it that many times."
   (nerd-icons-dired-dir-icon-function #'nerd-icons-icon-for-dir)
   :hook
   (dired-mode . nerd-icons-dired-mode))
+
+(use-package oklch
+  :load-path "lisp/")
 
 (use-package orderless
   :custom
