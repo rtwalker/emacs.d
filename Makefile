@@ -1,3 +1,4 @@
+INIT_FILES := init.el rtwalker.el
 -include lib/borg/borg.mk
 
 ifndef BORG_DIR
