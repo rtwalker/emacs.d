@@ -5,27 +5,30 @@
 
 ;;; Code:
 
+(defface rust-unsafe-keyword-face
+  `((t :family ,(if-let* ((font "PragmataPro Mono Liga Fraktur")
+                          ((find-font (font-spec :name font))))
+                    font
+                  (face-attribute 'default :family))
+       :background ,(modus-themes-get-color-value 'bg-red-subtle)
+       :foreground ,(modus-themes-get-color-value 'fg-alt)
+       :weight bold
+       :slant italic
+       :underline t
+       :inherit warning))
+  "Face for the `unsafe` keyword."
+  :group 'rust)
+
+(defface rust-unsafe-block-face
+  `((t :background ,(modus-themes-get-color-value 'bg-red-subtle) :extend t :foreground unspecified))
+  "Face for `unsafe` block content."
+  :group 'rust)
+
 (use-package flycheck-rust)
 
 (use-package rust-ts-mode
   :config
   (setq rust-ts-mode-prettify-symbols-alist nil)
-
-  (defface rust-unsafe-keyword-face
-    `((t :family ,(if-let* ((font "PragmataPro Mono Liga Fraktur")
-                            ((find-font (font-spec :name font))))
-                      font
-                    (face-attribute 'default :family))
-         :weight bold
-         :slant italic
-         :inherit warning))
-    "Face for the `unsafe` keyword."
-    :group 'rust)
-
-  (defface rust-unsafe-block-face
-    `((t :background ,(modus-themes-get-color-value 'bg-red-nuanced) :extend t :foreground unspecified))
-    "Face for `unsafe` block content."
-    :group 'rust)
 
   (defun rtw/rust-ts-font-lock ()
     (when (treesit-ready-p 'rust)
