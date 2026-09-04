@@ -223,6 +223,10 @@ Returns nil if no Magit buffer is found."
          ("C-c C-l" . org-insert-link-global)))
 
 (use-package paren
+  :custom
+  (show-paren-when-point-inside-paren t)
+  (show-paren-delay 0.025)
+  (show-paren-style 'expression)
   :config (show-paren-mode))
 
 (use-package paren-face
