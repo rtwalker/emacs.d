@@ -17,9 +17,6 @@
 
 (use-package flycheck)
 
-(use-package flycheck-eglot
-  :after (flycheck eglot))
-
 (use-package treesit-fold
   :config
   (global-treesit-fold-mode))

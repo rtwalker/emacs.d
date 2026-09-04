@@ -151,10 +151,6 @@
 	path = lib/flycheck
 	url = https://github.com/flycheck/flycheck
 	ignore = dirty
-[submodule "flycheck-eglot"]
-	path = lib/flycheck-eglot
-	url = https://github.com/flycheck/flycheck-eglot
-	ignore = dirty
 [submodule "flycheck-rust"]
 	path = lib/flycheck-rust
 	url = https://github.com/flycheck/flycheck-rust
