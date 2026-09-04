@@ -572,6 +572,7 @@ The structure of INFO can be found in docstring of
   (visual-fill-column-center-text t))
 
 (use-package window
+  :bind (("C-x K" . kill-buffer-and-window))
   :config
   (defun is-portrait ()
     (> (frame-native-height) (frame-native-width)))
