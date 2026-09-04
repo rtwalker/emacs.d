@@ -48,6 +48,12 @@
 	path = lib/capf-autosuggest
 	url = https://repo.or.cz/emacs-capf-autosuggest.git
 	ignore = dirty
+[submodule "cider"]
+	path = lib/cider
+	url = https://github.com/clojure-emacs/cider
+[submodule "clojure-mode"]
+	path = lib/clojure-mode
+	url = https://github.com/clojure-emacs/clojure-mode
 [submodule "closql"]
 	path = lib/closql
 	url = https://github.com/magit/closql.git
@@ -72,6 +78,9 @@
 	path = lib/dash
 	url = https://github.com/magnars/dash.el.git
 	ignore = dirty
+[submodule "datetime"]
+	path = lib/datetime
+	url = https://github.com/doublep/datetime
 [submodule "diff-hl"]
 	path = lib/diff-hl
 	url = https://github.com/dgutov/diff-hl.git
@@ -131,6 +140,9 @@
 	path = lib/exec-path-from-shell
 	url = https://github.com/purcell/exec-path-from-shell
 	ignore = dirty
+[submodule "extmap"]
+	path = lib/extmap
+	url = https://github.com/doublep/extmap
 [submodule "f"]
 	path = lib/f
 	url = https://github.com/rejeep/f.el
@@ -219,6 +231,9 @@
 	path = lib/llama
 	url = https://github.com/tarsius/llama.git
 	ignore = dirty
+[submodule "logview"]
+	path = lib/logview
+	url = https://github.com/doublep/logview
 [submodule "magit"]
 	path = lib/magit
 	url = https://github.com/magit/magit.git
@@ -287,6 +302,12 @@
 	path = lib/paren-face
 	url = https://github.com/tarsius/paren-face
 	ignore = dirty
+[submodule "parseclj"]
+	path = lib/parseclj
+	url = https://github.com/clojure-emacs/parseclj
+[submodule "parseedn"]
+	path = lib/parseedn
+	url = https://github.com/clojure-emacs/parseedn
 [submodule "pcmpl-args"]
 	path = lib/pcmpl-args
 	url = https://github.com/JonWaltman/pcmpl-args.el
@@ -343,10 +364,16 @@
 	path = lib/scala-mode
 	url = https://github.com/hvesalai/emacs-scala-mode
 	ignore = dirty
+[submodule "sesman"]
+	path = lib/sesman
+	url = https://github.com/vspinu/sesman
 [submodule "spacious-padding"]
 	path = lib/spacious-padding
 	url = https://github.com/protesilaos/spacious-padding.git
 	ignore = dirty
+[submodule "spinner"]
+	path = lib/spinner
+	url = https://github.com/Malabarba/spinner.el
 [submodule "tablist"]
 	path = lib/tablist
 	url = https://github.com/politza/tablist

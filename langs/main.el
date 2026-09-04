@@ -29,6 +29,8 @@
     (unless (string-match-p "main\\.el$" file)
       (load file))))
 
+(use-package cider)
+
 (use-package dockerfile-ts-mode
   :mode (("Dockerfile\\'" . dockerfile-ts-mode))
   :config
