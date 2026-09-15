@@ -32,7 +32,12 @@
   (setq mac-right-command-modifier 'hyper)
 
   (setq-default truncate-lines t)
-  (global-hl-line-mode 1))
+  (global-hl-line-mode 1)
+
+  (setq-default bidi-paragraph-direction 'left-to-right)
+  (setq bidi-inhibit-bpa t)
+  (setq redisplay-skip-fontification-on-input t)
+  (setq read-process-output-max (* 4 1024 1024)))
 
 (eval-and-compile ; `borg'
   (add-to-list 'load-path (expand-file-name "lib/borg" user-emacs-directory))
