@@ -301,7 +301,10 @@ Returns nil if no Magit buffer is found."
   :config (save-place-mode))
 
 (use-package simple
-  :config (column-number-mode))
+  :config
+  (column-number-mode)
+  (setq save-interprogram-paste-before-kill t)
+  (setq kill-do-not-save-duplicates t))
 
 (use-package smerge-mode
   :defer t
