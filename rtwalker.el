@@ -237,6 +237,10 @@ With optional argument FRAME, return the list of buffers of FRAME."
   :after evil
   :config (global-evil-surround-mode 1))
 
+(use-package executable
+  :config
+  (add-hook 'after-save-hook #'executable-make-buffer-file-executable-if-script-p))
+
 (use-package flymake
   :bind (:map flymake-mode-map
               ("M-n" . flymake-goto-next-error)
