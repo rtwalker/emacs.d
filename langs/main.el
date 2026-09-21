@@ -9,7 +9,8 @@
   :after eldoc project
   :custom
   (eglot-extend-to-xref t)
-  (eglot-ignored-server-capabilities '(:inlayHintProvider)))
+  (eglot-ignored-server-capabilities '(:inlayHintProvider))
+  (eglot-workspace-configuration '(:rust-analyzer (:cargo (:features "all" :targetDir t)))))
 
 (use-package eldoc-box
   :config
