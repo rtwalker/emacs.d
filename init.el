@@ -244,7 +244,10 @@ Returns nil if no Magit buffer is found."
    pragmatapro-prettify-symbol
    add-pragmatapro-prettify-symbols-alist
    setup-compose-predicate)
-  :config (global-prettify-symbols-mode)
+  :bind
+  ("M-<return>" . #'comment-indent-new-line)
+  :config
+  (global-prettify-symbols-mode)
   (defun indicate-buffer-boundaries-left ()
     (setq indicate-buffer-boundaries 'left))
   (add-hook 'prog-mode-hook #'indicate-buffer-boundaries-left)
